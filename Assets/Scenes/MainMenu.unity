@@ -255,11 +255,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5f62a6d76aa327044876ee113ef7143d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 309.149994
+      value: 416.23999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f62a6d76aa327044876ee113ef7143d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -74.2289963
+      value: -83.4079971
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f62a6d76aa327044876ee113ef7143d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1083,6 +1083,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b3791c82fac384da2d95daf94fa7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _serverPort: 7331
+  _serverAdress: 127.0.0.1
+  _maxNumberOfConnections: 3
   _buildingServer: 1
   _networkView: {fileID: 1954410505}
   _playButton: {fileID: 1541749071}
@@ -1090,9 +1093,8 @@ MonoBehaviour:
   _aboutButton: {fileID: 496916545}
   _howToPlayButton: {fileID: 1338064784}
   _exitGameButton: {fileID: 2079573258}
-  _serverPort: 7331
-  _serverAdress: 127.0.0.1
-  _maxNumberOfConnections: 6
+  _lobbyScene: Lobby
+  _mainScene: Game
 --- !u!4 &1954410507
 Transform:
   m_ObjectHideFlags: 0
@@ -1100,7 +1102,7 @@ Transform:
   m_PrefabInternal: {fileID: 636918617}
   m_GameObject: {fileID: 1954410504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 309.149994, y: -74.2289963, z: 5.875}
+  m_LocalPosition: {x: 416.23999, y: -83.4079971, z: 5.875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

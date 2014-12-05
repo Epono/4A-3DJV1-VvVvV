@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MainMenuManager : MonoBehaviour
 {
+    //To ease the configuration
+    [SerializeField]
+    int _serverPort;
 
-    // Appelle directement la prochaine scène (matchmaking room) ou reste sur celle là pednant ce temps ?
-    // [SerializeField]
-    // string _nextScene;
+    [SerializeField]
+    string _serverAdress;
+
+    [SerializeField]
+    int _maxNumberOfConnections;
+    //
 
     [SerializeField]
     bool _buildingServer;
@@ -30,22 +37,20 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     Button _exitGameButton;
 
-    //To ease the configuration
     [SerializeField]
-    int _serverPort;
+    string _lobbyScene;
 
+    //Useless here ?
     [SerializeField]
-    string _serverAdress;
-
-    [SerializeField]
-    int _maxNumberOfConnections;
+    string _gameScene;
 
     private bool _isServerRunning = false;
+    private List<NetworkPlayer> _players;
 
     // Use this for initialization
     void Start()
     {
-        Debug.Log("Starting the game, waiting for a player input on a button");
+        Debug.Log("Starting the game (" + (_buildingServer ? "Server mode" : "Client mode") + "), waiting for a player input on a button");
 
         //Specifies that the Application should be running when in background (mandatory if multiple instances)
         Application.runInBackground = true;
@@ -87,9 +92,55 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+
+
+    //Server
+    void OnServerInitialized()
+    {
+        _isServerRunning = true;
+        _playButtonText.text = "Close Server";
+        _players = new List<NetworkPlayer>();
+        Debug.Log("Server created, waiting for players ...");
+    }
+
+    void OnPlayerConnected(NetworkPlayer player)
+    {
+        _players.Add(player);
+        Debug.Log("Player [" + player + "] connected");
+        if (_players.Count == 1)
+        {
+            Application.LoadLevel(_lobbyScene);
+        }
+        else if (_players.Count == _maxNumberOfConnections)
+        {
+            Debug.Log("Launching the game ...");
+            Application.LoadLevel(_gameScene);
+        }
+    }
+
+    //Doesn't gets called, abnormal
+    void OnPlayerDisConnected(NetworkPlayer player)
+    {
+        _players.Remove(player);
+        Debug.Log("Player [" + player + "] disconnected");
+    }
+
+    //Client
+    void OnFailedToConnect(NetworkConnectionError error)
+    {
+        Debug.Log("Couldn't connect to the server : " + error);
+        //Display an error message, and asks if the player wants to retry to connect
+    }
+
+    void OnConnectedToServer()
+    {
+        Debug.Log("Connected to the server");
+        Application.LoadLevel(_lobbyScene);
+    }
+
+    //Both
     void OnDisconnectedFromServer(NetworkDisconnection networkDisconnection)
     {
-        //If it's called in the server, means the server disconnected (probably by user input)
         if (_buildingServer)
         {
             _isServerRunning = false;
@@ -98,26 +149,8 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Shouldn't (I think) ever gets called"); ;
+            Debug.Log("Disconnected from the server : " + networkDisconnection);
         }
-        
-    }
-
-    void OnServerInitialized()
-    {
-        _isServerRunning = true;
-        _playButtonText.text = "Close Server";
-        Debug.Log("Server created, waiting for players ...");
-    }
-
-    void OnFailedToConnect(NetworkConnectionError error)
-    {
-        Debug.Log("Couldn't connect to the server : " + error);
-    }
-
-    void OnConnectedToServer()
-    {
-        Debug.Log("Connected to the server");
     }
 
     //TODO

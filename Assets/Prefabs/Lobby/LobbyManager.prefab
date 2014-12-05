@@ -9,9 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
-  - 148: {fileID: 14800000}
   m_Layer: 0
-  m_Name: MainMenuManager
+  m_Name: LobbyManager
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -24,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 309.149994, y: -74.2289963, z: 5.875}
+  m_LocalPosition: {x: 404.029999, y: -82.7340012, z: 5.875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,33 +36,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b3791c82fac384da2d95daf94fa7a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 383a3ba40ba2c3945aae53b2cf4673bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _serverPort: 7331
-  _serverAdress: 127.0.0.1
-  _maxNumberOfConnections: 3
-  _buildingServer: 0
-  _networkView: {fileID: 14800000}
-  _playButton: {fileID: 0}
-  _playButtonText: {fileID: 0}
-  _aboutButton: {fileID: 0}
-  _howToPlayButton: {fileID: 0}
-  _exitGameButton: {fileID: 0}
-  _lobbyScene: Lobby
-  _mainScene: Game
---- !u!148 &14800000
-NetworkView:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_StateSynchronization: 0
-  m_Observed: {fileID: 0}
-  m_ViewID:
-    m_ID: 0
-    m_Type: 0
+  _player1text: {fileID: 0}
+  _player2text: {fileID: 0}
+  _player3text: {fileID: 0}
+  _readyButton: {fileID: 0}
+  _readyButtonText: {fileID: 0}
+  _exitRoomButton: {fileID: 0}
+  _gameScene: Game
+  _mainMenuScene: MainMenu
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
