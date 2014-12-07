@@ -3,6 +3,8 @@ using System.Collections;
 
 public class InputManagerScript : MonoBehaviour
 {
+    //Singletonisation
+    public static InputManagerScript currentInputManagerScript;
 
     [SerializeField]
     private GameManagerScript _gameManager;
@@ -16,8 +18,18 @@ public class InputManagerScript : MonoBehaviour
     [SerializeField]
     float _groundDistance;
 
-    //[SerializeField]
-    //NetworkView _networkView;
+    void Awake()
+    {
+        if (currentInputManagerScript == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            currentInputManagerScript = this;
+        }
+        else if (currentInputManagerScript != null)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Use this for initialization
     void Start()

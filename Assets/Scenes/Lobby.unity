@@ -176,7 +176,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -308.549988, y: -197.669998}
+  m_AnchoredPosition: {x: -236.570007, y: -160.350006}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &48632660
@@ -186,6 +186,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playerText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playersText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
       propertyPath: m_LocalPosition.x
       value: 404.029999
@@ -242,6 +250,38 @@ Prefab:
       propertyPath: _player3text
       value: 
       objectReference: {fileID: 160673468}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playerText.Array.data[0]
+      value: 
+      objectReference: {fileID: 394039447}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playerText.Array.data[1]
+      value: 
+      objectReference: {fileID: 617318097}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playerText.Array.data[2]
+      value: 
+      objectReference: {fileID: 160673468}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playersText.Array.data[0]
+      value: 
+      objectReference: {fileID: 394039447}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playersText.Array.data[1]
+      value: 
+      objectReference: {fileID: 617318097}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _playersText.Array.data[2]
+      value: 
+      objectReference: {fileID: 160673468}
+    - target: {fileID: 14800000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
   m_RootGameObject: {fileID: 1040967021}
@@ -550,6 +590,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1040967022}
   - 114: {fileID: 1040967023}
+  - 148: {fileID: 1040967024}
   m_Layer: 0
   m_Name: LobbyManager
   m_TagString: Untagged
@@ -578,17 +619,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040967021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383a3ba40ba2c3945aae53b2cf4673bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 429a91fbcc4879844940c48ed89e426c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1text: {fileID: 394039447}
-  _player2text: {fileID: 617318097}
-  _player3text: {fileID: 160673468}
+  _playersText:
+  - {fileID: 394039447}
+  - {fileID: 617318097}
+  - {fileID: 160673468}
   _readyButton: {fileID: 1584985395}
   _readyButtonText: {fileID: 1377145047}
   _exitRoomButton: {fileID: 21381064}
+  _networkView: {fileID: 1040967024}
   _gameScene: Game
   _mainMenuScene: MainMenu
+--- !u!148 &1040967024
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: aac109ddfbb3fcf4ea20e26aac36de09,
+    type: 2}
+  m_PrefabInternal: {fileID: 48632660}
+  m_GameObject: {fileID: 1040967021}
+  m_Enabled: 1
+  m_StateSynchronization: 0
+  m_Observed: {fileID: 0}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &1345241947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1236,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 7.88789988, y: 184.940002}
+  m_AnchoredPosition: {x: 7.88789988, y: 159.610001}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1863518170

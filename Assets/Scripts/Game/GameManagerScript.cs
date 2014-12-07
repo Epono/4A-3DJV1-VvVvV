@@ -1,33 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManagerScript : MonoBehaviour {
+public class GameManagerScript : MonoBehaviour
+{
 
-	[SerializeField]
+    //Singletonisation
+    public static GameManagerScript currentGameManagerScript;
+
+    [SerializeField]
     private APlayerScript[] _playersScript;
 
+    void Awake()
+    {
+        if (currentGameManagerScript == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            currentGameManagerScript = this;
+        }
+        else if (currentGameManagerScript != null)
+        {
+            Destroy(gameObject);
+        }
+    }
 
-//	[SerializeField]
-//	bool _buildingServer = false;
+    // Use this for initialization
+    void Start()
+    {
 
-//	[SerializeField]
-//	NetworkView _networkView;
+    }
 
-	// Use this for initialization
-	void Start () 
-	{
-      
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
-   
+    // Update is called once per frame
+    void Update()
+    {
 
-//	public void WantToShoot(int player)
-//	{
-//		_playersScript [player].TryToShoot();
-//	}
+    }
+
+
+    //	public void WantToShoot(int player)
+    //	{
+    //		_playersScript [player].TryToShoot();
+    //	}
 
     public void WantToMove(int player, Vector3 pos)
     {

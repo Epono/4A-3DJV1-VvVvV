@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: MainMenuManager
+  m_Name: PersistentPlayers
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 309.149994, y: -74.2289963, z: 5.875}
+  m_LocalPosition: {x: 108.669998, y: -101.970001, z: 5.875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36,19 +36,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0643b858267c14a88f3a55fb54d537, type: 3}
+  m_Script: {fileID: 11500000, guid: c1d2e74fe5bd8ef49891142ffafec700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 0}
-  _playButtonText: {fileID: 0}
-  _aboutButton: {fileID: 0}
-  _howToPlayButton: {fileID: 0}
-  _exitGameButton: {fileID: 0}
-  _lobbyScene: Lobby
-  _networkManagerScript: {fileID: 11400000, guid: 84ced47838f24ce40b471542846bfc79,
-    type: 2}
-  _isServer: 1
-  _gameScene: Game
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
