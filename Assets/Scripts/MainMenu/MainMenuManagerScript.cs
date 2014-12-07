@@ -63,11 +63,11 @@ public class MainMenuManagerScript : MonoBehaviour
         //Specifies that the Application should be running when in background (mandatory if multiple instances)
         Application.runInBackground = true;
 
-        //  if (NetworkManagerScript.currentNetworkManagerScript._isServer)
-        // {
-        //      _playButtonText.text = "Run Server";
-        // }
+        initScene();
+    }
 
+    public void initScene()
+    {
         if (NetworkManagerScript.currentNetworkManagerScript._isServer)
         {
             NetworkManagerScript.currentNetworkManagerScript.runServer();

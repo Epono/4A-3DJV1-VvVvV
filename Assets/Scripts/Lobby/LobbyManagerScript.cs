@@ -12,13 +12,7 @@ public class LobbyManagerScript : MonoBehaviour
     private Text[] _playersText;
 
     [SerializeField]
-    Button _readyButton;
-
-    [SerializeField]
-    Text _readyButtonText;
-
-    [SerializeField]
-    Button _exitRoomButton;
+    Button _exitLobbyButton;
 
     [SerializeField]
     NetworkView _networkView;
@@ -44,6 +38,7 @@ public class LobbyManagerScript : MonoBehaviour
 
     void Start()
     {
+        _exitLobbyButton.onClick.AddListener(() => { exitLobby(); });
         if (NetworkManagerScript.currentNetworkManagerScript._isServer)
         {
             Debug.Log("Server created, waiting for players ...");
@@ -52,6 +47,7 @@ public class LobbyManagerScript : MonoBehaviour
         {
             Debug.Log("Lobby joined, waiting for other players ...");
         }
+
     }
 
     void Update()
@@ -59,47 +55,67 @@ public class LobbyManagerScript : MonoBehaviour
 
     }
 
+    public void exitLobby()
+    {
+        if (NetworkManagerScript.currentNetworkManagerScript._isServer)
+        {
+            // Close server and quit
+            Debug.Log("Closing server and quitting ...");
+            Network.Disconnect();
+            Application.Quit();
+        }
+        else
+        {
+            //Disconnect from server and go back to MainMenuScene
+            Debug.Log("Quitting lobby and going back to MainMenu ...");
+            Network.Disconnect();
+            SceneStateManager.currentStateManager.setNewSceneState(SceneStateManager.sceneState.MainMenu);
+            Application.LoadLevel(_mainMenuScene);
+        }
+    }
+
+
     // Server-only method
     public void serverPlayerJoined(NetworkPlayer player)
     {
-        PersistentPlayersScript.currentPersistentPlayersScript.addPlayer(player);
+        PersistentPlayersScript.currentPersistentPlayersScript.playerConnected(player);
 
-        Debug.Log(PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1);
-        _playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.externalIP;
-
-        NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("clientPlayerJoined", RPCMode.Others, PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count, player.externalIP);
-
-        string stringOfAllFloats = "";
-        foreach (Text t in _playersText)
-        {
-            stringOfAllFloats += t.text.ToString() + ",";
-        }
-        stringOfAllFloats.TrimEnd(","[0]);
-        NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("clientGetPlayersText", player, stringOfAllFloats);
-
+        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
+        serverRefreshPlayersText();
 
         if (PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == NetworkManagerScript.currentNetworkManagerScript._maxNumberOfConnections)
         {
             Debug.Log("Lobby full, launching the game ...");
-            NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("launchGameScene", RPCMode.Others);
+            NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("launchGameScene", RPCMode.OthersBuffered);
             Application.LoadLevel(_gameScene);
         }
     }
 
-    //Client-only method
-    public void clientPlayerJoined(int index, string externalIP)
+    // Server-only method
+    public void serverPlayerDisconnected(NetworkPlayer player)
     {
-        _playersText[index].text = externalIP;
+        PersistentPlayersScript.currentPersistentPlayersScript.playerDisconnected(player);
+
+        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
+        serverRefreshPlayersText();
+
+        if (PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == NetworkManagerScript.currentNetworkManagerScript._maxNumberOfConnections)
+        {
+            Debug.Log("Lobby full, launching the game ...");
+            NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("launchGameScene", RPCMode.OthersBuffered);
+            Application.LoadLevel(_gameScene);
+        }
     }
 
-    //Client-only method
-    public void clientGetPlayersText(string playersText)
+    // Server-only method
+    public void serverRefreshPlayersText()
     {
-        string[] splittedPlayerstext = playersText.Split(","[0]);
-        for (int i = 0; i < splittedPlayerstext.Length; i++)
+        for (int i = 0; i < PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count; i++)
         {
-            _playersText[i].text = splittedPlayerstext[i];
+            _playersText[i].text = PersistentPlayersScript.currentPersistentPlayersScript.getPlayers()[i].guid;
         }
+        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
+
     }
 
     //Client-only method
@@ -107,4 +123,5 @@ public class LobbyManagerScript : MonoBehaviour
     {
         Application.LoadLevel(_gameScene);
     }
+
 }

@@ -102,9 +102,9 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Server (a player disconnected)
-    //Doesn't gets called, weird
-    void OnPlayerDisConnected(NetworkPlayer player)
+    void OnPlayerDisconnected(NetworkPlayer player)
     {
+        Debug.Log("Player disconnected : " + player.guid);
         //LobbyManagerScript.currentLobbyManagerScript.playerDisconnected(player);
         switch (SceneStateManager.currentStateManager.getCurrentSceneState())
         {
@@ -113,6 +113,7 @@ public class NetworkManagerScript : MonoBehaviour
                 break;
             case SceneStateManager.sceneState.Lobby:
                 // Wait (a bit) for him to reconnect ?
+                LobbyManagerScript.currentLobbyManagerScript.serverPlayerDisconnected(player);
                 break;
             case SceneStateManager.sceneState.Game:
                 // Wait (a bit longer) for him to reconnect ?
@@ -148,7 +149,6 @@ public class NetworkManagerScript : MonoBehaviour
     //Client
     void OnConnectedToServer()
     {
-        //LobbyManagerScript.currentLobbyManagerScript.playerConnectedToServer();
         switch (SceneStateManager.currentStateManager.getCurrentSceneState())
         {
             case SceneStateManager.sceneState.MainMenu:
@@ -168,8 +168,16 @@ public class NetworkManagerScript : MonoBehaviour
     //Server (gets called when the server finishes closing => normal) + Client (gets called when disconnected from server => abnormal)
     void OnDisconnectedFromServer(NetworkDisconnection networkDisconnection)
     {
-        _isServerRunning = false;
-        //LobbyManagerScript.currentLobbyManagerScript.disconnectedFromServer(networkDisconnection);
+        if (_isServer)
+        {
+            Debug.Log("Server closed");
+            _isServerRunning = false;
+        }
+        else
+        {
+            Debug.Log("Disconnected from server");
+        }
+
         switch (SceneStateManager.currentStateManager.getCurrentSceneState())
         {
             case SceneStateManager.sceneState.MainMenu:
@@ -185,7 +193,7 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     /********************************************************** RPC calls Client ********************************************************************************/
-
+    /*
     //Client-only method
     [RPC]
     public void clientPlayerJoined(int index, string externalIP)
@@ -201,6 +209,7 @@ public class NetworkManagerScript : MonoBehaviour
         Debug.Log("Lobby joined, charging players text ...");
         LobbyManagerScript.currentLobbyManagerScript.clientGetPlayersText(playersText);
     }
+     */
 
     //Client-only method
     [RPC]

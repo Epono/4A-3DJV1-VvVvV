@@ -31,7 +31,7 @@ public class PersistentPlayersScript : MonoBehaviour
         _players = new List<NetworkPlayer>();
     }
 
-    public void addPlayer(NetworkPlayer player)
+    public void playerConnected(NetworkPlayer player)
     {
         _players.Add(player);
 

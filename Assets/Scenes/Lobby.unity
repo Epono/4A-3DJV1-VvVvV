@@ -86,7 +86,7 @@ GameObject:
   - 114: {fileID: 21381065}
   - 114: {fileID: 21381064}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: ExitLobbyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ RectTransform:
   m_Children:
   - {fileID: 1804225567}
   m_Father: {fileID: 1345241948}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -236.570007, y: -160.350006}
@@ -233,11 +233,11 @@ Prefab:
     - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
       propertyPath: _readyButtonText
       value: 
-      objectReference: {fileID: 1377145047}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
       propertyPath: _readyButton
       value: 
-      objectReference: {fileID: 1584985395}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
       propertyPath: _player1text
       value: 
@@ -282,6 +282,10 @@ Prefab:
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
+      propertyPath: _exitLobbyButton
+      value: 
+      objectReference: {fileID: 21381064}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aac109ddfbb3fcf4ea20e26aac36de09, type: 2}
   m_RootGameObject: {fileID: 1040967021}
@@ -297,6 +301,7 @@ GameObject:
   - 224: {fileID: 160673467}
   - 222: {fileID: 160673469}
   - 114: {fileID: 160673468}
+  - 148: {fileID: 160673470}
   m_Layer: 5
   m_Name: Player3Text
   m_TagString: Untagged
@@ -357,6 +362,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 1824085593}
   m_GameObject: {fileID: 160673466}
   m_HideIfInvisible: 0
+--- !u!148 &160673470
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1824085593}
+  m_GameObject: {fileID: 160673466}
+  m_Enabled: 1
+  m_StateSynchronization: 2
+  m_Observed: {fileID: 160673467}
+  m_ViewID:
+    m_ID: 4
+    m_Type: 1
 --- !u!1 &394039445
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +385,7 @@ GameObject:
   - 224: {fileID: 394039446}
   - 222: {fileID: 394039448}
   - 114: {fileID: 394039447}
+  - 148: {fileID: 394039449}
   m_Layer: 5
   m_Name: Player1Text
   m_TagString: Untagged
@@ -427,6 +446,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 2086563590}
   m_GameObject: {fileID: 394039445}
   m_HideIfInvisible: 0
+--- !u!148 &394039449
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2086563590}
+  m_GameObject: {fileID: 394039445}
+  m_Enabled: 1
+  m_StateSynchronization: 2
+  m_Observed: {fileID: 394039446}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &617318095
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +469,7 @@ GameObject:
   - 224: {fileID: 617318096}
   - 222: {fileID: 617318098}
   - 114: {fileID: 617318097}
+  - 148: {fileID: 617318099}
   m_Layer: 5
   m_Name: Player2Text
   m_TagString: Untagged
@@ -497,6 +530,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 1794699701}
   m_GameObject: {fileID: 617318095}
   m_HideIfInvisible: 0
+--- !u!148 &617318099
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794699701}
+  m_GameObject: {fileID: 617318095}
+  m_Enabled: 1
+  m_StateSynchronization: 2
+  m_Observed: {fileID: 617318096}
+  m_ViewID:
+    m_ID: 3
+    m_Type: 1
 --- !u!1 &854180188
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,9 +672,7 @@ MonoBehaviour:
   - {fileID: 394039447}
   - {fileID: 617318097}
   - {fileID: 160673468}
-  _readyButton: {fileID: 1584985395}
-  _readyButtonText: {fileID: 1377145047}
-  _exitRoomButton: {fileID: 21381064}
+  _exitLobbyButton: {fileID: 21381064}
   _networkView: {fileID: 1040967024}
   _gameScene: Game
   _mainMenuScene: MainMenu
@@ -676,7 +720,6 @@ RectTransform:
   - {fileID: 394039446}
   - {fileID: 617318096}
   - {fileID: 160673467}
-  - {fileID: 1584985394}
   - {fileID: 21381067}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -718,178 +761,6 @@ Canvas:
   m_OverrideSorting: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1 &1377145045
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1377145046}
-  - 222: {fileID: 1377145048}
-  - 114: {fileID: 1377145047}
-  m_Layer: 5
-  m_Name: ReadyButtonText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1377145046
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1377145045}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1584985394}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1377145047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1377145045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: .195999995, g: .195999995, b: .195999995, a: 1}
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Ready !
---- !u!222 &1377145048
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1377145045}
-  m_HideIfInvisible: 0
---- !u!1 &1584985393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1584985394}
-  - 222: {fileID: 1584985397}
-  - 114: {fileID: 1584985396}
-  - 114: {fileID: 1584985395}
-  m_Layer: 5
-  m_Name: ReadyButtonButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1584985394
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584985393}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1377145046}
-  m_Father: {fileID: 1345241948}
-  m_RootOrder: 4
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -169.570007, y: -42.9970016}
-  m_SizeDelta: {x: 130, y: 30}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1584985395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584985393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
-    m_HighlightedColor: {r: .501960814, g: .501960814, b: .501960814, a: .698039234}
-    m_PressedColor: {r: .345098048, g: .345098048, b: .345098048, a: .698039234}
-    m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
-    m_ColorMultiplier: 2
-    m_FadeDuration: .100000001
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1584985396}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1584985396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584985393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .588}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1584985397
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584985393}
-  m_HideIfInvisible: 0
 --- !u!1 &1621522078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +916,14 @@ Prefab:
       propertyPath: m_Name
       value: Player2Text
       objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26147325131f040439e446e76729fc5f, type: 2}
   m_RootGameObject: {fileID: 617318095}
@@ -1061,7 +940,7 @@ GameObject:
   - 222: {fileID: 1804225569}
   - 114: {fileID: 1804225568}
   m_Layer: 5
-  m_Name: ExitButtonText
+  m_Name: ExitLobbyButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,6 +1079,14 @@ Prefab:
       propertyPath: m_Name
       value: Player3Text
       objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26147325131f040439e446e76729fc5f, type: 2}
   m_RootGameObject: {fileID: 160673466}
@@ -1216,7 +1103,7 @@ GameObject:
   - 222: {fileID: 1863518171}
   - 114: {fileID: 1863518170}
   m_Layer: 5
-  m_Name: WaitingRoomText
+  m_Name: LobbyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1264,7 +1151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Waiting Room
+  m_Text: Lobby
 --- !u!222 &1863518171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1354,6 +1241,14 @@ Prefab:
     - target: {fileID: 100000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_Name
       value: Player1Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26147325131f040439e446e76729fc5f, type: 2}
