@@ -11,9 +11,6 @@ public class MainMenuManagerScript : MonoBehaviour
     [SerializeField]
     Button _playButton;
 
-    // [SerializeField]
-    // Text _playButtonText;
-
     [SerializeField]
     Button _aboutButton;
 
@@ -23,24 +20,11 @@ public class MainMenuManagerScript : MonoBehaviour
     [SerializeField]
     Button _exitGameButton;
 
-    /*[SerializeField]
-    string _lobbyScene;*/
-
-    /* [SerializeField]
-     NetworkManagerScript _networkManagerScript;*/
-
-    /* [SerializeField]
-     PersistentPlayersScript _persistentPlayersScript;*/
-
-    /* [SerializeField]
-     public bool _isServer;*/
-
     [SerializeField]
     string _gameScene;
 
     [SerializeField]
     string _lobbyScene;
-
 
     void Awake()
     {
@@ -74,7 +58,7 @@ public class MainMenuManagerScript : MonoBehaviour
         }
         else
         {
-            _playButton.onClick.AddListener(() => { NetworkManagerScript.currentNetworkManagerScript.connectToServer(); });
+            _playButton.onClick.AddListener(() => { NetworkManagerScript.currentNetworkManagerScript.TryToConnectToServer(); });
         }
 
         _aboutButton.onClick.AddListener(() => { displayAboutInformations(); });
@@ -124,7 +108,15 @@ public class MainMenuManagerScript : MonoBehaviour
     public void onConnectedToServer()
     {
         Debug.Log("Joining the Lobby");
+
+        Network.SetSendingEnabled(0, false);
+        Network.isMessageQueueRunning = false;
+        SceneStateManager.currentStateManager.setNewSceneState(SceneStateManager.sceneState.Lobby);
+
         Application.LoadLevel(_lobbyScene);
+
+        Network.isMessageQueueRunning = true;
+        Network.SetSendingEnabled(0, true);
     }
 
     public void disconnectedFromServer(NetworkDisconnection networkDisconnection)

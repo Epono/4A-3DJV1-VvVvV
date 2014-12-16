@@ -26,7 +26,7 @@ public class GameManagerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
     }
 
     // Update is called once per frame

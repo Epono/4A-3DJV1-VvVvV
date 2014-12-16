@@ -59,6 +59,14 @@ public class PersistentPlayersScript : MonoBehaviour
         return _players;
     }
 
+    public void displayNetworkPlayers()
+    {
+        for (int i = 0; i < _players.Count; i++)
+        {
+            Debug.Log(_players[i].guid);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

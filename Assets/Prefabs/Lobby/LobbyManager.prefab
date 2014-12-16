@@ -41,12 +41,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playersText: []
-  _readyButton: {fileID: 0}
-  _readyButtonText: {fileID: 0}
-  _exitRoomButton: {fileID: 0}
+  _exitLobbyButton: {fileID: 0}
   _networkView: {fileID: 14800000}
   _gameScene: Game
   _mainMenuScene: MainMenu
+  _lobbySceneLevelPrefix: 1
 --- !u!148 &14800000
 NetworkView:
   m_ObjectHideFlags: 1

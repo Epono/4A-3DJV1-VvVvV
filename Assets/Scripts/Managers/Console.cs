@@ -6,6 +6,9 @@ using UnityEngine;
 /// </summary>
 public class Console : MonoBehaviour
 {
+
+    public static Console currentConsole;
+
     struct Log
     {
         public string message;
@@ -67,6 +70,19 @@ public class Console : MonoBehaviour
         }
 
         windowRect = GUILayout.Window(123456, windowRect, ConsoleWindow, "Console");
+    }
+
+    void Awake()
+    {
+        if (currentConsole == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            currentConsole = this;
+        }
+        else if (currentConsole != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>

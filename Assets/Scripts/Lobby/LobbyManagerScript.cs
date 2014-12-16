@@ -50,11 +50,6 @@ public class LobbyManagerScript : MonoBehaviour
 
     }
 
-    void Update()
-    {
-
-    }
-
     public void exitLobby()
     {
         if (NetworkManagerScript.currentNetworkManagerScript._isServer)
@@ -79,32 +74,34 @@ public class LobbyManagerScript : MonoBehaviour
     public void serverPlayerJoined(NetworkPlayer player)
     {
         PersistentPlayersScript.currentPersistentPlayersScript.playerConnected(player);
-
-        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
         serverRefreshPlayersText();
 
         if (PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == NetworkManagerScript.currentNetworkManagerScript._maxNumberOfConnections)
         {
-            Debug.Log("Lobby full, launching the game ...");
-            NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("launchGameScene", RPCMode.OthersBuffered);
-            Application.LoadLevel(_gameScene);
+            StartCoroutine(wait3s());
         }
     }
+
+    public IEnumerator wait3s()
+    {
+        Debug.Log("Lobby full, launching the game in 3 ...");
+        yield return new WaitForSeconds(1);
+        Debug.Log("2 ...");
+        yield return new WaitForSeconds(1);
+        Debug.Log("1 ...");
+        yield return new WaitForSeconds(1);
+        Debug.Log("Starting !");
+        _networkView.RPC("clientLaunchGameScene", RPCMode.All);
+        Application.LoadLevel(_gameScene);
+    }
+
+
 
     // Server-only method
     public void serverPlayerDisconnected(NetworkPlayer player)
     {
         PersistentPlayersScript.currentPersistentPlayersScript.playerDisconnected(player);
-
-        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
         serverRefreshPlayersText();
-
-        if (PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == NetworkManagerScript.currentNetworkManagerScript._maxNumberOfConnections)
-        {
-            Debug.Log("Lobby full, launching the game ...");
-            NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("launchGameScene", RPCMode.OthersBuffered);
-            Application.LoadLevel(_gameScene);
-        }
     }
 
     // Server-only method
@@ -114,14 +111,30 @@ public class LobbyManagerScript : MonoBehaviour
         {
             _playersText[i].text = PersistentPlayersScript.currentPersistentPlayersScript.getPlayers()[i].guid;
         }
-        //_playersText[PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count - 1].text = player.guid;
-
     }
 
     //Client-only method
+    [RPC
+]
     public void clientLaunchGameScene()
     {
+        Network.SetSendingEnabled(0, false);
+
+        // We need to stop receiving because first the level must be loaded first.
+        // Once the level is loaded, rpc's and other state update attached to objects in the level are allowed to fire
+        Network.isMessageQueueRunning = false;
+
+        // All network views loaded from a level will get a prefix into their NetworkViewID.
+        // This will prevent old updates from clients leaking into a newly created scene.
+        SceneStateManager.currentStateManager.setNewSceneState(SceneStateManager.sceneState.Game);
         Application.LoadLevel(_gameScene);
+        // yield;
+        // yield;
+
+        // Allow receiving data again
+        Network.isMessageQueueRunning = true;
+        // Now the level has been loaded and we can start sending out data to clients
+        Network.SetSendingEnabled(0, true);
     }
 
 }

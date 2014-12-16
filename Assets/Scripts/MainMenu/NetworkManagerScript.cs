@@ -89,11 +89,6 @@ public class NetworkManagerScript : MonoBehaviour
                 // Add the player to the persistentPlayersScript
                 Debug.Log("Player [" + player.ipAddress + "] connected");
                 LobbyManagerScript.currentLobbyManagerScript.serverPlayerJoined(player);
-                //PersistentPlayersScript.currentPersistentPlayersScript.addPlayer(player);
-
-                //Check if the lobby is full, and launch the game if it is
-                //LobbyManagerScript.currentLobbyManagerScript.check();
-
                 break;
             case SceneStateManager.sceneState.Game:
                 // If it's a reconnection, add him to the game, shouldn't happen otherwise
@@ -122,7 +117,7 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Client (tries to connect to the server)
-    public void connectToServer()
+    public void TryToConnectToServer()
     {
         Debug.Log("Trying to connect to the server ...");
         Network.Connect(_serverAdress, _serverPort);
@@ -191,33 +186,4 @@ public class NetworkManagerScript : MonoBehaviour
                 break;
         }
     }
-
-    /********************************************************** RPC calls Client ********************************************************************************/
-    /*
-    //Client-only method
-    [RPC]
-    public void clientPlayerJoined(int index, string externalIP)
-    {
-        Debug.Log("New player joined");
-        LobbyManagerScript.currentLobbyManagerScript.clientPlayerJoined(index, externalIP);
-    }
-
-    //Client-only method
-    [RPC]
-    public void clientGetPlayersText(string playersText)
-    {
-        Debug.Log("Lobby joined, charging players text ...");
-        LobbyManagerScript.currentLobbyManagerScript.clientGetPlayersText(playersText);
-    }
-     */
-
-    //Client-only method
-    [RPC]
-    public void clientLaunchGameScene()
-    {
-        Debug.Log("Game starting ...");
-        LobbyManagerScript.currentLobbyManagerScript.clientLaunchGameScene();
-    }
-
-    /************************************************************************************************************************************************************/
 }
