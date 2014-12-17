@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 public abstract class APlayerScript : MonoBehaviour {
 
@@ -20,5 +20,7 @@ public abstract class APlayerScript : MonoBehaviour {
 
 
 	abstract public  void TryToShoot ();
+
+    abstract public void ExecuteAction(string actionName,Vector3 pos);
 	
 }

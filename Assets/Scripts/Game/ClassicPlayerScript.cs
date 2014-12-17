@@ -10,6 +10,8 @@ public class ClassicPlayerScript : APlayerScript
     [SerializeField]
     Transform[] _ballsTransform;
 
+    [SerializeField]
+    LineRenderer _lineMovement;
 
     [SerializeField]
     Rigidbody[] _ballsRigidBody;
@@ -29,12 +31,29 @@ public class ClassicPlayerScript : APlayerScript
     void Start()
     {
         _squareShootDistance = Mathf.Pow(_shootDistance, 2);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    void FixedUpdate()
+    {
+        //Affichage d'un trait pour symboliser le déplacement
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+         //   Debug.Log("x" + Input.mousePosition.x);
+        //    _lineMovement.SetPosition(1, new Vector3(Input.mousePosition.x-_transform.position.x, 0, Input.mousePosition.y));
+           //  Input.mousePosition.z);
+            //Debug.Log(Input.mousePresent.)
+
+          //  _lineMovement.SetWidth(this._transform.position.x, Input.mousePosition.x);
+        }
+        
     }
     #region implemented abstract members of APayerScript
 
@@ -59,6 +78,14 @@ public class ClassicPlayerScript : APlayerScript
                 brigid.AddForce(distanceVector.normalized * _shootImpulse, ForceMode.Impulse);
             }
         }
+    }
+
+    public override void ExecuteAction(string actionName, Vector3 pos)
+    {
+        Debug.Log(gameObject.name + "Execute action :" + actionName);
+        _agent.SetDestination(pos);
+
+       // throw new System.NotImplementedException();
     }
     #endregion
 }

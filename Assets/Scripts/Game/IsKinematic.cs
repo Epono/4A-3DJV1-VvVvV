@@ -6,8 +6,6 @@ public class IsKinematic : MonoBehaviour {
     [SerializeField]
     private Rigidbody TargetRigibody;
 
-//  [SerializeField]
-//  private Vector3 _force;
     
 
     // Use this for initialization
@@ -18,18 +16,13 @@ public class IsKinematic : MonoBehaviour {
     // Update is called once per frame
     void Update () {
     
-    //  if (Input.GetKey (KeyCode.A)) {
-    //                  TargetRigibody.isKinematic = false;
-    //      TargetRigibody.AddForce(Vector3.down);
-    //          }
+  
 
 
     }
 
     void OnTriggerEnter(Collider other) {
-        //other.rigidbody.isKinematic = true;
-    
-    //  other.rigidbody.AddForce(_force);
+       
         Debug.Log("Un intru !");
         TargetRigibody.isKinematic = false;
         TargetRigibody.AddForce(Vector3.down);

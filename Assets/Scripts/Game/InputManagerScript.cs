@@ -18,6 +18,16 @@ public class InputManagerScript : MonoBehaviour
     [SerializeField]
     float _groundDistance;
 
+    private RaycastHit onTest;
+
+    // MES AJOUTS
+    //Le manager intelligent
+
+    [SerializeField]
+    LineRenderer _lineMovement;
+
+    
+
     void Awake()
     {
         if (currentInputManagerScript == null)
@@ -52,9 +62,24 @@ public class InputManagerScript : MonoBehaviour
 
                 if (_groundCollider.Raycast(ray, out hitInfo, _groundDistance))
                 {
-                    _gameManager.WantToMove(0, hitInfo.point);
+                   // _gameManager.WantToMove(0, hitInfo.point);
+                   
+                    Debug.Log("MoveToLocation :");
+                    _gameManager.AddActionInActionList("MoveToLocation");
+
+                    onTest = hitInfo;
+                    Debug.Log("Initialisation du raycast :");
                 }
+
+               
           }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _gameManager.ExecuteTurnAction(onTest.point);
+            }
+
+         
     }
 }
 
