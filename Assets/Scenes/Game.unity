@@ -349,12 +349,8 @@ GameObject:
   - 33: {fileID: 68342804}
   - 65: {fileID: 68342803}
   - 23: {fileID: 68342802}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 68342805}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,12 +579,8 @@ GameObject:
   - 33: {fileID: 147011966}
   - 65: {fileID: 147011965}
   - 23: {fileID: 147011964}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 147011967}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,12 +665,8 @@ GameObject:
   - 33: {fileID: 148368043}
   - 65: {fileID: 148368042}
   - 23: {fileID: 148368041}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 148368044}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,12 +887,8 @@ GameObject:
   - 33: {fileID: 209582550}
   - 65: {fileID: 209582549}
   - 23: {fileID: 209582548}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 209582551}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,12 +1025,8 @@ GameObject:
   - 33: {fileID: 239843968}
   - 65: {fileID: 239843967}
   - 23: {fileID: 239843966}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 239843969}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,12 +1111,8 @@ GameObject:
   - 33: {fileID: 255974266}
   - 65: {fileID: 255974265}
   - 23: {fileID: 255974264}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 255974267}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,12 +1197,8 @@ GameObject:
   - 33: {fileID: 267270483}
   - 65: {fileID: 267270482}
   - 23: {fileID: 267270481}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 267270485}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1311,12 +1283,8 @@ GameObject:
   - 33: {fileID: 267364224}
   - 65: {fileID: 267364223}
   - 23: {fileID: 267364222}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 267364225}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,12 +1504,8 @@ GameObject:
   - 33: {fileID: 290713591}
   - 65: {fileID: 290713590}
   - 23: {fileID: 290713589}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 290713592}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2734,12 +2698,8 @@ GameObject:
   - 33: {fileID: 606663642}
   - 65: {fileID: 606663641}
   - 23: {fileID: 606663640}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 606663643}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,12 +2784,8 @@ GameObject:
   - 33: {fileID: 609792992}
   - 65: {fileID: 609792991}
   - 23: {fileID: 609792990}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 609792993}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3050,12 +3006,8 @@ GameObject:
   - 33: {fileID: 668920427}
   - 65: {fileID: 668920426}
   - 23: {fileID: 668920425}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 668920428}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,12 +3236,8 @@ GameObject:
   - 33: {fileID: 690081811}
   - 65: {fileID: 690081810}
   - 23: {fileID: 690081809}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 690081812}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3518,12 +3466,8 @@ GameObject:
   - 33: {fileID: 740628912}
   - 65: {fileID: 740628911}
   - 23: {fileID: 740628910}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 740628913}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3952,12 +3896,8 @@ GameObject:
   - 33: {fileID: 793063881}
   - 65: {fileID: 793063880}
   - 23: {fileID: 793063879}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 793063882}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4413,12 +4353,8 @@ GameObject:
   - 33: {fileID: 940513065}
   - 65: {fileID: 940513064}
   - 23: {fileID: 940513063}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 940513066}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4695,12 +4631,8 @@ GameObject:
   - 33: {fileID: 969581150}
   - 65: {fileID: 969581149}
   - 23: {fileID: 969581148}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 969581151}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4785,12 +4717,8 @@ GameObject:
   - 33: {fileID: 973008186}
   - 65: {fileID: 973008185}
   - 23: {fileID: 973008184}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 973008187}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4947,12 +4875,8 @@ GameObject:
   - 33: {fileID: 1003200292}
   - 65: {fileID: 1003200291}
   - 23: {fileID: 1003200290}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1003200293}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5181,12 +5105,8 @@ GameObject:
   - 33: {fileID: 1051491992}
   - 65: {fileID: 1051491991}
   - 23: {fileID: 1051491990}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1051491993}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5271,12 +5191,8 @@ GameObject:
   - 33: {fileID: 1060604000}
   - 65: {fileID: 1060603999}
   - 23: {fileID: 1060603998}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1060604001}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5759,12 +5675,8 @@ GameObject:
   - 33: {fileID: 1209047446}
   - 65: {fileID: 1209047445}
   - 23: {fileID: 1209047444}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1209047447}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6829,12 +6741,8 @@ GameObject:
   - 33: {fileID: 1478389200}
   - 65: {fileID: 1478389199}
   - 23: {fileID: 1478389198}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1478389201}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7191,12 +7099,8 @@ GameObject:
   - 33: {fileID: 1674308949}
   - 65: {fileID: 1674308948}
   - 23: {fileID: 1674308947}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1674308950}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7281,12 +7185,8 @@ GameObject:
   - 33: {fileID: 1677029562}
   - 65: {fileID: 1677029561}
   - 23: {fileID: 1677029560}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1677029563}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7435,12 +7335,8 @@ GameObject:
   - 33: {fileID: 1713855461}
   - 65: {fileID: 1713855460}
   - 23: {fileID: 1713855459}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1713855462}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7797,12 +7693,8 @@ GameObject:
   - 33: {fileID: 1778478400}
   - 65: {fileID: 1778478399}
   - 23: {fileID: 1778478398}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1778478401}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7999,12 +7891,8 @@ GameObject:
   - 33: {fileID: 1825803568}
   - 65: {fileID: 1825803567}
   - 23: {fileID: 1825803566}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1825803569}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8161,12 +8049,8 @@ GameObject:
   - 33: {fileID: 1830510866}
   - 65: {fileID: 1830510865}
   - 23: {fileID: 1830510864}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1830510867}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8503,12 +8387,8 @@ GameObject:
   - 33: {fileID: 1850225426}
   - 65: {fileID: 1850225425}
   - 23: {fileID: 1850225424}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1850225427}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8919,12 +8799,8 @@ GameObject:
   - 33: {fileID: 1915184568}
   - 65: {fileID: 1915184567}
   - 23: {fileID: 1915184566}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1915184569}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9073,12 +8949,8 @@ GameObject:
   - 33: {fileID: 1926369471}
   - 65: {fileID: 1926369470}
   - 23: {fileID: 1926369469}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1926369472}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9227,12 +9099,8 @@ GameObject:
   - 33: {fileID: 1948245057}
   - 65: {fileID: 1948245056}
   - 23: {fileID: 1948245055}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 1948245058}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9453,12 +9321,8 @@ GameObject:
   - 33: {fileID: 2005876688}
   - 65: {fileID: 2005876687}
   - 23: {fileID: 2005876686}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 2005876689}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9543,12 +9407,8 @@ GameObject:
   - 33: {fileID: 2033023677}
   - 65: {fileID: 2033023676}
   - 23: {fileID: 2033023675}
-<<<<<<< HEAD
-  m_Layer: 9
-=======
   - 114: {fileID: 2033023678}
-  m_Layer: 0
->>>>>>> d264b8238b06f8f9c8ff631415e66bcf88f8d0a2
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
