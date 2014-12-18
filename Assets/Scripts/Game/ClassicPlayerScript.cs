@@ -87,10 +87,10 @@ public class ClassicPlayerScript : MonoBehaviour
     //   // throw new System.NotImplementedException();
     //}
 
-    public override void ExecuteActionT(CharacterAction action)
 
-    public void ExecuteAction(string actionName, Vector3 pos)
+   // public void ExecuteAction(string actionName, Vector3 pos)
 
+    public void ExecuteActionT(CharacterAction action)
     {
        
         

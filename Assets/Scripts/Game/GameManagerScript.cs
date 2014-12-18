@@ -11,10 +11,6 @@ public class GameManagerScript : MonoBehaviour
 
     //Singletonisation
     public static GameManagerScript currentGameManagerScript;
-    
-    [SerializeField]
-
-    private APlayerScript[] _playersScript;
 
     SmartActionManagerScript _smartActionManager;
 
@@ -88,8 +84,7 @@ public class GameManagerScript : MonoBehaviour
       //  Timer.text = Time.timeSinceLevelLoad.ToString();
       //  timer.text = Time.timeSinceLevelLoad.ToString();
     }
-    public void WantToMove(int player, Vector3 pos)
-=======
+    public void WantToMove(int player, Vector3 pos) {
         if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
             //Debug
             PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
