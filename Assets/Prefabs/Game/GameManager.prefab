@@ -45,8 +45,10 @@ MonoBehaviour:
   _gameManager: {fileID: 11400002}
   _gameCamera: {fileID: 0}
   _groundCollider: {fileID: 0}
-  _groundDistance: 100
-  _lineMovement: {fileID: 0}
+  _moveButton: {fileID: 0}
+  _collectButton: {fileID: 0}
+  _networkView: {fileID: 14800000}
+  _endTurnButton: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,7 +60,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smartActionManager: {fileID: 11400004}
   _playersScript:
   - {fileID: 0}
   _playersGameObject:

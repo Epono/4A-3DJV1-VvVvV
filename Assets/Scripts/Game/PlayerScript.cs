@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerScript
-{
+public class PlayerScript : MonoBehaviour {
 
     [SerializeField]
     NavMeshAgent _agent;
@@ -15,35 +14,26 @@ public class PlayerScript
     int _actionPoints;
 
     [SerializeField]
-    ArrayList actionList;
+    public List<CharacterAction> actionList;
 
-    void Start()
-    {
-        actionList = new ArrayList();
+    void Start() {
+        actionList = new List<CharacterAction>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void FixedUpdate()
-    {
+    void Update() {
 
     }
-/*
-    public void ExecuteAction(string actionName)
-    {
+
+    void FixedUpdate() {
 
     }
- */
 
-    public void ExecuteActionT(CharacterAction action)
-    {
-        /*
-        if (this.transform.position != action.getLocation())
-        {
+    public void AddActionInList(CharacterAction currentAction) {
+        actionList.Add(currentAction);
+    }
+
+    public void ExecuteActionT(CharacterAction action) {
+        if(this.transform.position != action.getLocation()) {
             Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
             _agent.SetDestination(action.getLocation());
             Debug.Log("Mon_AgentPATH:" + _agent.path);
@@ -52,6 +42,5 @@ public class PlayerScript
         }
         //_agent.ResetPath();
         // throw new System.NotImplementedException();
-       */
     }
 }

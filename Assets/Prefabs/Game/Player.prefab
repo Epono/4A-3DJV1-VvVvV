@@ -13,9 +13,9 @@ GameObject:
   - 54: {fileID: 5400000}
   - 148: {fileID: 14800000}
   - 148: {fileID: 14800002}
-  - 114: {fileID: 11400000}
   - 195: {fileID: 19500000}
   - 136: {fileID: 13600000}
+  - 114: {fileID: 11400000}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -85,17 +85,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00f3ce29e48ad245a60adf5998dc57b, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b71cc7f87ef24439072dbdc38aa2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 19500000}
-  _ballsTransform: []
-  _lineMovement: {fileID: 0}
-  _ballsRigidBody: []
   _transform: {fileID: 400000}
-  _shootDistance: 0
-  _shootImpulse: 0
-  playerId: 0
+  _actionPoints: 5
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -103,7 +98,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: .5
   m_Height: 2
@@ -115,7 +110,7 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 400000}
   m_ViewID:
@@ -127,7 +122,7 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 5400000}
   m_ViewID:
