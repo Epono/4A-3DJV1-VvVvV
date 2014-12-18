@@ -11,10 +11,11 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11400000}
-  - 195: {fileID: 19500000}
   - 148: {fileID: 14800000}
   - 148: {fileID: 14800002}
+  - 148: {fileID: 14800004}
+  - 114: {fileID: 11400000}
+  - 195: {fileID: 19500000}
   - 136: {fileID: 13600000}
   m_Layer: 10
   m_Name: Player
@@ -95,12 +96,9 @@ MonoBehaviour:
   _transform: {fileID: 400000}
   _shootDistance: 0
   _shootImpulse: 0
-<<<<<<< .mine  playerId: 0
---- !u!135 &13500000
-SphereCollider:
-=======--- !u!136 &13600000
+--- !u!136 &13600000
 CapsuleCollider:
->>>>>>> .theirs  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -117,7 +115,7 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StateSynchronization: 1
   m_Observed: {fileID: 400000}
   m_ViewID:
@@ -129,13 +127,24 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StateSynchronization: 1
   m_Observed: {fileID: 5400000}
   m_ViewID:
     m_ID: 0
     m_Type: 0
-
+--- !u!148 &14800004
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 400000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!195 &19500000
 NavMeshAgent:
   m_ObjectHideFlags: 1
