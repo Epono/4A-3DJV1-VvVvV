@@ -346,6 +346,7 @@ GameObject:
   - 33: {fileID: 68342804}
   - 65: {fileID: 68342803}
   - 23: {fileID: 68342802}
+  - 114: {fileID: 68342805}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -407,6 +408,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1759315712}
   m_GameObject: {fileID: 68342800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &68342805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1759315712}
+  m_GameObject: {fileID: 68342800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &89869310
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +570,7 @@ GameObject:
   - 33: {fileID: 147011966}
   - 65: {fileID: 147011965}
   - 23: {fileID: 147011964}
+  - 114: {fileID: 147011967}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -617,6 +632,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1889142618}
   m_GameObject: {fileID: 147011962}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &147011967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889142618}
+  m_GameObject: {fileID: 147011962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &148368039
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +656,7 @@ GameObject:
   - 33: {fileID: 148368043}
   - 65: {fileID: 148368042}
   - 23: {fileID: 148368041}
+  - 114: {fileID: 148368044}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -689,6 +718,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1802658246}
   m_GameObject: {fileID: 148368039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &148368044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802658246}
+  m_GameObject: {fileID: 148368039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &176054043
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +875,7 @@ GameObject:
   - 33: {fileID: 209582550}
   - 65: {fileID: 209582549}
   - 23: {fileID: 209582548}
+  - 114: {fileID: 209582551}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -894,6 +937,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1292326496}
   m_GameObject: {fileID: 209582546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &209582551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1292326496}
+  m_GameObject: {fileID: 209582546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+--- !u!1001 &214281741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 112.296997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 54.3233337
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 141.184906
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+  m_RootGameObject: {fileID: 1064685527}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &239843964
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +1013,7 @@ GameObject:
   - 33: {fileID: 239843968}
   - 65: {fileID: 239843967}
   - 23: {fileID: 239843966}
+  - 114: {fileID: 239843969}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -966,6 +1075,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 964788109}
   m_GameObject: {fileID: 239843964}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &239843969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 964788109}
+  m_GameObject: {fileID: 239843964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &255974262
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1099,7 @@ GameObject:
   - 33: {fileID: 255974266}
   - 65: {fileID: 255974265}
   - 23: {fileID: 255974264}
+  - 114: {fileID: 255974267}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -1038,6 +1161,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1896174855}
   m_GameObject: {fileID: 255974262}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &255974267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1896174855}
+  m_GameObject: {fileID: 255974262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &267270480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1185,7 @@ GameObject:
   - 33: {fileID: 267270483}
   - 65: {fileID: 267270482}
   - 23: {fileID: 267270481}
+  - 114: {fileID: 267270485}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -1110,6 +1247,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1874101459}
   m_RootOrder: 11
+--- !u!114 &267270485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1703687235}
+  m_GameObject: {fileID: 267270480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &267364220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1271,7 @@ GameObject:
   - 33: {fileID: 267364224}
   - 65: {fileID: 267364223}
   - 23: {fileID: 267364222}
+  - 114: {fileID: 267364225}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -1182,6 +1333,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1936490813}
   m_GameObject: {fileID: 267364220}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &267364225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1936490813}
+  m_GameObject: {fileID: 267364220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &272079233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,10 +1474,10 @@ Transform:
   m_GameObject: {fileID: 283772231}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
   m_LocalPosition: {x: 0, y: 1000, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: .99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &290713587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1489,7 @@ GameObject:
   - 33: {fileID: 290713591}
   - 65: {fileID: 290713590}
   - 23: {fileID: 290713589}
+  - 114: {fileID: 290713592}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -1386,6 +1551,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 956195184}
   m_GameObject: {fileID: 290713587}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &290713592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 956195184}
+  m_GameObject: {fileID: 290713587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &308930026
 Prefab:
   m_ObjectHideFlags: 0
@@ -2411,6 +2589,7 @@ GameObject:
   - 33: {fileID: 606663642}
   - 65: {fileID: 606663641}
   - 23: {fileID: 606663640}
+  - 114: {fileID: 606663643}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -2472,6 +2651,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 547985228}
   m_GameObject: {fileID: 606663638}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &606663643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 547985228}
+  m_GameObject: {fileID: 606663638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &609792988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2675,7 @@ GameObject:
   - 33: {fileID: 609792992}
   - 65: {fileID: 609792991}
   - 23: {fileID: 609792990}
+  - 114: {fileID: 609792993}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -2544,6 +2737,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 45659466}
   m_GameObject: {fileID: 609792988}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &609792993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 45659466}
+  m_GameObject: {fileID: 609792988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &613548844
 Prefab:
   m_ObjectHideFlags: 0
@@ -2688,6 +2894,7 @@ GameObject:
   - 33: {fileID: 668920427}
   - 65: {fileID: 668920426}
   - 23: {fileID: 668920425}
+  - 114: {fileID: 668920428}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -2749,6 +2956,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1920495415}
   m_GameObject: {fileID: 668920423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668920428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1920495415}
+  m_GameObject: {fileID: 668920423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &672919845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +3118,7 @@ GameObject:
   - 33: {fileID: 690081811}
   - 65: {fileID: 690081810}
   - 23: {fileID: 690081809}
+  - 114: {fileID: 690081812}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -2959,6 +3180,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 968611828}
   m_GameObject: {fileID: 690081807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &690081812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 968611828}
+  m_GameObject: {fileID: 690081807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &690310355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,6 +3342,7 @@ GameObject:
   - 33: {fileID: 740628912}
   - 65: {fileID: 740628911}
   - 23: {fileID: 740628910}
+  - 114: {fileID: 740628913}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -3169,6 +3404,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 308930026}
   m_GameObject: {fileID: 740628908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &740628913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 308930026}
+  m_GameObject: {fileID: 740628908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &747442138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3763,7 @@ GameObject:
   - 33: {fileID: 793063881}
   - 65: {fileID: 793063880}
   - 23: {fileID: 793063879}
+  - 114: {fileID: 793063882}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -3576,6 +3825,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 902114861}
   m_GameObject: {fileID: 793063877}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &793063882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 902114861}
+  m_GameObject: {fileID: 793063877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &802422740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,6 +4211,7 @@ GameObject:
   - 33: {fileID: 940513065}
   - 65: {fileID: 940513064}
   - 23: {fileID: 940513063}
+  - 114: {fileID: 940513066}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4010,6 +4273,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 486269036}
   m_GameObject: {fileID: 940513061}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &940513066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 486269036}
+  m_GameObject: {fileID: 940513061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &956195184
 Prefab:
   m_ObjectHideFlags: 0
@@ -4213,6 +4489,7 @@ GameObject:
   - 33: {fileID: 969581150}
   - 65: {fileID: 969581149}
   - 23: {fileID: 969581148}
+  - 114: {fileID: 969581151}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4274,6 +4551,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 191409607}
   m_GameObject: {fileID: 969581146}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &969581151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 191409607}
+  m_GameObject: {fileID: 969581146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &973008182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,6 +4575,7 @@ GameObject:
   - 33: {fileID: 973008186}
   - 65: {fileID: 973008185}
   - 23: {fileID: 973008184}
+  - 114: {fileID: 973008187}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4346,6 +4637,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 11137236}
   m_GameObject: {fileID: 973008182}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &973008187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 11137236}
+  m_GameObject: {fileID: 973008182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &981071317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,6 +4730,7 @@ GameObject:
   - 33: {fileID: 1003200292}
   - 65: {fileID: 1003200291}
   - 23: {fileID: 1003200290}
+  - 114: {fileID: 1003200293}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4487,6 +4792,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1953796323}
   m_GameObject: {fileID: 1003200288}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1003200293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1953796323}
+  m_GameObject: {fileID: 1003200288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1029156827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,6 +4954,7 @@ GameObject:
   - 33: {fileID: 1051491992}
   - 65: {fileID: 1051491991}
   - 23: {fileID: 1051491990}
+  - 114: {fileID: 1051491993}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4697,6 +5016,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1223549701}
   m_GameObject: {fileID: 1051491988}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1051491993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223549701}
+  m_GameObject: {fileID: 1051491988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1060603996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4708,6 +5040,7 @@ GameObject:
   - 33: {fileID: 1060604000}
   - 65: {fileID: 1060603999}
   - 23: {fileID: 1060603998}
+  - 114: {fileID: 1060604001}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4769,6 +5102,73 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1660397783}
   m_GameObject: {fileID: 1060603996}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1060604001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1660397783}
+  m_GameObject: {fileID: 1060603996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+--- !u!1 &1064685527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+  m_PrefabInternal: {fileID: 214281741}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1064685530}
+  - 114: {fileID: 1064685529}
+  - 148: {fileID: 1064685528}
+  m_Layer: 0
+  m_Name: PersistentPlayers
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!148 &1064685528
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 0ad29534c8111ab438573ed192530a8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 214281741}
+  m_GameObject: {fileID: 1064685527}
+  m_Enabled: 1
+  m_StateSynchronization: 2
+  m_Observed: {fileID: 1064685530}
+  m_ViewID:
+    m_ID: 4
+    m_Type: 1
+--- !u!114 &1064685529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 0ad29534c8111ab438573ed192530a8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 214281741}
+  m_GameObject: {fileID: 1064685527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d2e74fe5bd8ef49891142ffafec700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1064685530
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+  m_PrefabInternal: {fileID: 214281741}
+  m_GameObject: {fileID: 1064685527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 112.296997, y: 54.3233337, z: 141.184906}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1001 &1107741347
 Prefab:
   m_ObjectHideFlags: 0
@@ -5115,6 +5515,7 @@ GameObject:
   - 33: {fileID: 1209047446}
   - 65: {fileID: 1209047445}
   - 23: {fileID: 1209047444}
+  - 114: {fileID: 1209047447}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -5176,6 +5577,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 547785572}
   m_GameObject: {fileID: 1209047442}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1209047447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 547785572}
+  m_GameObject: {fileID: 1209047442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1223549701
 Prefab:
   m_ObjectHideFlags: 0
@@ -5633,8 +6047,8 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 30
+  orthographic: 0
   orthographic size: 90
   m_Depth: -1
   m_CullingMask:
@@ -5658,7 +6072,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1335966984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,7 +6381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
       propertyPath: _gameCamera
@@ -6211,6 +6625,7 @@ GameObject:
   - 33: {fileID: 1478389200}
   - 65: {fileID: 1478389199}
   - 23: {fileID: 1478389198}
+  - 114: {fileID: 1478389201}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -6272,6 +6687,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2092402976}
   m_GameObject: {fileID: 1478389196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1478389201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 2092402976}
+  m_GameObject: {fileID: 1478389196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1545562370
 GameObject:
   m_ObjectHideFlags: 0
@@ -6549,6 +6977,7 @@ GameObject:
   - 33: {fileID: 1674308949}
   - 65: {fileID: 1674308948}
   - 23: {fileID: 1674308947}
+  - 114: {fileID: 1674308950}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -6610,6 +7039,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 792704634}
   m_GameObject: {fileID: 1674308945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1674308950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 792704634}
+  m_GameObject: {fileID: 1674308945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1677029558
 GameObject:
   m_ObjectHideFlags: 0
@@ -6621,6 +7063,7 @@ GameObject:
   - 33: {fileID: 1677029562}
   - 65: {fileID: 1677029561}
   - 23: {fileID: 1677029560}
+  - 114: {fileID: 1677029563}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -6682,6 +7125,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 784977529}
   m_GameObject: {fileID: 1677029558}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1677029563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 784977529}
+  m_GameObject: {fileID: 1677029558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1703687235
 Prefab:
   m_ObjectHideFlags: 0
@@ -6757,6 +7213,7 @@ GameObject:
   - 33: {fileID: 1713855461}
   - 65: {fileID: 1713855460}
   - 23: {fileID: 1713855459}
+  - 114: {fileID: 1713855462}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -6818,6 +7275,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1751040121}
   m_GameObject: {fileID: 1713855457}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1713855462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1751040121}
+  m_GameObject: {fileID: 1713855457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1751040121
 Prefab:
   m_ObjectHideFlags: 0
@@ -7095,6 +7565,7 @@ GameObject:
   - 33: {fileID: 1778478400}
   - 65: {fileID: 1778478399}
   - 23: {fileID: 1778478398}
+  - 114: {fileID: 1778478401}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -7156,6 +7627,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 541880670}
   m_GameObject: {fileID: 1778478396}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1778478401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 541880670}
+  m_GameObject: {fileID: 1778478396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1802658246
 Prefab:
   m_ObjectHideFlags: 0
@@ -7279,6 +7763,7 @@ GameObject:
   - 33: {fileID: 1825803568}
   - 65: {fileID: 1825803567}
   - 23: {fileID: 1825803566}
+  - 114: {fileID: 1825803569}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -7340,6 +7825,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1107741347}
   m_GameObject: {fileID: 1825803564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1825803569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1107741347}
+  m_GameObject: {fileID: 1825803564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1829926386
 GameObject:
   m_ObjectHideFlags: 0
@@ -7420,6 +7918,7 @@ GameObject:
   - 33: {fileID: 1830510866}
   - 65: {fileID: 1830510865}
   - 23: {fileID: 1830510864}
+  - 114: {fileID: 1830510867}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -7481,6 +7980,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 866216386}
   m_GameObject: {fileID: 1830510862}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1830510867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 866216386}
+  m_GameObject: {fileID: 1830510862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1839480009
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,7 +8070,7 @@ Transform:
   - {fileID: 703356192}
   - {fileID: 1545562374}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1845325181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,7 +8243,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1850225422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7743,6 +8255,7 @@ GameObject:
   - 33: {fileID: 1850225426}
   - 65: {fileID: 1850225425}
   - 23: {fileID: 1850225424}
+  - 114: {fileID: 1850225427}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -7804,6 +8317,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 5443992}
   m_GameObject: {fileID: 1850225422}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1850225427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 5443992}
+  m_GameObject: {fileID: 1850225422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1873113975
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,7 +8460,7 @@ Transform:
   - {fileID: 255974263}
   - {fileID: 1926369468}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1001 &1883292932
 Prefab:
   m_ObjectHideFlags: 0
@@ -8134,6 +8660,7 @@ GameObject:
   - 33: {fileID: 1915184568}
   - 65: {fileID: 1915184567}
   - 23: {fileID: 1915184566}
+  - 114: {fileID: 1915184569}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -8195,6 +8722,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1196648223}
   m_GameObject: {fileID: 1915184564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1915184569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1196648223}
+  m_GameObject: {fileID: 1915184564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1920495415
 Prefab:
   m_ObjectHideFlags: 0
@@ -8270,6 +8810,7 @@ GameObject:
   - 33: {fileID: 1926369471}
   - 65: {fileID: 1926369470}
   - 23: {fileID: 1926369469}
+  - 114: {fileID: 1926369472}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -8331,6 +8872,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1275810916}
   m_GameObject: {fileID: 1926369467}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1926369472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1275810916}
+  m_GameObject: {fileID: 1926369467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1001 &1936490813
 Prefab:
   m_ObjectHideFlags: 0
@@ -8406,6 +8960,7 @@ GameObject:
   - 33: {fileID: 1948245057}
   - 65: {fileID: 1948245056}
   - 23: {fileID: 1948245055}
+  - 114: {fileID: 1948245058}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -8467,6 +9022,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 613548844}
   m_GameObject: {fileID: 1948245053}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1948245058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 613548844}
+  m_GameObject: {fileID: 1948245053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &1950832697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,6 +9179,7 @@ GameObject:
   - 33: {fileID: 2005876688}
   - 65: {fileID: 2005876687}
   - 23: {fileID: 2005876686}
+  - 114: {fileID: 2005876689}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -8672,6 +9241,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1619083579}
   m_GameObject: {fileID: 2005876684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2005876689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1619083579}
+  m_GameObject: {fileID: 2005876684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &2033023673
 GameObject:
   m_ObjectHideFlags: 0
@@ -8683,6 +9265,7 @@ GameObject:
   - 33: {fileID: 2033023677}
   - 65: {fileID: 2033023676}
   - 23: {fileID: 2033023675}
+  - 114: {fileID: 2033023678}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -8744,6 +9327,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1354237162}
   m_GameObject: {fileID: 2033023673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2033023678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1354237162}
+  m_GameObject: {fileID: 2033023673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
 --- !u!1 &2051850080
 GameObject:
   m_ObjectHideFlags: 0
@@ -8805,7 +9401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &2051850084
 MonoBehaviour:
   m_ObjectHideFlags: 0
