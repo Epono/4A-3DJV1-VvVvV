@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClassicPlayerScript
+public class ClassicPlayerScript : MonoBehaviour
 {
 
     [SerializeField]
@@ -19,21 +19,27 @@ public class ClassicPlayerScript
     [SerializeField]
     Transform _transform;
 
-    //[SerializeField]
-    //float _shootDistance;
+    [SerializeField]
+    float _shootDistance;
 
-    //[SerializeField]
-    //float _shootImpulse;
+    [SerializeField]
+    float _shootImpulse;
 
-    //float _squareShootDistance;
+    [SerializeField]
+    GameObject Coin;
+    
+    float _squareShootDistance;
     // Use this for initialization
+
+   // List<CharacterAction> _maList = new List<CharacterAction>();
 
     [SerializeField]
     public int playerId;
 
+
     void Start()
     {
-        //_squareShootDistance = Mathf.Pow(_shootDistance, 2);
+        _squareShootDistance = Mathf.Pow(_shootDistance, 2);
     }
 
     // Update is called once per frame
@@ -42,52 +48,64 @@ public class ClassicPlayerScript
         
     }
 
-    void FixedUpdate()
-    {
-        //Affichage d'un trait pour symboliser le déplacement
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    other.
+    //}
 
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-         //   Debug.Log("x" + Input.mousePosition.x);
-        //    _lineMovement.SetPosition(1, new Vector3(Input.mousePosition.x-_transform.position.x, 0, Input.mousePosition.y));
-           //  Input.mousePosition.z);
-            //Debug.Log(Input.mousePresent.)
-
-          //  _lineMovement.SetWidth(this._transform.position.x, Input.mousePosition.x);
-        }
-        
-    }
     #region implemented abstract members of APayerScript
 
-    //public override void TryToMove(Vector3 pos)
+    public void TryToMove(Vector3 pos)
+    {
+        Debug.Log(gameObject.name + "TRY TO MOVE TO : " + pos);
+        _agent.SetDestination(pos);
+    }
+
+    public void TryToShoot()
+    {
+        Debug.Log(gameObject.name + " shoots");
+        for (var i = 0; i < _ballsTransform.Length; i++)
+        {
+            var b = _ballsTransform[i];
+            var brigid = _ballsRigidBody[i];
+
+            var distanceVector = b.position - _transform.position;
+
+            if (distanceVector.sqrMagnitude <= _squareShootDistance)
+            {
+                brigid.AddForce(distanceVector.normalized * _shootImpulse, ForceMode.Impulse);
+            }
+        }
+    }
+
+
+    //public override void ExecuteAction(string actionName, Vector3 pos)
     //{
-    //    //Debug.Log(gameObject.name + "TRY TO MOVE TO : " + pos);
-    //    _agent.SetDestination(pos);
-    //}
-
-    //public override void TryToShoot()
-    //{
-    //    //Debug.Log(gameObject.name + " shoots");
-    //    for (var i = 0; i < _ballsTransform.Length; i++)
-    //    {
-    //        var b = _ballsTransform[i];
-    //        var brigid = _ballsRigidBody[i];
-
-    //        var distanceVector = b.position - _transform.position;
-
-    //        if (distanceVector.sqrMagnitude <= _squareShootDistance)
-    //        {
-    //            brigid.AddForce(distanceVector.normalized * _shootImpulse, ForceMode.Impulse);
-    //        }
-    //    }
-    //}
-
- //   public override void ExecuteAction(string actionName, Vector3 pos)
-  //  {
-        //Debug.Log(gameObject.name + "Execute action :" + actionName);
+    //    Debug.Log(gameObject.name + "Execute action :" + actionName);
     //    _agent.SetDestination(pos);
 
-       // throw new System.NotImplementedException();
+    //   // throw new System.NotImplementedException();
     //}
+
+    public override void ExecuteActionT(CharacterAction action)
+
+    public void ExecuteAction(string actionName, Vector3 pos)
+
+    {
+       
+        
+        
+        if(this.transform.position != action.getLocation())
+        {
+            Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
+            _agent.SetDestination(action.getLocation());
+            Debug.Log("Mon_AgentPATH:" + _agent.path);
+
+            Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
+        }
+        //_agent.ResetPath();
+        // throw new System.NotImplementedException();
+    }
+
     #endregion
 }

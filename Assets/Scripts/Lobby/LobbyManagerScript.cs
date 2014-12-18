@@ -15,6 +15,9 @@ public class LobbyManagerScript : MonoBehaviour
     Button _exitLobbyButton;
 
     [SerializeField]
+    Button _startGame;
+
+    [SerializeField]
     NetworkView _networkView;
 
     [SerializeField]
@@ -38,6 +41,7 @@ public class LobbyManagerScript : MonoBehaviour
 
     void Start()
     {
+        _startGame.onClick.AddListener(() => { Application.LoadLevel(2); });
         _exitLobbyButton.onClick.AddListener(() => { exitLobby(); });
         if (NetworkManagerScript.currentNetworkManagerScript._isServer)
         {
@@ -48,8 +52,10 @@ public class LobbyManagerScript : MonoBehaviour
             Debug.Log("Lobby joined, waiting for other players ...");
         }
 
+        
     }
 
+   
     public void exitLobby()
     {
         if (NetworkManagerScript.currentNetworkManagerScript._isServer)

@@ -17,9 +17,6 @@ public class SmartActionManagerScript : MonoBehaviour {
     {
         bool boolActionIsAchievable = false;
 
-
-
-
         return boolActionIsAchievable;
     }
 }
