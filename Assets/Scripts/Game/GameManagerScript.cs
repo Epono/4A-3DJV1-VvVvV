@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 
 public class GameManagerScript : MonoBehaviour
@@ -8,9 +11,31 @@ public class GameManagerScript : MonoBehaviour
 
     //Singletonisation
     public static GameManagerScript currentGameManagerScript;
+    
+    [SerializeField]
+
+    private APlayerScript[] _playersScript;
+
+    SmartActionManagerScript _smartActionManager;
 
     [SerializeField]
-    private APlayerScript[] _playersScript;
+    private PlayerScript[] _playersScript;
+
+    [SerializeField]
+    private GameObject[] _playersGameObject;
+
+    /*
+    [SerializeField]
+    public Object _playerPrefab;
+    */
+
+    [SerializeField]
+    public Material _otherPlayerMaterial;
+
+
+    [SerializeField]
+    public NetworkView _networkView;
+
 
     //[SerializeField]
     //GUIText Timer;
@@ -64,9 +89,35 @@ public class GameManagerScript : MonoBehaviour
       //  timer.text = Time.timeSinceLevelLoad.ToString();
     }
     public void WantToMove(int player, Vector3 pos)
-    {
-        _playersScript[player].TryToMove(pos);
+=======
+        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
+            //Debug
+            PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
+            //_networkView.RPC("TellPlayerWhoHeIs", RPCMode.Others);
+
+   
+        } else {
+            foreach(GameObject go in _playersGameObject) {
+                if(!go.name.Equals(int.Parse(Network.player.ToString()))) {
+                    go.GetComponent<Renderer>().material = _otherPlayerMaterial;
+                }
+            }
+        }
     }
+
+    [RPC]
+    void TellPlayerWhoHeIs() {
+
+
+        foreach(GameObject go in _playersGameObject) {
+            if(!go.name.Equals(int.Parse(Network.player.ToString()))) {
+                go.GetComponent<Renderer>().material = _otherPlayerMaterial;
+            }
+        }
+    }
+
+    // Update is called once per frame
+
                 
    
     //Execution des actions d'un joueur
@@ -114,6 +165,7 @@ public class GameManagerScript : MonoBehaviour
       //  maList.ConvertAll(CharacterActionMove);
         for (int i = 0; i < maList.Count; i++)
         {
+
             Debug.Log("Taille de la liste :" + maList.Count);
            // Debug.Log("type de ma putain de liste :" + maList[i].GetType());
            // Debug.Log("??? de ma putain de liste :" + maList[i]);
@@ -123,6 +175,9 @@ public class GameManagerScript : MonoBehaviour
            
             //_playersScript[player].ExecuteActionT(dico["MoveToLocation"]);
             _playersScript[player].ExecuteActionT(maList[i]);
+
+            //_playersScript[player].ExecuteAction(actionNameList[i], pos);
+
         }
     }
 }

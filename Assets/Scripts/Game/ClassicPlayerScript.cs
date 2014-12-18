@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClassicPlayerScript : APlayerScript
+public class ClassicPlayerScript : MonoBehaviour
 {
 
     [SerializeField]
@@ -33,10 +33,13 @@ public class ClassicPlayerScript : APlayerScript
 
    // List<CharacterAction> _maList = new List<CharacterAction>();
 
+    [SerializeField]
+    public int playerId;
+
+
     void Start()
     {
         _squareShootDistance = Mathf.Pow(_shootDistance, 2);
-        
     }
 
     // Update is called once per frame
@@ -52,13 +55,13 @@ public class ClassicPlayerScript : APlayerScript
 
     #region implemented abstract members of APayerScript
 
-    public override void TryToMove(Vector3 pos)
+    public void TryToMove(Vector3 pos)
     {
         Debug.Log(gameObject.name + "TRY TO MOVE TO : " + pos);
         _agent.SetDestination(pos);
     }
 
-    public override void TryToShoot()
+    public void TryToShoot()
     {
         Debug.Log(gameObject.name + " shoots");
         for (var i = 0; i < _ballsTransform.Length; i++)
@@ -75,6 +78,7 @@ public class ClassicPlayerScript : APlayerScript
         }
     }
 
+
     //public override void ExecuteAction(string actionName, Vector3 pos)
     //{
     //    Debug.Log(gameObject.name + "Execute action :" + actionName);
@@ -84,6 +88,9 @@ public class ClassicPlayerScript : APlayerScript
     //}
 
     public override void ExecuteActionT(CharacterAction action)
+
+    public void ExecuteAction(string actionName, Vector3 pos)
+
     {
        
         
