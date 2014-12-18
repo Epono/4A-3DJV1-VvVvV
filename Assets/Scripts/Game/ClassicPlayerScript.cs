@@ -28,10 +28,12 @@ public class ClassicPlayerScript : APlayerScript
     float _squareShootDistance;
     // Use this for initialization
 
+    [SerializeField]
+    public int playerId;
+
     void Start()
     {
         _squareShootDistance = Mathf.Pow(_shootDistance, 2);
-        
     }
 
     // Update is called once per frame

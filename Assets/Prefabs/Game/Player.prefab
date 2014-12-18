@@ -12,11 +12,10 @@ GameObject:
   - 135: {fileID: 13500000}
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
-  - 148: {fileID: 14800000}
-  - 148: {fileID: 14800002}
-  - 148: {fileID: 14800004}
   - 114: {fileID: 11400000}
   - 195: {fileID: 19500000}
+  - 148: {fileID: 14800000}
+  - 148: {fileID: 14800002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -96,6 +95,7 @@ MonoBehaviour:
   _transform: {fileID: 400000}
   _shootDistance: 0
   _shootImpulse: 0
+  playerId: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 400000}
   m_ViewID:
@@ -126,21 +126,9 @@ NetworkView:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 5400000}
-  m_ViewID:
-    m_ID: 0
-    m_Type: 0
---- !u!148 &14800004
-NetworkView:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 400000}
   m_ViewID:
     m_ID: 0
     m_Type: 0
