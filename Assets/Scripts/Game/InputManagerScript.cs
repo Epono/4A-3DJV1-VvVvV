@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class InputManagerScript : MonoBehaviour
 {
@@ -16,13 +17,16 @@ public class InputManagerScript : MonoBehaviour
     Collider _groundCollider;
 
     [SerializeField]
-    float _groundDistance;
+    Button _moveButton;
 
-    private RaycastHit onTest;
+    [SerializeField]
+    Button _collectButton;
 
-    // MES AJOUTS
-    //Le manager intelligent
+    [SerializeField]
+    Button _endTurnButton;
 
+    [SerializeField]
+    GUI _menuJoueur;
 
     void Awake()
     {
@@ -40,7 +44,7 @@ public class InputManagerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -48,30 +52,32 @@ public class InputManagerScript : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
+            
                 var ray = _gameCamera.ScreenPointToRay(Input.mousePosition);
 
                 RaycastHit hitInfo;
                 Debug.Log("J'ai cliqué !");
                 if (_groundCollider.Raycast(ray, out hitInfo, float.MaxValue))
                 {
-                   // _gameManager.WantToMove(0, hitInfo.point);
+                    //_gameManager.addAction();
                    
                     Debug.Log("MoveToLocation :");
-                    _gameManager.AddActionInActionList("MoveToLocation");
 
-                    onTest = hitInfo;
-                    Debug.Log("Initialisation du raycast :");
                 }
-
-               
           }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _gameManager.ExecuteTurnAction(onTest.point);
-            }
 
-         
+            }
+    }
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(-300f,50f,100f,30f), "Move"))
+        {
+            Debug.Log("Bouton move");
+        }
     }
 }
 

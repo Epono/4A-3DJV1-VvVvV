@@ -8,12 +8,12 @@ public class GameManagerScript : MonoBehaviour
 
     //Singletonisation
     public static GameManagerScript currentGameManagerScript;
-
+    
     [SerializeField]
     SmartActionManagerScript _smartActionManager;
 
     [SerializeField]
-    private APlayerScript[] _playersScript;
+    private PlayerScript[] _playersScript;
 
     //Liste qui contiendras les actions à executer a chaque tour
     List<string> _listActionName = new List<string>();
@@ -46,17 +46,6 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
-
-    //	public void WantToShoot(int player)
-    //	{
-    //		_playersScript [player].TryToShoot();
-    //	}
-
-    public void WantToMove(int player, Vector3 pos)
-    {
-        _playersScript[player].TryToMove(pos);
-    }
-
     //J'EN SUIS LA
     public void ExecuteTurnAction(Vector3 pos)
     {
@@ -83,7 +72,7 @@ public class GameManagerScript : MonoBehaviour
         Debug.Log("On rentre dans ExecuteActionOfPlayer()");
         for (int i = 0; i < actionNameList.Count; i++)
         {
-            _playersScript[player].ExecuteAction(actionNameList[i], pos);
+            //_playersScript[player].ExecuteAction(actionNameList[i], pos);
         }
     }
 }
