@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -31,12 +32,15 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     public NetworkView _networkView;
 
+    [SerializeField]
+    Button _executeButton;
+
 
     //[SerializeField]
     //GUIText Timer;
 
     //TODO : Utilisation d'une variable pour le choix de la durée d'une partie
-    float timeleft = 60.0f * 5;
+    float timeleft = 60.0f * 3;
     //[SerializeField]
     //TextMesh timer;
 
@@ -55,9 +59,6 @@ public class GameManagerScript : MonoBehaviour {
     // Use this for initialization
     void Start() {
         PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
-
-
-
     }
 
     // Update is called once per frame

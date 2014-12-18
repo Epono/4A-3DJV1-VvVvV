@@ -33,6 +33,8 @@ public class InputManagerScript : MonoBehaviour {
     [SerializeField]
     Button _endTurnButton;
 
+    [SerializeField]
+    Button _executeButton;
 
     [SerializeField]
     GUI _menuJoueur;
@@ -48,7 +50,7 @@ public class InputManagerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        _executeButton.onClick.AddListener(() => { ExecuteActions(); });
     }
 
     // Update is called once per frame
@@ -84,8 +86,8 @@ public class InputManagerScript : MonoBehaviour {
 
             if(Input.GetKeyDown(KeyCode.Space)) {
                 // _gameManager.ExecuteTurnActionT();
-                Debug.Log("Player " + gameObject.name + " wants to execute actions");
-                _networkView.RPC("WantsToExecute", RPCMode.Server, Network.player);
+                ExecuteActions();
+
             }
 
             if(Input.GetMouseButtonUp(0)) {
@@ -103,10 +105,37 @@ public class InputManagerScript : MonoBehaviour {
                 }
             }
 
+            if(Input.touchCount > 0) {
+
+                Touch touch = Input.GetTouch(0);
+
+                if(touch.phase == TouchPhase.Ended) {
+                    var ray = _gameCamera.ScreenPointToRay(touch.position);
+
+                    RaycastHit hitInfo;
+
+                    if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue)) {
+                        //Debug.Log("MoveToLocation :");
+                        Debug.Log("Player " + gameObject.name + " wants to add a new waypoint : " + hitInfo.point);
+                        //CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point);
+                        //_gameManager.AddActionInList(moveAction);
+                        //_playerScript.AddActionInList(moveAction);
+                        _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, hitInfo.point);
+                    }
+                }
+
+
+            }
+
             if(Input.GetKeyDown(KeyCode.A)) {
                 Debug.Log("Vous souhaitez vous déplacer, cliqué dans la direction désiré");
             }
         }
+    }
+
+    void ExecuteActions() {
+        Debug.Log("Player " + gameObject.name + " wants to execute actions");
+        _networkView.RPC("WantsToExecute", RPCMode.Server, Network.player);
     }
 
     void OnGUI() {
