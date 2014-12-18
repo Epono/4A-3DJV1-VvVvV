@@ -1,21 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterAction : MonoBehaviour {
+public abstract class CharacterAction  {
 
     protected int actionPoint;
     protected string actionName;
-    protected int actionRange;
+    //protected int actionRange;
 
-	// Use this for initialization
-	void Start () {
-	   
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public virtual Vector3 getLocation()
+    {
+        return new Vector3(0,0,0); 
+    }
+    
+    public string GetActionName()
+    {
+        return actionName;
+    }
+
+    public int GetActionPoint()
+    {
+        return actionPoint;
+    }
+
+    public virtual void Execute()
+    {
+
+    }
+
 
     //void initiateActionPoint(int actionLvlSwitch)
     //{

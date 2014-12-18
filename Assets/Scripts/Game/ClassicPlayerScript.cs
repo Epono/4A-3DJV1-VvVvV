@@ -25,8 +25,13 @@ public class ClassicPlayerScript : APlayerScript
     [SerializeField]
     float _shootImpulse;
 
+    [SerializeField]
+    GameObject Coin;
+    
     float _squareShootDistance;
     // Use this for initialization
+
+   // List<CharacterAction> _maList = new List<CharacterAction>();
 
     void Start()
     {
@@ -40,21 +45,11 @@ public class ClassicPlayerScript : APlayerScript
         
     }
 
-    void FixedUpdate()
-    {
-        //Affichage d'un trait pour symboliser le déplacement
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    other.
+    //}
 
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-         //   Debug.Log("x" + Input.mousePosition.x);
-        //    _lineMovement.SetPosition(1, new Vector3(Input.mousePosition.x-_transform.position.x, 0, Input.mousePosition.y));
-           //  Input.mousePosition.z);
-            //Debug.Log(Input.mousePresent.)
-
-          //  _lineMovement.SetWidth(this._transform.position.x, Input.mousePosition.x);
-        }
-        
-    }
     #region implemented abstract members of APayerScript
 
     public override void TryToMove(Vector3 pos)
@@ -80,12 +75,30 @@ public class ClassicPlayerScript : APlayerScript
         }
     }
 
-    public override void ExecuteAction(string actionName, Vector3 pos)
-    {
-        Debug.Log(gameObject.name + "Execute action :" + actionName);
-        _agent.SetDestination(pos);
+    //public override void ExecuteAction(string actionName, Vector3 pos)
+    //{
+    //    Debug.Log(gameObject.name + "Execute action :" + actionName);
+    //    _agent.SetDestination(pos);
 
-       // throw new System.NotImplementedException();
+    //   // throw new System.NotImplementedException();
+    //}
+
+    public override void ExecuteActionT(CharacterAction action)
+    {
+       
+        
+        
+        if(this.transform.position != action.getLocation())
+        {
+            Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
+            _agent.SetDestination(action.getLocation());
+            Debug.Log("Mon_AgentPATH:" + _agent.path);
+
+            Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
+        }
+        //_agent.ResetPath();
+        // throw new System.NotImplementedException();
     }
+
     #endregion
 }

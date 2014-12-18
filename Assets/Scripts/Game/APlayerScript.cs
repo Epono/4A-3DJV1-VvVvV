@@ -21,6 +21,12 @@ public abstract class APlayerScript : MonoBehaviour {
 
 	abstract public  void TryToShoot ();
 
-    abstract public void ExecuteAction(string actionName,Vector3 pos);
-	
+    //abstract public void ExecuteAction(string actionName,Vector3 pos);
+
+    abstract public void ExecuteActionT(CharacterAction action);
+
+
+
+
+   
 }

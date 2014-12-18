@@ -23,8 +23,8 @@ public class InputManagerScript : MonoBehaviour
     // MES AJOUTS
     //Le manager intelligent
 
-    [SerializeField]
-    LineRenderer _lineMovement;
+   // [SerializeField]
+   // LineRenderer _lineMovement;
 
     
 
@@ -52,7 +52,33 @@ public class InputManagerScript : MonoBehaviour
     {
        
 
+            //if(GUI BOUTTON MOVE)
+            //{
+            //    print("Choisir un point de déplacement :");
+                
+            //    if(Input.GetMouseButtonUp(0))
+            //    {
+            //        var ray = _gameCamera.ScreenPointToRay(Input.mousePosition);
+            //        RaycastHit hitInfo;
+            //        if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue))
+            //        {
+            //            CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point));
+            //        }
+            //    }
+                
+
+            //}
+
+            //if(GUI BOUTTON PICK)
+            //{
+            //    //Recupère les pièces dans une zone
+            //}
             
+            //if(GUI BOUTTON END TURN)
+            //{
+            //   // EXECUTE LES METHODE D'ACTION;
+            //}
+
 
             if (Input.GetMouseButtonUp(0))
             {
@@ -60,25 +86,31 @@ public class InputManagerScript : MonoBehaviour
 
                 RaycastHit hitInfo;
 
-                if (_groundCollider.Raycast(ray, out hitInfo, _groundDistance))
+                if (_groundCollider.Raycast(ray, out hitInfo, float.MaxValue))
                 {
-                   // _gameManager.WantToMove(0, hitInfo.point);
-                   
+            
+                    
                     Debug.Log("MoveToLocation :");
-                    _gameManager.AddActionInActionList("MoveToLocation");
+                    CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point);
+                    _gameManager.AddActionInList(moveAction);
 
-                    onTest = hitInfo;
-                    Debug.Log("Initialisation du raycast :");
+                  
                 }
 
                
-          }
+           }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _gameManager.ExecuteTurnAction(onTest.point);
+               _gameManager.ExecuteTurnActionT();
             }
 
+            if(Input.GetKeyDown(KeyCode.A))
+            {
+                Debug.Log("Vous souhaitez vous déplacer, cliqué dans la direction désiré");
+
+            }
+            
          
     }
 }

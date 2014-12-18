@@ -4,15 +4,15 @@ using System.Collections;
 public class CharacterActionShoot : CharacterAction {
 
     //Pour désigner une target soit il faut passer un NetworkPlayer soit un Int (a determiner)
-    int actionTarget = -1;
-    
+   // int actionTarget = -1;
+   // int actionRange = 5;
 
 	// Use this for initialization
 	void Start () 
     {
         this.actionPoint = 2;
         this.actionName = "ShootDrugs";
-        this.actionRange = 5;
+      //  this.actionRange = 5;
 	    
     }
 	
@@ -31,6 +31,6 @@ public class CharacterActionShoot : CharacterAction {
 
     void SelectTarget(int target)
     {
-        this.actionTarget = target;
+  //      this.actionTarget = target;
     }
 }

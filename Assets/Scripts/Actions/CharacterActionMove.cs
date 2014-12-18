@@ -1,18 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterActionMoveToLocation : CharacterAction {
+public class CharacterActionMove : CharacterAction {
 
-	// Use this for initialization
-	void Start () {
+    public Vector3 location;
+
+	
+    public CharacterActionMove(Vector3 locationChoose)
+    {
         actionPoint = 1;
         actionName = "MoveToLocation";
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+        location = locationChoose;
+    }
+
+   // public override void Execute()
+   // {
+   //     _agent.SetDestination(getLocation());
+   // }
+    
+    public override Vector3 getLocation()
+    {
+        return location;
+    }
 
     void MoveToLocation()
     {

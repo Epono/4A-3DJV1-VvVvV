@@ -10,17 +10,19 @@ public class GameManagerScript : MonoBehaviour
     public static GameManagerScript currentGameManagerScript;
 
     [SerializeField]
-    SmartActionManagerScript _smartActionManager;
-
-    [SerializeField]
     private APlayerScript[] _playersScript;
 
-    //Liste qui contiendras les actions à executer a chaque tour
-    List<string> _listActionName = new List<string>();
+    //[SerializeField]
+    //GUIText Timer;
+    
+    //TODO : Utilisation d'une variable pour le choix de la durée d'une partie
+    float timeleft = 60.0f  * 5;
+    //[SerializeField]
+    //TextMesh timer;
 
-    //test avec un dictionnaire
-    Dictionary<string, Object> _dicoActionName = new Dictionary<string, Object>();
+    List<CharacterAction> _maList = new List<CharacterAction>();
 
+    
     void Awake()
     {
         if (currentGameManagerScript == null)
@@ -38,52 +40,89 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
+        
+
+             
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       // Debug.Log("Fin de la partie dans :" + timeleft);
+        timeleft -= Time.deltaTime;
+        if(timeleft < 0)
+        {
+            Debug.Log("GameOver");
+            Application.Quit();
+        }
     }
 
-
-    //	public void WantToShoot(int player)
-    //	{
-    //		_playersScript [player].TryToShoot();
-    //	}
-
+    void FixedUpdate()
+    {
+        //guiText.text = Time.timeSinceLevelLoad.ToString();
+      //  Timer.text = Time.timeSinceLevelLoad.ToString();
+      //  timer.text = Time.timeSinceLevelLoad.ToString();
+    }
     public void WantToMove(int player, Vector3 pos)
     {
         _playersScript[player].TryToMove(pos);
     }
-
-    //J'EN SUIS LA
-    public void ExecuteTurnAction(Vector3 pos)
+                
+   
+    //Execution des actions d'un joueur
+    public void ExecuteTurnActionT()
     {
-        Debug.Log("On rentre dans ExecuteTurnAction()");
-       // for (int i = 0; i < 3; i++ )
-        //{
-        Debug.Log(_listActionName[0]);
-        ExecuteActionOfPlayer(0, _listActionName, pos);
-        //}
-        
-           
+        Debug.Log("On rentre dans ExecuteTurnActionT()");
+              
+        ExecuteActionOfPlayerT(0, _maList);
+       
+      
     }
+
 
     //Liste d'action du tour d'un joueur
-    public void AddActionInActionList(string actionName)
+    //public void AddActionInActionList(string actionName)
+    //{
+    //    _listActionName.Add(actionName);
+    //    Debug.Log("L'action a bien été ajouté a la liste");
+    //}
+
+    //public void AddActionInDico(CharacterActionMove action)
+    //{
+    //    //_dicoActionName.Add(action.getActionName(), action);
+    //    _maList.Add(action);
+    //    Debug.Log("L'action a bien été ajouté au dico");
+    //}
+
+    public void AddActionInList(CharacterAction currentAction)
     {
-        _listActionName.Add(actionName);
-        Debug.Log("L'action a bien été ajouté a la liste");
+        _maList.Add(currentAction);
     }
 
+    //public void ExecuteActionOfPlayer(int player, List<string> actionNameList, Vector3 pos)
+    //{
+    //    Debug.Log("On rentre dans ExecuteActionOfPlayer()");
+    //    for (int i = 0; i < actionNameList.Count; i++)
+    //    {
+    //        _playersScript[player].ExecuteAction(actionNameList[i], pos);
+    //    }
+    //}
 
-    public void ExecuteActionOfPlayer(int player, List<string> actionNameList, Vector3 pos)
+    public void ExecuteActionOfPlayerT(int player, List<CharacterAction> maList)
     {
-        Debug.Log("On rentre dans ExecuteActionOfPlayer()");
-        for (int i = 0; i < actionNameList.Count; i++)
+        Debug.Log("On rentre dans ExecuteActionOfPlayerT()");
+      //  maList.ConvertAll(CharacterActionMove);
+        for (int i = 0; i < maList.Count; i++)
         {
-            _playersScript[player].ExecuteAction(actionNameList[i], pos);
+            Debug.Log("Taille de la liste :" + maList.Count);
+           // Debug.Log("type de ma putain de liste :" + maList[i].GetType());
+           // Debug.Log("??? de ma putain de liste :" + maList[i]);
+           // Debug.Log("??? de ma putain de liste :" + maList);
+
+   
+           
+            //_playersScript[player].ExecuteActionT(dico["MoveToLocation"]);
+            _playersScript[player].ExecuteActionT(maList[i]);
         }
     }
 }
