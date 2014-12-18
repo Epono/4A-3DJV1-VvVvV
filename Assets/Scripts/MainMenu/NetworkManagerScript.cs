@@ -61,7 +61,7 @@ public class NetworkManagerScript : MonoBehaviour
         {
             Debug.Log("Trying to initialize the server ...");
             Network.InitializeSecurity();
-            Network.InitializeServer(_maxNumberOfConnections, _serverPort, true);
+            Network.InitializeServer(_maxNumberOfConnections, _serverPort, !Network.HavePublicAddress());
         }
         else
         {

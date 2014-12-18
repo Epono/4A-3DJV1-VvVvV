@@ -3,22 +3,15 @@ using System.Collections;
 
 public class CoinScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public float speed = 10f;
 
-    //void OnTriggerEnter(Collider other)
-    //{
-    //    other.
-    //    other.rigidbody.AddForce(_force);
-    //    TargetRigibody.isKinematic = false;
-    //    TargetRigibody.AddForce(Vector3.down);
+    void Update() {
+        transform.Rotate(Vector3.down, speed * Time.deltaTime);
+        transform.Rotate(Vector3.left, speed * Time.deltaTime);
+    }
 
-    //}
+    void OnTriggerEnter(Collider other)
+    {
+        Object.Destroy(this.gameObject);
+    }
 }

@@ -349,7 +349,7 @@ GameObject:
   - 33: {fileID: 68342804}
   - 65: {fileID: 68342803}
   - 23: {fileID: 68342802}
-  - 114: {fileID: 68342805}
+  - 114: {fileID: 68342806}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -398,7 +398,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1759315712}
   m_GameObject: {fileID: 68342800}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -411,19 +411,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1759315712}
   m_GameObject: {fileID: 68342800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &68342805
+--- !u!114 &68342806
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1759315712}
   m_GameObject: {fileID: 68342800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &89869310
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ GameObject:
   - 33: {fileID: 147011966}
   - 65: {fileID: 147011965}
   - 23: {fileID: 147011964}
-  - 114: {fileID: 147011967}
+  - 114: {fileID: 147011968}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -628,7 +628,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1889142618}
   m_GameObject: {fileID: 147011962}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -641,19 +641,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1889142618}
   m_GameObject: {fileID: 147011962}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &147011967
+--- !u!114 &147011968
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1889142618}
   m_GameObject: {fileID: 147011962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &148368039
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - 33: {fileID: 148368043}
   - 65: {fileID: 148368042}
   - 23: {fileID: 148368041}
-  - 114: {fileID: 148368044}
+  - 114: {fileID: 148368045}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -714,7 +714,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1802658246}
   m_GameObject: {fileID: 148368039}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -727,19 +727,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1802658246}
   m_GameObject: {fileID: 148368039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &148368044
+--- !u!114 &148368045
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1802658246}
   m_GameObject: {fileID: 148368039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &176054043
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +887,7 @@ GameObject:
   - 33: {fileID: 209582550}
   - 65: {fileID: 209582549}
   - 23: {fileID: 209582548}
-  - 114: {fileID: 209582551}
+  - 114: {fileID: 209582552}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -936,7 +936,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1292326496}
   m_GameObject: {fileID: 209582546}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -949,19 +949,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1292326496}
   m_GameObject: {fileID: 209582546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &209582551
+--- !u!114 &209582552
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1292326496}
   m_GameObject: {fileID: 209582546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &214281741
 Prefab:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   - 33: {fileID: 239843968}
   - 65: {fileID: 239843967}
   - 23: {fileID: 239843966}
-  - 114: {fileID: 239843969}
+  - 114: {fileID: 239843970}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -1074,7 +1074,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 964788109}
   m_GameObject: {fileID: 239843964}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -1087,19 +1087,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 964788109}
   m_GameObject: {fileID: 239843964}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &239843969
+--- !u!114 &239843970
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 964788109}
   m_GameObject: {fileID: 239843964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &255974262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ GameObject:
   - 33: {fileID: 255974266}
   - 65: {fileID: 255974265}
   - 23: {fileID: 255974264}
-  - 114: {fileID: 255974267}
+  - 114: {fileID: 255974268}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -1160,7 +1160,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1896174855}
   m_GameObject: {fileID: 255974262}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -1173,19 +1173,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1896174855}
   m_GameObject: {fileID: 255974262}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &255974267
+--- !u!114 &255974268
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1896174855}
   m_GameObject: {fileID: 255974262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &267270480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ GameObject:
   - 33: {fileID: 267270483}
   - 65: {fileID: 267270482}
   - 23: {fileID: 267270481}
-  - 114: {fileID: 267270485}
+  - 114: {fileID: 267270486}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -1234,7 +1234,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1703687235}
   m_GameObject: {fileID: 267270480}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -1259,19 +1259,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1874101459}
   m_RootOrder: 11
---- !u!114 &267270485
+--- !u!114 &267270486
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1703687235}
   m_GameObject: {fileID: 267270480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &267364220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1283,7 @@ GameObject:
   - 33: {fileID: 267364224}
   - 65: {fileID: 267364223}
   - 23: {fileID: 267364222}
-  - 114: {fileID: 267364225}
+  - 114: {fileID: 267364226}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -1332,7 +1332,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1936490813}
   m_GameObject: {fileID: 267364220}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -1345,19 +1345,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1936490813}
   m_GameObject: {fileID: 267364220}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &267364225
+--- !u!114 &267364226
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1936490813}
   m_GameObject: {fileID: 267364220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &272079233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1507,7 @@ MonoBehaviour:
   _transform: {fileID: 274252840}
   _shootDistance: 0
   _shootImpulse: 0
+  Coin: {fileID: 0}
   playerId: 0
 --- !u!148 &274252835
 NetworkView:
@@ -1590,7 +1591,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &283772231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,7 +1666,7 @@ GameObject:
   - 33: {fileID: 290713591}
   - 65: {fileID: 290713590}
   - 23: {fileID: 290713589}
-  - 114: {fileID: 290713592}
+  - 114: {fileID: 290713593}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -1714,7 +1715,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 956195184}
   m_GameObject: {fileID: 290713587}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -1727,19 +1728,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 956195184}
   m_GameObject: {fileID: 290713587}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &290713592
+--- !u!114 &290713593
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 956195184}
   m_GameObject: {fileID: 290713587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &308930026
 Prefab:
   m_ObjectHideFlags: 0
@@ -1876,6 +1877,92 @@ Prefab:
   m_RootGameObject: {fileID: 1148168570}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &351924573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 351924578}
+  - 33: {fileID: 351924577}
+  - 65: {fileID: 351924576}
+  - 23: {fileID: 351924575}
+  - 114: {fileID: 351924574}
+  m_Layer: 9
+  m_Name: Coin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351924574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  m_GameObject: {fileID: 351924573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!23 &351924575
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  m_GameObject: {fileID: 351924573}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 371c36d52c8cc5642b8338c4a84bdf1c, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &351924576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  m_GameObject: {fileID: 351924573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 3, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &351924577
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 6884eecd39ce0b740b60364075ede321,
+    type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  m_GameObject: {fileID: 351924573}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &351924578
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+  m_PrefabInternal: {fileID: 411362926}
+  m_GameObject: {fileID: 351924573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.37907124, y: 1.0026741, z: -51.3435059}
+  m_LocalScale: {x: 2, y: .5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &402468985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +2035,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 18
+--- !u!1001 &411362926
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.37907124
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.0026741
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -51.3435059
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+      propertyPath: m_Size.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
+  m_RootGameObject: {fileID: 351924573}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &419500542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2301,10 @@ Prefab:
     - target: {fileID: 100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13600000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
@@ -2935,7 +3082,7 @@ GameObject:
   - 33: {fileID: 606663642}
   - 65: {fileID: 606663641}
   - 23: {fileID: 606663640}
-  - 114: {fileID: 606663643}
+  - 114: {fileID: 606663644}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -2984,7 +3131,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 547985228}
   m_GameObject: {fileID: 606663638}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -2997,19 +3144,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 547985228}
   m_GameObject: {fileID: 606663638}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &606663643
+--- !u!114 &606663644
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 547985228}
   m_GameObject: {fileID: 606663638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &609792988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,7 +3168,7 @@ GameObject:
   - 33: {fileID: 609792992}
   - 65: {fileID: 609792991}
   - 23: {fileID: 609792990}
-  - 114: {fileID: 609792993}
+  - 114: {fileID: 609792994}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -3070,7 +3217,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 45659466}
   m_GameObject: {fileID: 609792988}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -3083,19 +3230,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 45659466}
   m_GameObject: {fileID: 609792988}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &609792993
+--- !u!114 &609792994
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 45659466}
   m_GameObject: {fileID: 609792988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &613548844
 Prefab:
   m_ObjectHideFlags: 0
@@ -3243,7 +3390,7 @@ GameObject:
   - 33: {fileID: 668920427}
   - 65: {fileID: 668920426}
   - 23: {fileID: 668920425}
-  - 114: {fileID: 668920428}
+  - 114: {fileID: 668920429}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -3292,7 +3439,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1920495415}
   m_GameObject: {fileID: 668920423}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -3305,19 +3452,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1920495415}
   m_GameObject: {fileID: 668920423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &668920428
+--- !u!114 &668920429
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1920495415}
   m_GameObject: {fileID: 668920423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &672919845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3620,7 @@ GameObject:
   - 33: {fileID: 690081811}
   - 65: {fileID: 690081810}
   - 23: {fileID: 690081809}
-  - 114: {fileID: 690081812}
+  - 114: {fileID: 690081813}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -3522,7 +3669,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 968611828}
   m_GameObject: {fileID: 690081807}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -3535,19 +3682,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 968611828}
   m_GameObject: {fileID: 690081807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &690081812
+--- !u!114 &690081813
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 968611828}
   m_GameObject: {fileID: 690081807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &690310355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,7 +3850,7 @@ GameObject:
   - 33: {fileID: 740628912}
   - 65: {fileID: 740628911}
   - 23: {fileID: 740628910}
-  - 114: {fileID: 740628913}
+  - 114: {fileID: 740628914}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -3752,7 +3899,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 308930026}
   m_GameObject: {fileID: 740628908}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -3765,19 +3912,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 308930026}
   m_GameObject: {fileID: 740628908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &740628913
+--- !u!114 &740628914
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 308930026}
   m_GameObject: {fileID: 740628908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &747442138
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,7 +4280,7 @@ GameObject:
   - 33: {fileID: 793063881}
   - 65: {fileID: 793063880}
   - 23: {fileID: 793063879}
-  - 114: {fileID: 793063882}
+  - 114: {fileID: 793063883}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -4182,7 +4329,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 902114861}
   m_GameObject: {fileID: 793063877}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -4195,46 +4342,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 902114861}
   m_GameObject: {fileID: 793063877}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &793063882
+--- !u!114 &793063883
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 902114861}
   m_GameObject: {fileID: 793063877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
---- !u!1 &802422740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-  m_PrefabInternal: {fileID: 1819532961}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 802422741}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Respawn
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &802422741
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-  m_PrefabInternal: {fileID: 1819532961}
-  m_GameObject: {fileID: 802422740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  speed: 10
 --- !u!1 &814453583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,7 +4710,7 @@ GameObject:
   - 33: {fileID: 940513065}
   - 65: {fileID: 940513064}
   - 23: {fileID: 940513063}
-  - 114: {fileID: 940513066}
+  - 114: {fileID: 940513067}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -4639,7 +4759,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 486269036}
   m_GameObject: {fileID: 940513061}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -4652,19 +4772,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 486269036}
   m_GameObject: {fileID: 940513061}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &940513066
+--- !u!114 &940513067
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 486269036}
   m_GameObject: {fileID: 940513061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &956195184
 Prefab:
   m_ObjectHideFlags: 0
@@ -4868,7 +4988,7 @@ GameObject:
   - 33: {fileID: 969581150}
   - 65: {fileID: 969581149}
   - 23: {fileID: 969581148}
-  - 114: {fileID: 969581151}
+  - 114: {fileID: 969581152}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -4917,7 +5037,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 191409607}
   m_GameObject: {fileID: 969581146}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -4930,19 +5050,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 191409607}
   m_GameObject: {fileID: 969581146}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &969581151
+--- !u!114 &969581152
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 191409607}
   m_GameObject: {fileID: 969581146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &973008182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,7 +5074,7 @@ GameObject:
   - 33: {fileID: 973008186}
   - 65: {fileID: 973008185}
   - 23: {fileID: 973008184}
-  - 114: {fileID: 973008187}
+  - 114: {fileID: 973008188}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -5003,7 +5123,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 11137236}
   m_GameObject: {fileID: 973008182}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -5016,19 +5136,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 11137236}
   m_GameObject: {fileID: 973008182}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &973008187
+--- !u!114 &973008188
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 11137236}
   m_GameObject: {fileID: 973008182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &981071317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,7 +5232,7 @@ GameObject:
   - 33: {fileID: 1003200292}
   - 65: {fileID: 1003200291}
   - 23: {fileID: 1003200290}
-  - 114: {fileID: 1003200293}
+  - 114: {fileID: 1003200294}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -5161,7 +5281,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1953796323}
   m_GameObject: {fileID: 1003200288}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -5174,19 +5294,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1953796323}
   m_GameObject: {fileID: 1003200288}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1003200293
+--- !u!114 &1003200294
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1953796323}
   m_GameObject: {fileID: 1003200288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1029156827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,7 +5462,7 @@ GameObject:
   - 33: {fileID: 1051491992}
   - 65: {fileID: 1051491991}
   - 23: {fileID: 1051491990}
-  - 114: {fileID: 1051491993}
+  - 114: {fileID: 1051491994}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -5391,7 +5511,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1223549701}
   m_GameObject: {fileID: 1051491988}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -5404,19 +5524,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1223549701}
   m_GameObject: {fileID: 1051491988}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1051491993
+--- !u!114 &1051491994
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1223549701}
   m_GameObject: {fileID: 1051491988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1060603996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,7 +5548,7 @@ GameObject:
   - 33: {fileID: 1060604000}
   - 65: {fileID: 1060603999}
   - 23: {fileID: 1060603998}
-  - 114: {fileID: 1060604001}
+  - 114: {fileID: 1060604002}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -5477,7 +5597,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1660397783}
   m_GameObject: {fileID: 1060603996}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -5490,19 +5610,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1660397783}
   m_GameObject: {fileID: 1060603996}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1060604001
+--- !u!114 &1060604002
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1660397783}
   m_GameObject: {fileID: 1060603996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1064685527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5770,6 +5890,7 @@ MonoBehaviour:
   _transform: {fileID: 1148168580}
   _shootDistance: 0
   _shootImpulse: 0
+  Coin: {fileID: 0}
   playerId: 0
 --- !u!148 &1148168575
 NetworkView:
@@ -5853,7 +5974,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1185459446
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,7 +6194,7 @@ GameObject:
   - 33: {fileID: 1209047446}
   - 65: {fileID: 1209047445}
   - 23: {fileID: 1209047444}
-  - 114: {fileID: 1209047447}
+  - 114: {fileID: 1209047448}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -6122,7 +6243,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 547785572}
   m_GameObject: {fileID: 1209047442}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -6135,19 +6256,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 547785572}
   m_GameObject: {fileID: 1209047442}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1209047447
+--- !u!114 &1209047448
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 547785572}
   m_GameObject: {fileID: 1209047442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1223549701
 Prefab:
   m_ObjectHideFlags: 0
@@ -7223,7 +7344,7 @@ GameObject:
   - 33: {fileID: 1478389200}
   - 65: {fileID: 1478389199}
   - 23: {fileID: 1478389198}
-  - 114: {fileID: 1478389201}
+  - 114: {fileID: 1478389202}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -7272,7 +7393,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 2092402976}
   m_GameObject: {fileID: 1478389196}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -7285,19 +7406,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2092402976}
   m_GameObject: {fileID: 1478389196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1478389201
+--- !u!114 &1478389202
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 2092402976}
   m_GameObject: {fileID: 1478389196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1545562370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,7 +7702,7 @@ GameObject:
   - 33: {fileID: 1674308949}
   - 65: {fileID: 1674308948}
   - 23: {fileID: 1674308947}
-  - 114: {fileID: 1674308950}
+  - 114: {fileID: 1674308951}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -7630,7 +7751,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 792704634}
   m_GameObject: {fileID: 1674308945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -7643,19 +7764,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 792704634}
   m_GameObject: {fileID: 1674308945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1674308950
+--- !u!114 &1674308951
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 792704634}
   m_GameObject: {fileID: 1674308945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1677029558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7667,7 +7788,7 @@ GameObject:
   - 33: {fileID: 1677029562}
   - 65: {fileID: 1677029561}
   - 23: {fileID: 1677029560}
-  - 114: {fileID: 1677029563}
+  - 114: {fileID: 1677029564}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -7716,7 +7837,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 784977529}
   m_GameObject: {fileID: 1677029558}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -7729,19 +7850,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 784977529}
   m_GameObject: {fileID: 1677029558}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1677029563
+--- !u!114 &1677029564
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 784977529}
   m_GameObject: {fileID: 1677029558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1703687235
 Prefab:
   m_ObjectHideFlags: 0
@@ -7817,7 +7938,7 @@ GameObject:
   - 33: {fileID: 1713855461}
   - 65: {fileID: 1713855460}
   - 23: {fileID: 1713855459}
-  - 114: {fileID: 1713855462}
+  - 114: {fileID: 1713855463}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -7866,7 +7987,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1751040121}
   m_GameObject: {fileID: 1713855457}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -7879,19 +8000,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1751040121}
   m_GameObject: {fileID: 1713855457}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1713855462
+--- !u!114 &1713855463
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1751040121}
   m_GameObject: {fileID: 1713855457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1751040121
 Prefab:
   m_ObjectHideFlags: 0
@@ -8175,7 +8296,7 @@ GameObject:
   - 33: {fileID: 1778478400}
   - 65: {fileID: 1778478399}
   - 23: {fileID: 1778478398}
-  - 114: {fileID: 1778478401}
+  - 114: {fileID: 1778478402}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -8224,7 +8345,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 541880670}
   m_GameObject: {fileID: 1778478396}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -8237,19 +8358,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 541880670}
   m_GameObject: {fileID: 1778478396}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1778478401
+--- !u!114 &1778478402
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 541880670}
   m_GameObject: {fileID: 1778478396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1802658246
 Prefab:
   m_ObjectHideFlags: 0
@@ -8314,54 +8435,6 @@ Prefab:
   m_RootGameObject: {fileID: 148368039}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &1819532961
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-      propertyPath: m_TagString
-      value: Respawn
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e78237aa02899f543b1ecafee8c497f6, type: 2}
-  m_RootGameObject: {fileID: 802422740}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1825803564
 GameObject:
   m_ObjectHideFlags: 0
@@ -8373,7 +8446,7 @@ GameObject:
   - 33: {fileID: 1825803568}
   - 65: {fileID: 1825803567}
   - 23: {fileID: 1825803566}
-  - 114: {fileID: 1825803569}
+  - 114: {fileID: 1825803570}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -8422,7 +8495,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1107741347}
   m_GameObject: {fileID: 1825803564}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -8435,19 +8508,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1107741347}
   m_GameObject: {fileID: 1825803564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1825803569
+--- !u!114 &1825803570
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1107741347}
   m_GameObject: {fileID: 1825803564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1829926386
 GameObject:
   m_ObjectHideFlags: 0
@@ -8531,7 +8604,7 @@ GameObject:
   - 33: {fileID: 1830510866}
   - 65: {fileID: 1830510865}
   - 23: {fileID: 1830510864}
-  - 114: {fileID: 1830510867}
+  - 114: {fileID: 1830510868}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -8580,7 +8653,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 866216386}
   m_GameObject: {fileID: 1830510862}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -8593,19 +8666,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 866216386}
   m_GameObject: {fileID: 1830510862}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1830510867
+--- !u!114 &1830510868
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 866216386}
   m_GameObject: {fileID: 1830510862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1839480009
 GameObject:
   m_ObjectHideFlags: 0
@@ -8747,6 +8820,7 @@ MonoBehaviour:
   _transform: {fileID: 1845325191}
   _shootDistance: 0
   _shootImpulse: 0
+  Coin: {fileID: 0}
   playerId: 0
 --- !u!148 &1845325185
 NetworkView:
@@ -8844,7 +8918,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1850225422
 GameObject:
   m_ObjectHideFlags: 0
@@ -8856,7 +8930,7 @@ GameObject:
   - 33: {fileID: 1850225426}
   - 65: {fileID: 1850225425}
   - 23: {fileID: 1850225424}
-  - 114: {fileID: 1850225427}
+  - 114: {fileID: 1850225428}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -8905,7 +8979,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 5443992}
   m_GameObject: {fileID: 1850225422}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -8918,19 +8992,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 5443992}
   m_GameObject: {fileID: 1850225422}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1850225427
+--- !u!114 &1850225428
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 5443992}
   m_GameObject: {fileID: 1850225422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1873113975
 GameObject:
   m_ObjectHideFlags: 0
@@ -9268,7 +9342,7 @@ GameObject:
   - 33: {fileID: 1915184568}
   - 65: {fileID: 1915184567}
   - 23: {fileID: 1915184566}
-  - 114: {fileID: 1915184569}
+  - 114: {fileID: 1915184570}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -9317,7 +9391,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1196648223}
   m_GameObject: {fileID: 1915184564}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -9330,19 +9404,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1196648223}
   m_GameObject: {fileID: 1915184564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1915184569
+--- !u!114 &1915184570
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1196648223}
   m_GameObject: {fileID: 1915184564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1920495415
 Prefab:
   m_ObjectHideFlags: 0
@@ -9418,7 +9492,7 @@ GameObject:
   - 33: {fileID: 1926369471}
   - 65: {fileID: 1926369470}
   - 23: {fileID: 1926369469}
-  - 114: {fileID: 1926369472}
+  - 114: {fileID: 1926369473}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -9467,7 +9541,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1275810916}
   m_GameObject: {fileID: 1926369467}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -9480,19 +9554,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1275810916}
   m_GameObject: {fileID: 1926369467}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1926369472
+--- !u!114 &1926369473
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1275810916}
   m_GameObject: {fileID: 1926369467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1001 &1936490813
 Prefab:
   m_ObjectHideFlags: 0
@@ -9568,7 +9642,7 @@ GameObject:
   - 33: {fileID: 1948245057}
   - 65: {fileID: 1948245056}
   - 23: {fileID: 1948245055}
-  - 114: {fileID: 1948245058}
+  - 114: {fileID: 1948245059}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -9617,7 +9691,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 613548844}
   m_GameObject: {fileID: 1948245053}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -9630,19 +9704,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 613548844}
   m_GameObject: {fileID: 1948245053}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1948245058
+--- !u!114 &1948245059
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 613548844}
   m_GameObject: {fileID: 1948245053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &1950832697
 GameObject:
   m_ObjectHideFlags: 0
@@ -9790,7 +9864,7 @@ GameObject:
   - 33: {fileID: 2005876688}
   - 65: {fileID: 2005876687}
   - 23: {fileID: 2005876686}
-  - 114: {fileID: 2005876689}
+  - 114: {fileID: 2005876690}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -9839,7 +9913,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1619083579}
   m_GameObject: {fileID: 2005876684}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -9852,19 +9926,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1619083579}
   m_GameObject: {fileID: 2005876684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2005876689
+--- !u!114 &2005876690
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1619083579}
   m_GameObject: {fileID: 2005876684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &2033023673
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,7 +9950,7 @@ GameObject:
   - 33: {fileID: 2033023677}
   - 65: {fileID: 2033023676}
   - 23: {fileID: 2033023675}
-  - 114: {fileID: 2033023678}
+  - 114: {fileID: 2033023679}
   m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
@@ -9925,7 +9999,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1354237162}
   m_GameObject: {fileID: 2033023673}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
@@ -9938,19 +10012,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1354237162}
   m_GameObject: {fileID: 2033023673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2033023678
+--- !u!114 &2033023679
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6884eecd39ce0b740b60364075ede321,
+  m_PrefabParentObject: {fileID: 11400002, guid: 6884eecd39ce0b740b60364075ede321,
     type: 2}
   m_PrefabInternal: {fileID: 1354237162}
   m_GameObject: {fileID: 2033023673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66567ff1a71c634e897853565d77ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 96fc31897bd04ba45ab7392247d2cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
 --- !u!1 &2051850080
 GameObject:
   m_ObjectHideFlags: 0
@@ -10001,7 +10075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smartActionManager: {fileID: 2051850084}
   _playersGameObject:
   - {fileID: 1845325181}
   - {fileID: 274252830}
