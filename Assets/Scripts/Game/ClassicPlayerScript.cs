@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClassicPlayerScript : APlayerScript
+public class ClassicPlayerScript
 {
 
     [SerializeField]
