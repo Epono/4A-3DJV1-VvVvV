@@ -23,10 +23,6 @@ public class InputManagerScript : MonoBehaviour
     // MES AJOUTS
     //Le manager intelligent
 
-    [SerializeField]
-    LineRenderer _lineMovement;
-
-    
 
     void Awake()
     {
@@ -50,17 +46,13 @@ public class InputManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-
-            
-
-            if (Input.GetMouseButtonUp(0))
-            {
+        if (Input.GetMouseButtonUp(0))
+        {
                 var ray = _gameCamera.ScreenPointToRay(Input.mousePosition);
 
                 RaycastHit hitInfo;
-
-                if (_groundCollider.Raycast(ray, out hitInfo, _groundDistance))
+                Debug.Log("J'ai cliqué !");
+                if (_groundCollider.Raycast(ray, out hitInfo, float.MaxValue))
                 {
                    // _gameManager.WantToMove(0, hitInfo.point);
                    
