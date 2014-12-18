@@ -275,9 +275,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 56529025}
   - 33: {fileID: 56529024}
-  - 65: {fileID: 56529023}
   - 23: {fileID: 56529022}
-  m_Layer: 0
+  - 54: {fileID: 56529023}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,18 +304,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &56529023
-BoxCollider:
+--- !u!54 &56529023
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56529021}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &56529024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -346,7 +349,7 @@ GameObject:
   - 33: {fileID: 68342804}
   - 65: {fileID: 68342803}
   - 23: {fileID: 68342802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,9 +419,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 89869314}
   - 33: {fileID: 89869313}
-  - 65: {fileID: 89869312}
   - 23: {fileID: 89869311}
-  m_Layer: 0
+  - 54: {fileID: 89869312}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,18 +448,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &89869312
-BoxCollider:
+--- !u!54 &89869312
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89869310}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &89869313
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -485,9 +491,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 108552303}
   - 33: {fileID: 108552302}
-  - 65: {fileID: 108552301}
   - 23: {fileID: 108552300}
-  m_Layer: 0
+  - 54: {fileID: 108552301}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,18 +520,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &108552301
-BoxCollider:
+--- !u!54 &108552301
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108552299}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &108552302
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -556,7 +565,7 @@ GameObject:
   - 33: {fileID: 147011966}
   - 65: {fileID: 147011965}
   - 23: {fileID: 147011964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +637,7 @@ GameObject:
   - 33: {fileID: 148368043}
   - 65: {fileID: 148368042}
   - 23: {fileID: 148368041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,9 +707,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 176054047}
   - 33: {fileID: 176054046}
-  - 65: {fileID: 176054045}
   - 23: {fileID: 176054044}
-  m_Layer: 0
+  - 54: {fileID: 176054045}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,18 +736,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &176054045
-BoxCollider:
+--- !u!54 &176054045
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176054043}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &176054046
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -753,8 +765,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176054043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 2.5, z: 34.5}
-  m_LocalScale: {x: 1, y: 5, z: 9}
+  m_LocalPosition: {x: -30, y: 2.5, z: 34}
+  m_LocalScale: {x: 1, y: 5, z: 8}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 32
@@ -833,7 +845,7 @@ GameObject:
   - 33: {fileID: 209582550}
   - 65: {fileID: 209582549}
   - 23: {fileID: 209582548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +917,7 @@ GameObject:
   - 33: {fileID: 239843968}
   - 65: {fileID: 239843967}
   - 23: {fileID: 239843966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +989,7 @@ GameObject:
   - 33: {fileID: 255974266}
   - 65: {fileID: 255974265}
   - 23: {fileID: 255974264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1061,7 @@ GameObject:
   - 33: {fileID: 267270483}
   - 65: {fileID: 267270482}
   - 23: {fileID: 267270481}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1133,7 @@ GameObject:
   - 33: {fileID: 267364224}
   - 65: {fileID: 267364223}
   - 23: {fileID: 267364222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,9 +1203,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 272079237}
   - 33: {fileID: 272079236}
-  - 65: {fileID: 272079235}
   - 23: {fileID: 272079234}
-  m_Layer: 0
+  - 54: {fileID: 272079235}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1220,18 +1232,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &272079235
-BoxCollider:
+--- !u!54 &272079235
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272079233}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &272079236
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1246,8 +1261,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272079233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 2.5, z: 11}
-  m_LocalScale: {x: 1, y: 5, z: 58}
+  m_LocalPosition: {x: 40, y: 2.5, z: 11.5}
+  m_LocalScale: {x: 1, y: 5, z: 57}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 20
@@ -1325,7 +1340,7 @@ GameObject:
   - 33: {fileID: 290713591}
   - 65: {fileID: 290713590}
   - 23: {fileID: 290713589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,9 +1474,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 402468989}
   - 33: {fileID: 402468988}
-  - 65: {fileID: 402468987}
   - 23: {fileID: 402468986}
-  m_Layer: 0
+  - 54: {fileID: 402468987}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,18 +1503,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &402468987
-BoxCollider:
+--- !u!54 &402468987
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402468985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &402468988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1514,8 +1532,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402468985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: 2.5, z: 20}
-  m_LocalScale: {x: 20, y: 5, z: 1}
+  m_LocalPosition: {x: 80.5, y: 2.5, z: 20}
+  m_LocalScale: {x: 19, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 18
@@ -1528,9 +1546,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 419500546}
   - 33: {fileID: 419500545}
-  - 65: {fileID: 419500544}
   - 23: {fileID: 419500543}
-  m_Layer: 0
+  - 54: {fileID: 419500544}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1557,18 +1575,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &419500544
-BoxCollider:
+--- !u!54 &419500544
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419500542}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &419500545
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1597,9 +1618,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 438412488}
   - 33: {fileID: 438412487}
-  - 65: {fileID: 438412486}
   - 23: {fileID: 438412485}
-  m_Layer: 0
+  - 54: {fileID: 438412486}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1626,18 +1647,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &438412486
-BoxCollider:
+--- !u!54 &438412486
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438412484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &438412487
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1652,11 +1676,79 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438412484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 2.5, z: 43}
-  m_LocalScale: {x: 1, y: 5, z: 14}
+  m_LocalPosition: {x: 90, y: 2.5, z: 43.5}
+  m_LocalScale: {x: 1, y: 5, z: 13}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 41
+--- !u!1001 &448608618
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -61.2519989
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800002, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800002, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+  m_RootGameObject: {fileID: 1845325181}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &473794475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,9 +1758,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 473794479}
   - 33: {fileID: 473794478}
-  - 65: {fileID: 473794477}
   - 23: {fileID: 473794476}
-  m_Layer: 0
+  - 54: {fileID: 473794477}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,18 +1787,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &473794477
-BoxCollider:
+--- !u!54 &473794477
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473794475}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &473794478
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1721,8 +1816,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473794475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54, y: 2.5, z: 20}
-  m_LocalScale: {x: 28, y: 5, z: 1}
+  m_LocalPosition: {x: 53.5, y: 2.5, z: 20}
+  m_LocalScale: {x: 27, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 36
@@ -1799,9 +1894,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 503650313}
   - 33: {fileID: 503650312}
-  - 65: {fileID: 503650311}
   - 23: {fileID: 503650310}
-  m_Layer: 0
+  - 54: {fileID: 503650311}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,18 +1923,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &503650311
-BoxCollider:
+--- !u!54 &503650311
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503650309}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &503650312
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1854,8 +1952,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503650309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 2.5, z: 15}
-  m_LocalScale: {x: 1, y: 5, z: 10}
+  m_LocalPosition: {x: -30, y: 2.5, z: 15.5}
+  m_LocalScale: {x: 1, y: 5, z: 9}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 40
@@ -1868,9 +1966,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 519667497}
   - 33: {fileID: 519667496}
-  - 65: {fileID: 519667495}
   - 23: {fileID: 519667494}
-  m_Layer: 0
+  - 54: {fileID: 519667495}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1897,18 +1995,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &519667495
-BoxCollider:
+--- !u!54 &519667495
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519667493}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &519667496
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1923,8 +2024,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519667493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 2.5, z: 45.5}
-  m_LocalScale: {x: 1, y: 5, z: 9}
+  m_LocalPosition: {x: 30, y: 2.5, z: 46}
+  m_LocalScale: {x: 1, y: 5, z: 8}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 34
@@ -1937,9 +2038,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 522276882}
   - 33: {fileID: 522276881}
-  - 65: {fileID: 522276880}
   - 23: {fileID: 522276879}
-  m_Layer: 0
+  - 54: {fileID: 522276880}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1966,18 +2067,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &522276880
-BoxCollider:
+--- !u!54 &522276880
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522276878}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &522276881
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1992,8 +2096,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522276878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -90, y: 2.5, z: 23}
-  m_LocalScale: {x: 1, y: 5, z: 34}
+  m_LocalPosition: {x: -90, y: 2.5, z: 23.5}
+  m_LocalScale: {x: 1, y: 5, z: 33}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 22
@@ -2198,9 +2302,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 554875210}
   - 33: {fileID: 554875209}
-  - 65: {fileID: 554875208}
   - 23: {fileID: 554875207}
-  m_Layer: 0
+  - 54: {fileID: 554875208}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2227,18 +2331,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &554875208
-BoxCollider:
+--- !u!54 &554875208
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 554875206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &554875209
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2267,9 +2374,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 562662989}
   - 33: {fileID: 562662988}
-  - 65: {fileID: 562662987}
   - 23: {fileID: 562662986}
-  m_Layer: 0
+  - 54: {fileID: 562662987}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,18 +2403,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &562662987
-BoxCollider:
+--- !u!54 &562662987
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 562662985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &562662988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2336,9 +2446,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 598566456}
   - 33: {fileID: 598566455}
-  - 64: {fileID: 598566454}
+  - 65: {fileID: 598566454}
   - 23: {fileID: 598566453}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2366,20 +2476,19 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &598566454
-MeshCollider:
+--- !u!65 &598566454
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 9ad14756e28516d4da454dca9b594654,
+  m_PrefabParentObject: {fileID: 6500000, guid: 9ad14756e28516d4da454dca9b594654,
     type: 2}
   m_PrefabInternal: {fileID: 1883292932}
   m_GameObject: {fileID: 598566452}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 250, y: 2, z: 150}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!33 &598566455
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2411,7 +2520,7 @@ GameObject:
   - 33: {fileID: 606663642}
   - 65: {fileID: 606663641}
   - 23: {fileID: 606663640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2483,7 +2592,7 @@ GameObject:
   - 33: {fileID: 609792992}
   - 65: {fileID: 609792991}
   - 23: {fileID: 609792990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2617,9 +2726,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 643401800}
   - 33: {fileID: 643401799}
-  - 65: {fileID: 643401798}
   - 23: {fileID: 643401797}
-  m_Layer: 0
+  - 54: {fileID: 643401798}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2646,18 +2755,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &643401798
-BoxCollider:
+--- !u!54 &643401798
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643401796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &643401799
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2688,7 +2800,7 @@ GameObject:
   - 33: {fileID: 668920427}
   - 65: {fileID: 668920426}
   - 23: {fileID: 668920425}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2758,9 +2870,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 672919849}
   - 33: {fileID: 672919848}
-  - 65: {fileID: 672919847}
   - 23: {fileID: 672919846}
-  m_Layer: 0
+  - 54: {fileID: 672919847}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2787,18 +2899,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &672919847
-BoxCollider:
+--- !u!54 &672919847
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672919845}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &672919848
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2813,8 +2928,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672919845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 2.5, z: -25.5}
-  m_LocalScale: {x: 1, y: 5, z: 29}
+  m_LocalPosition: {x: 90, y: 2.5, z: -26}
+  m_LocalScale: {x: 1, y: 5, z: 28}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 29
@@ -2827,9 +2942,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 677587965}
   - 33: {fileID: 677587964}
-  - 65: {fileID: 677587963}
   - 23: {fileID: 677587962}
-  m_Layer: 0
+  - 54: {fileID: 677587963}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,18 +2971,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &677587963
-BoxCollider:
+--- !u!54 &677587963
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677587961}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &677587964
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2882,8 +3000,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677587961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 2.5, z: 5.5}
-  m_LocalScale: {x: 1, y: 5, z: 29}
+  m_LocalPosition: {x: 90, y: 2.5, z: 6}
+  m_LocalScale: {x: 1, y: 5, z: 28}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 28
@@ -2898,7 +3016,7 @@ GameObject:
   - 33: {fileID: 690081811}
   - 65: {fileID: 690081810}
   - 23: {fileID: 690081809}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2911,7 +3029,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
   m_PrefabInternal: {fileID: 968611828}
   m_GameObject: {fileID: 690081807}
-  m_LocalRotation: {x: 0, y: 0, z: .382683486, w: .923879564}
+  m_LocalRotation: {x: .270598084, y: .65328151, z: .270598084, w: .65328151}
   m_LocalPosition: {x: -7.32024384, y: 1, z: -29.6160603}
   m_LocalScale: {x: 2, y: 2, z: .5}
   m_Children: []
@@ -2968,9 +3086,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 690310359}
   - 33: {fileID: 690310358}
-  - 65: {fileID: 690310357}
   - 23: {fileID: 690310356}
-  m_Layer: 0
+  - 54: {fileID: 690310357}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2997,18 +3115,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &690310357
-BoxCollider:
+--- !u!54 &690310357
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 690310355}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &690310358
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3037,9 +3158,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 703356192}
   - 33: {fileID: 703356191}
-  - 65: {fileID: 703356190}
   - 23: {fileID: 703356189}
-  m_Layer: 0
+  - 54: {fileID: 703356190}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,18 +3187,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &703356190
-BoxCollider:
+--- !u!54 &703356190
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703356188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &703356191
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3108,7 +3232,7 @@ GameObject:
   - 33: {fileID: 740628912}
   - 65: {fileID: 740628911}
   - 23: {fileID: 740628910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3178,9 +3302,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 747442142}
   - 33: {fileID: 747442141}
-  - 65: {fileID: 747442140}
   - 23: {fileID: 747442139}
-  m_Layer: 0
+  - 54: {fileID: 747442140}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3207,18 +3331,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &747442140
-BoxCollider:
+--- !u!54 &747442140
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747442138}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &747442141
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3247,9 +3374,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 768670623}
   - 33: {fileID: 768670622}
-  - 65: {fileID: 768670621}
   - 23: {fileID: 768670620}
-  m_Layer: 0
+  - 54: {fileID: 768670621}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3276,18 +3403,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &768670621
-BoxCollider:
+--- !u!54 &768670621
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768670619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &768670622
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3380,9 +3510,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 790993901}
   - 33: {fileID: 790993900}
-  - 65: {fileID: 790993899}
   - 23: {fileID: 790993898}
-  m_Layer: 0
+  - 54: {fileID: 790993899}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3409,18 +3539,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &790993899
-BoxCollider:
+--- !u!54 &790993899
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790993897}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &790993900
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3515,7 +3648,7 @@ GameObject:
   - 33: {fileID: 793063881}
   - 65: {fileID: 793063880}
   - 23: {fileID: 793063879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3612,9 +3745,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 814453587}
   - 33: {fileID: 814453586}
-  - 65: {fileID: 814453585}
   - 23: {fileID: 814453584}
-  m_Layer: 0
+  - 54: {fileID: 814453585}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3641,18 +3774,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &814453585
-BoxCollider:
+--- !u!54 &814453585
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814453583}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &814453586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3809,9 +3945,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 922606817}
   - 33: {fileID: 922606816}
-  - 65: {fileID: 922606815}
   - 23: {fileID: 922606814}
-  m_Layer: 0
+  - 54: {fileID: 922606815}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3838,18 +3974,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &922606815
-BoxCollider:
+--- !u!54 &922606815
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 922606813}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &922606816
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3864,8 +4003,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 922606813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 2.5, z: -40}
-  m_LocalScale: {x: 19, y: 5, z: 1}
+  m_LocalPosition: {x: 11, y: 2.5, z: -40}
+  m_LocalScale: {x: 18, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 6
@@ -3878,9 +4017,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 938434950}
   - 33: {fileID: 938434949}
-  - 65: {fileID: 938434948}
   - 23: {fileID: 938434947}
-  m_Layer: 0
+  - 54: {fileID: 938434948}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3907,18 +4046,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &938434948
-BoxCollider:
+--- !u!54 &938434948
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938434946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &938434949
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3933,8 +4075,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938434946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80, y: 2.5, z: -48}
-  m_LocalScale: {x: 1, y: 5, z: 4}
+  m_LocalPosition: {x: -80, y: 2.5, z: -48.5}
+  m_LocalScale: {x: 1, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 46
@@ -3949,7 +4091,7 @@ GameObject:
   - 33: {fileID: 940513065}
   - 65: {fileID: 940513064}
   - 23: {fileID: 940513063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4159,19 +4301,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: .270598084
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .65328151
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .382683486
+      value: .270598084
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .923879564
+      value: .65328151
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6884eecd39ce0b740b60364075ede321, type: 2}
       propertyPath: m_RootOrder
@@ -4213,7 +4355,7 @@ GameObject:
   - 33: {fileID: 969581150}
   - 65: {fileID: 969581149}
   - 23: {fileID: 969581148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4285,7 +4427,7 @@ GameObject:
   - 33: {fileID: 973008186}
   - 65: {fileID: 973008185}
   - 23: {fileID: 973008184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4355,9 +4497,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 981071321}
   - 33: {fileID: 981071320}
-  - 65: {fileID: 981071319}
   - 23: {fileID: 981071318}
-  m_Layer: 0
+  - 54: {fileID: 981071319}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4384,18 +4526,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &981071319
-BoxCollider:
+--- !u!54 &981071319
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 981071317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &981071320
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4426,7 +4571,7 @@ GameObject:
   - 33: {fileID: 1003200292}
   - 65: {fileID: 1003200291}
   - 23: {fileID: 1003200290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4496,9 +4641,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1029156831}
   - 33: {fileID: 1029156830}
-  - 65: {fileID: 1029156829}
   - 23: {fileID: 1029156828}
-  m_Layer: 0
+  - 54: {fileID: 1029156829}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4525,18 +4670,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1029156829
-BoxCollider:
+--- !u!54 &1029156829
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029156827}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1029156830
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4551,8 +4699,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029156827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 2.5, z: -30}
-  m_LocalScale: {x: 74, y: 5, z: 1}
+  m_LocalPosition: {x: 3.5, y: 2.5, z: -30}
+  m_LocalScale: {x: 73, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 24
@@ -4565,9 +4713,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1038003344}
   - 33: {fileID: 1038003343}
-  - 65: {fileID: 1038003342}
   - 23: {fileID: 1038003341}
-  m_Layer: 0
+  - 54: {fileID: 1038003342}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4594,18 +4742,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1038003342
-BoxCollider:
+--- !u!54 &1038003342
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038003340}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1038003343
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4620,8 +4771,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038003340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 2.5, z: -16}
-  m_LocalScale: {x: 1, y: 5, z: 48}
+  m_LocalPosition: {x: -30, y: 2.5, z: -16.5}
+  m_LocalScale: {x: 1, y: 5, z: 47}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 25
@@ -4636,7 +4787,7 @@ GameObject:
   - 33: {fileID: 1051491992}
   - 65: {fileID: 1051491991}
   - 23: {fileID: 1051491990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4708,7 +4859,7 @@ GameObject:
   - 33: {fileID: 1060604000}
   - 65: {fileID: 1060603999}
   - 23: {fileID: 1060603998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4842,9 +4993,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1116481560}
   - 33: {fileID: 1116481559}
-  - 65: {fileID: 1116481558}
   - 23: {fileID: 1116481557}
-  m_Layer: 0
+  - 54: {fileID: 1116481558}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4871,18 +5022,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1116481558
-BoxCollider:
+--- !u!54 &1116481558
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116481556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1116481559
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4897,8 +5051,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116481556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 2.5, z: 34.5}
-  m_LocalScale: {x: 1, y: 5, z: 9}
+  m_LocalPosition: {x: 30, y: 2.5, z: 34}
+  m_LocalScale: {x: 1, y: 5, z: 8}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 33
@@ -4911,9 +5065,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1185459450}
   - 33: {fileID: 1185459449}
-  - 65: {fileID: 1185459448}
   - 23: {fileID: 1185459447}
-  m_Layer: 0
+  - 54: {fileID: 1185459448}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4940,18 +5094,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1185459448
-BoxCollider:
+--- !u!54 &1185459448
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1185459446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1185459449
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4966,8 +5123,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1185459446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80, y: 2.5, z: -42}
-  m_LocalScale: {x: 1, y: 5, z: 4}
+  m_LocalPosition: {x: -80, y: 2.5, z: -41.5}
+  m_LocalScale: {x: 1, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 45
@@ -5044,9 +5201,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1208650213}
   - 33: {fileID: 1208650212}
-  - 65: {fileID: 1208650211}
   - 23: {fileID: 1208650210}
-  m_Layer: 0
+  - 54: {fileID: 1208650211}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5073,18 +5230,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1208650211
-BoxCollider:
+--- !u!54 &1208650211
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208650209}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1208650212
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5099,8 +5259,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208650209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 2.5, z: 32}
-  m_LocalScale: {x: 1, y: 5, z: 4}
+  m_LocalPosition: {x: 90, y: 2.5, z: 31.5}
+  m_LocalScale: {x: 1, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 42
@@ -5115,7 +5275,7 @@ GameObject:
   - 33: {fileID: 1209047446}
   - 65: {fileID: 1209047445}
   - 23: {fileID: 1209047444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5249,9 +5409,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1249123894}
   - 33: {fileID: 1249123893}
-  - 65: {fileID: 1249123892}
   - 23: {fileID: 1249123891}
-  m_Layer: 0
+  - 54: {fileID: 1249123892}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5278,18 +5438,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1249123892
-BoxCollider:
+--- !u!54 &1249123892
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249123890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1249123893
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5318,9 +5481,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1253830187}
   - 33: {fileID: 1253830186}
-  - 65: {fileID: 1253830185}
   - 23: {fileID: 1253830184}
-  m_Layer: 0
+  - 54: {fileID: 1253830185}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5347,18 +5510,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1253830185
-BoxCollider:
+--- !u!54 &1253830185
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253830183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1253830186
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5451,9 +5617,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281847740}
   - 33: {fileID: 1281847739}
-  - 65: {fileID: 1281847738}
   - 23: {fileID: 1281847737}
-  m_Layer: 0
+  - 54: {fileID: 1281847738}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5480,18 +5646,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1281847738
-BoxCollider:
+--- !u!54 &1281847738
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281847736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1281847739
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5506,8 +5675,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281847736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 2.5, z: -40}
-  m_LocalScale: {x: 19, y: 5, z: 1}
+  m_LocalPosition: {x: -11, y: 2.5, z: -40}
+  m_LocalScale: {x: 18, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 5
@@ -5668,9 +5837,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1335966988}
   - 33: {fileID: 1335966987}
-  - 65: {fileID: 1335966986}
   - 23: {fileID: 1335966985}
-  m_Layer: 0
+  - 54: {fileID: 1335966986}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5697,18 +5866,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1335966986
-BoxCollider:
+--- !u!54 &1335966986
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335966984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1335966987
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5801,9 +5973,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1365690838}
   - 33: {fileID: 1365690837}
-  - 65: {fileID: 1365690836}
   - 23: {fileID: 1365690835}
-  m_Layer: 0
+  - 54: {fileID: 1365690836}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5830,18 +6002,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1365690836
-BoxCollider:
+--- !u!54 &1365690836
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365690834}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1365690837
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5870,9 +6045,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1386628229}
   - 33: {fileID: 1386628228}
-  - 65: {fileID: 1386628227}
   - 23: {fileID: 1386628226}
-  m_Layer: 0
+  - 54: {fileID: 1386628227}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5899,18 +6074,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1386628227
-BoxCollider:
+--- !u!54 &1386628227
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386628225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1386628228
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5925,8 +6103,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386628225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 2.5, z: 45.5}
-  m_LocalScale: {x: 1, y: 5, z: 9}
+  m_LocalPosition: {x: -30, y: 2.5, z: 46}
+  m_LocalScale: {x: 1, y: 5, z: 8}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 31
@@ -5980,7 +6158,7 @@ Prefab:
     - target: {fileID: 11400002, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
       propertyPath: _playersScript.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1845325183}
     - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
       propertyPath: _smartActionManager
       value: 
@@ -6003,9 +6181,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1412442444}
   - 33: {fileID: 1412442443}
-  - 65: {fileID: 1412442442}
   - 23: {fileID: 1412442441}
-  m_Layer: 0
+  - 54: {fileID: 1412442442}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6032,18 +6210,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1412442442
-BoxCollider:
+--- !u!54 &1412442442
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412442440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1412442443
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6072,9 +6253,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1450204365}
   - 33: {fileID: 1450204364}
-  - 65: {fileID: 1450204363}
   - 23: {fileID: 1450204362}
-  m_Layer: 0
+  - 54: {fileID: 1450204363}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6101,18 +6282,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1450204363
-BoxCollider:
+--- !u!54 &1450204363
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450204361}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1450204364
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6127,79 +6311,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450204361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -90, y: 2.5, z: -13}
-  m_LocalScale: {x: 1, y: 5, z: 34}
+  m_LocalPosition: {x: -90, y: 2.5, z: -13.5}
+  m_LocalScale: {x: 1, y: 5, z: 33}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 30
---- !u!1001 &1469962478
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_ID
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800002, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_ID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800002, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_ID
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-      propertyPath: m_ViewID.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-  m_RootGameObject: {fileID: 1845325181}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1478389196
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,7 +6327,7 @@ GameObject:
   - 33: {fileID: 1478389200}
   - 65: {fileID: 1478389199}
   - 23: {fileID: 1478389198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6281,9 +6397,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1545562374}
   - 33: {fileID: 1545562373}
-  - 65: {fileID: 1545562372}
   - 23: {fileID: 1545562371}
-  m_Layer: 0
+  - 54: {fileID: 1545562372}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6310,18 +6426,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1545562372
-BoxCollider:
+--- !u!54 &1545562372
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545562370}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1545562373
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6414,9 +6533,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1628065241}
   - 33: {fileID: 1628065240}
-  - 65: {fileID: 1628065239}
   - 23: {fileID: 1628065238}
-  m_Layer: 0
+  - 54: {fileID: 1628065239}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,18 +6562,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1628065239
-BoxCollider:
+--- !u!54 &1628065239
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628065237}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1628065240
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6549,7 +6671,7 @@ GameObject:
   - 33: {fileID: 1674308949}
   - 65: {fileID: 1674308948}
   - 23: {fileID: 1674308947}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6621,7 +6743,7 @@ GameObject:
   - 33: {fileID: 1677029562}
   - 65: {fileID: 1677029561}
   - 23: {fileID: 1677029560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6757,7 +6879,7 @@ GameObject:
   - 33: {fileID: 1713855461}
   - 65: {fileID: 1713855460}
   - 23: {fileID: 1713855459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6955,9 +7077,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1770160371}
   - 33: {fileID: 1770160370}
-  - 65: {fileID: 1770160369}
   - 23: {fileID: 1770160368}
-  m_Layer: 0
+  - 54: {fileID: 1770160369}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6984,18 +7106,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1770160369
-BoxCollider:
+--- !u!54 &1770160369
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770160367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1770160370
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7024,9 +7149,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1773973088}
   - 33: {fileID: 1773973087}
-  - 65: {fileID: 1773973086}
   - 23: {fileID: 1773973085}
-  m_Layer: 0
+  - 54: {fileID: 1773973086}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7053,18 +7178,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1773973086
-BoxCollider:
+--- !u!54 &1773973086
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1773973084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1773973087
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7095,7 +7223,7 @@ GameObject:
   - 33: {fileID: 1778478400}
   - 65: {fileID: 1778478399}
   - 23: {fileID: 1778478398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7279,7 +7407,7 @@ GameObject:
   - 33: {fileID: 1825803568}
   - 65: {fileID: 1825803567}
   - 23: {fileID: 1825803566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7349,9 +7477,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1829926390}
   - 33: {fileID: 1829926389}
-  - 65: {fileID: 1829926388}
   - 23: {fileID: 1829926387}
-  m_Layer: 0
+  - 54: {fileID: 1829926388}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7378,18 +7506,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1829926388
-BoxCollider:
+--- !u!54 &1829926388
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1829926386}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1829926389
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7420,7 +7551,7 @@ GameObject:
   - 33: {fileID: 1830510866}
   - 65: {fileID: 1830510865}
   - 23: {fileID: 1830510864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7563,12 +7694,11 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1845325191}
   - 33: {fileID: 1845325190}
-  - 135: {fileID: 1845325189}
   - 23: {fileID: 1845325188}
   - 54: {fileID: 1845325187}
   - 148: {fileID: 1845325186}
@@ -7576,7 +7706,8 @@ GameObject:
   - 148: {fileID: 1845325184}
   - 114: {fileID: 1845325183}
   - 195: {fileID: 1845325182}
-  m_Layer: 0
+  - 136: {fileID: 1845325189}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7588,10 +7719,10 @@ NavMeshAgent:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 19500000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 1
-  m_Radius: .500000119
+  m_Radius: .5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -7601,7 +7732,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: .5
+  m_BaseOffset: .899999976
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1845325183
@@ -7609,7 +7740,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7628,7 +7759,7 @@ NetworkView:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 0
   m_StateSynchronization: 1
@@ -7641,7 +7772,7 @@ NetworkView:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14800002, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 0
   m_StateSynchronization: 1
@@ -7654,7 +7785,7 @@ NetworkView:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14800000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 0
   m_StateSynchronization: 1
@@ -7667,7 +7798,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   serializedVersion: 2
   m_Mass: 1
@@ -7683,7 +7814,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Enabled: 1
   m_CastShadows: 1
@@ -7699,36 +7830,37 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1845325189
-SphereCollider:
+--- !u!136 &1845325189
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 6e7152d7fc94ace4e87f5d20af476656,
+  m_PrefabParentObject: {fileID: 13600000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1845325190
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 6e7152d7fc94ace4e87f5d20af476656,
     type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1845325191
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
-  m_PrefabInternal: {fileID: 1469962478}
+  m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -70}
-  m_LocalScale: {x: 1.5, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -61.2519989}
+  m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -7743,7 +7875,7 @@ GameObject:
   - 33: {fileID: 1850225426}
   - 65: {fileID: 1850225425}
   - 23: {fileID: 1850225424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7813,9 +7945,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1873113979}
   - 33: {fileID: 1873113978}
-  - 65: {fileID: 1873113977}
   - 23: {fileID: 1873113976}
-  m_Layer: 0
+  - 54: {fileID: 1873113977}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7842,18 +7974,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1873113977
-BoxCollider:
+--- !u!54 &1873113977
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1873113975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1873113978
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7989,6 +8124,10 @@ Prefab:
     - target: {fileID: 100000, guid: 9ad14756e28516d4da454dca9b594654, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 9ad14756e28516d4da454dca9b594654, type: 2}
+      propertyPath: m_Center.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ad14756e28516d4da454dca9b594654, type: 2}
@@ -8134,7 +8273,7 @@ GameObject:
   - 33: {fileID: 1915184568}
   - 65: {fileID: 1915184567}
   - 23: {fileID: 1915184566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8270,7 +8409,7 @@ GameObject:
   - 33: {fileID: 1926369471}
   - 65: {fileID: 1926369470}
   - 23: {fileID: 1926369469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8406,7 +8545,7 @@ GameObject:
   - 33: {fileID: 1948245057}
   - 65: {fileID: 1948245056}
   - 23: {fileID: 1948245055}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8476,9 +8615,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1950832701}
   - 33: {fileID: 1950832700}
-  - 65: {fileID: 1950832699}
   - 23: {fileID: 1950832698}
-  m_Layer: 0
+  - 54: {fileID: 1950832699}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8505,18 +8644,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1950832699
-BoxCollider:
+--- !u!54 &1950832699
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950832697}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &1950832700
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8531,8 +8673,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950832697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 2.5, z: -30}
-  m_LocalScale: {x: 1, y: 5, z: 20}
+  m_LocalPosition: {x: 40, y: 2.5, z: -30.5}
+  m_LocalScale: {x: 1, y: 5, z: 19}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 38
@@ -8611,7 +8753,7 @@ GameObject:
   - 33: {fileID: 2005876688}
   - 65: {fileID: 2005876687}
   - 23: {fileID: 2005876686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8683,7 +8825,7 @@ GameObject:
   - 33: {fileID: 2033023677}
   - 65: {fileID: 2033023676}
   - 23: {fileID: 2033023675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8778,7 +8920,6 @@ MonoBehaviour:
   _gameCamera: {fileID: 1293451599}
   _groundCollider: {fileID: 598566454}
   _groundDistance: 100
-  _lineMovement: {fileID: 0}
 --- !u!114 &2051850082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8793,7 +8934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _smartActionManager: {fileID: 2051850084}
   _playersScript:
-  - {fileID: 0}
+  - {fileID: 1845325183}
 --- !u!4 &2051850083
 Transform:
   m_ObjectHideFlags: 0
@@ -8826,9 +8967,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2076674465}
   - 33: {fileID: 2076674464}
-  - 65: {fileID: 2076674463}
   - 23: {fileID: 2076674462}
-  m_Layer: 0
+  - 54: {fileID: 2076674463}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8855,18 +8996,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2076674463
-BoxCollider:
+--- !u!54 &2076674463
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076674461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &2076674464
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8895,9 +9039,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2079603554}
   - 33: {fileID: 2079603553}
-  - 65: {fileID: 2079603552}
   - 23: {fileID: 2079603551}
-  m_Layer: 0
+  - 54: {fileID: 2079603552}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8924,18 +9068,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2079603552
-BoxCollider:
+--- !u!54 &2079603552
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079603550}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &2079603553
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8950,8 +9097,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079603550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63, y: 2.5, z: -30}
-  m_LocalScale: {x: 54, y: 5, z: 1}
+  m_LocalPosition: {x: -63.5, y: 2.5, z: -30}
+  m_LocalScale: {x: 53, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1839480010}
   m_RootOrder: 23
@@ -8964,9 +9111,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2091130412}
   - 33: {fileID: 2091130411}
-  - 65: {fileID: 2091130410}
   - 23: {fileID: 2091130409}
-  m_Layer: 0
+  - 54: {fileID: 2091130410}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8993,18 +9140,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2091130410
-BoxCollider:
+--- !u!54 &2091130410
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2091130408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &2091130411
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9097,9 +9247,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2096547571}
   - 33: {fileID: 2096547570}
-  - 65: {fileID: 2096547569}
   - 23: {fileID: 2096547568}
-  m_Layer: 0
+  - 54: {fileID: 2096547569}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9126,18 +9276,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2096547569
-BoxCollider:
+--- !u!54 &2096547569
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2096547567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &2096547570
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9166,9 +9319,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2111622349}
   - 33: {fileID: 2111622348}
-  - 65: {fileID: 2111622347}
   - 23: {fileID: 2111622346}
-  m_Layer: 0
+  - 54: {fileID: 2111622347}
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9195,18 +9348,21 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2111622347
-BoxCollider:
+--- !u!54 &2111622347
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2111622345}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &2111622348
 MeshFilter:
   m_ObjectHideFlags: 0
