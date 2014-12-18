@@ -14,10 +14,10 @@ public class GameManagerScript : MonoBehaviour {
     SmartActionManagerScript _smartActionManager;
 
     [SerializeField]
-    private PlayerScript[] _playersScript;
+    public PlayerScript[] _playersScript;
 
     [SerializeField]
-    private GameObject[] _playersGameObject;
+    public GameObject[] _playersGameObject;
 
     /*
     [SerializeField]
@@ -170,7 +170,9 @@ public class GameManagerScript : MonoBehaviour {
     public void ExecuteActionOfPlayerT(int player, List<CharacterAction> maList) {
         Debug.Log("On rentre dans ExecuteActionOfPlayerT()");
         //  maList.ConvertAll(CharacterActionMove);
-        for(int i = 0; i < maList.Count; i++) {
+        // for(int i = 0; i < maList.Count; i++) {
+        if(maList.Count != 0) {
+
 
             Debug.Log("Taille de la liste :" + maList.Count);
             // Debug.Log("type de ma putain de liste :" + maList[i].GetType());
@@ -180,10 +182,11 @@ public class GameManagerScript : MonoBehaviour {
 
 
             //_playersScript[player].ExecuteActionT(dico["MoveToLocation"]);
-            _playersScript[player].ExecuteActionT(maList[i]);
+            _playersScript[player].ExecuteActionT(maList[0]);
 
             //_playersScript[player].ExecuteAction(actionNameList[i], pos);
 
+            // }
         }
     }
 }

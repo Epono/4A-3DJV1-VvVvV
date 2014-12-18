@@ -14,10 +14,10 @@ public class PlayerScript : MonoBehaviour {
     int _actionPoints;
 
     [SerializeField]
-    public List<CharacterAction> actionList;
+    public List<CharacterAction> actionList = new List<CharacterAction>();
 
     void Start() {
-        actionList = new List<CharacterAction>();
+        //actionList = 
     }
 
     void Update() {
@@ -33,13 +33,14 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void ExecuteActionT(CharacterAction action) {
-        if(this.transform.position != action.getLocation()) {
-            Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
-            _agent.SetDestination(action.getLocation());
-            Debug.Log("Mon_AgentPATH:" + _agent.path);
+        //if(this.transform.position != action.getLocation()) {
+        Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
+        _agent.SetDestination(action.getLocation());
+        actionList.Remove(action);
+        Debug.Log("Mon_AgentPATH:" + _agent.path);
 
-            Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
-        }
+        Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
+        //}
         //_agent.ResetPath();
         // throw new System.NotImplementedException();
     }
