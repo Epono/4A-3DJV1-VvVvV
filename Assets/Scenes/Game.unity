@@ -1443,7 +1443,6 @@ GameObject:
   - 54: {fileID: 274252837}
   - 148: {fileID: 274252836}
   - 148: {fileID: 274252835}
-  - 148: {fileID: 274252834}
   - 114: {fileID: 274252833}
   - 195: {fileID: 274252832}
   - 136: {fileID: 274252831}
@@ -1509,19 +1508,6 @@ MonoBehaviour:
   _shootDistance: 0
   _shootImpulse: 0
   playerId: 0
---- !u!148 &274252834
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656,
-    type: 2}
-  m_PrefabInternal: {fileID: 1265866889}
-  m_GameObject: {fileID: 274252830}
-  m_Enabled: 0
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 274252840}
-  m_ViewID:
-    m_ID: 6
-    m_Type: 1
 --- !u!148 &274252835
 NetworkView:
   m_ObjectHideFlags: 0
@@ -1600,7 +1586,7 @@ Transform:
   m_PrefabInternal: {fileID: 1265866889}
   m_GameObject: {fileID: 274252830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -111.494217, y: 2, z: 61.5372162}
+  m_LocalPosition: {x: -110, y: 2, z: 60}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1827,7 +1813,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 113.501244
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1835,7 +1821,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 62.4300537
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1873,11 +1859,11 @@ Prefab:
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -2123,7 +2109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -61.2519989
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2145,11 +2131,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -5720,7 +5706,6 @@ GameObject:
   - 54: {fileID: 1148168577}
   - 148: {fileID: 1148168576}
   - 148: {fileID: 1148168575}
-  - 148: {fileID: 1148168574}
   - 114: {fileID: 1148168573}
   - 195: {fileID: 1148168572}
   - 136: {fileID: 1148168571}
@@ -5786,19 +5771,6 @@ MonoBehaviour:
   _shootDistance: 0
   _shootImpulse: 0
   playerId: 0
---- !u!148 &1148168574
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656,
-    type: 2}
-  m_PrefabInternal: {fileID: 346257441}
-  m_GameObject: {fileID: 1148168570}
-  m_Enabled: 0
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 1148168580}
-  m_ViewID:
-    m_ID: 9
-    m_Type: 1
 --- !u!148 &1148168575
 NetworkView:
   m_ObjectHideFlags: 0
@@ -5877,7 +5849,7 @@ Transform:
   m_PrefabInternal: {fileID: 346257441}
   m_GameObject: {fileID: 1148168570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 113.501244, y: 2, z: 62.4300537}
+  m_LocalPosition: {x: 110, y: 2, z: 60}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6393,7 +6365,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -111.494217
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6401,7 +6373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 61.5372162
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6439,11 +6411,11 @@ Prefab:
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -8725,7 +8697,6 @@ GameObject:
   - 54: {fileID: 1845325187}
   - 148: {fileID: 1845325186}
   - 148: {fileID: 1845325185}
-  - 148: {fileID: 1845325184}
   - 114: {fileID: 1845325183}
   - 195: {fileID: 1845325182}
   - 136: {fileID: 1845325189}
@@ -8777,19 +8748,6 @@ MonoBehaviour:
   _shootDistance: 0
   _shootImpulse: 0
   playerId: 0
---- !u!148 &1845325184
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800004, guid: 6e7152d7fc94ace4e87f5d20af476656,
-    type: 2}
-  m_PrefabInternal: {fileID: 448608618}
-  m_GameObject: {fileID: 1845325181}
-  m_Enabled: 0
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 1845325191}
-  m_ViewID:
-    m_ID: 3
-    m_Type: 1
 --- !u!148 &1845325185
 NetworkView:
   m_ObjectHideFlags: 0
@@ -8882,7 +8840,7 @@ Transform:
   m_PrefabInternal: {fileID: 448608618}
   m_GameObject: {fileID: 1845325181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -61.2519989}
+  m_LocalPosition: {x: 0, y: 2, z: -70}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
