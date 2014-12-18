@@ -1,0 +1,5 @@
+- Gestion pause
+- Gestion reconnexion
+- Paramétrage de partie
+- Fix de la résolution
+- Ajout de fonctionnalités (équipement, consommables, éléments interactifs)
