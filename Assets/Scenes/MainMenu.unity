@@ -670,6 +670,7 @@ MonoBehaviour:
   _maxNumberOfConnections: 3
   _networkView: {fileID: 460902283}
   _isServer: 1
+  _lobbyManagerScript: {fileID: 0}
 --- !u!4 &460902285
 Transform:
   m_ObjectHideFlags: 0

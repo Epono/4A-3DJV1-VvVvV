@@ -7792,6 +7792,22 @@ Prefab:
       propertyPath: _executeButton
       value: 
       objectReference: {fileID: 160824149}
+    - target: {fileID: 14800000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _endTurnButton
+      value: 
+      objectReference: {fileID: 160824149}
+    - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _collectButton
+      value: 
+      objectReference: {fileID: 407993380}
+    - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _moveButton
+      value: 
+      objectReference: {fileID: 1258738036}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
   m_RootGameObject: {fileID: 2051850080}
@@ -10844,10 +10860,10 @@ MonoBehaviour:
   _gameManager: {fileID: 2051850082}
   _gameCamera: {fileID: 1293451599}
   _groundCollider: {fileID: 598566454}
-  _moveButton: {fileID: 0}
-  _collectButton: {fileID: 0}
+  _moveButton: {fileID: 1258738036}
+  _collectButton: {fileID: 407993380}
   _networkView: {fileID: 2051850085}
-  _endTurnButton: {fileID: 0}
+  _endTurnButton: {fileID: 160824149}
   _executeButton: {fileID: 160824149}
 --- !u!114 &2051850082
 MonoBehaviour:
@@ -10861,6 +10877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _smartActionManager: {fileID: 0}
   _playersScript:
   - {fileID: 1845325183}
   - {fileID: 274252833}
@@ -10869,7 +10886,6 @@ MonoBehaviour:
   _otherPlayerMaterial: {fileID: 2100000, guid: 7d43234139074e747ab21840779b7f97,
     type: 2}
   _networkView: {fileID: 2051850085}
-  _executeButton: {fileID: 0}
   _textTurnTimeRemaining: {fileID: 0}
   _textGameTimeRemaining: {fileID: 0}
   _turnDuration: 30
