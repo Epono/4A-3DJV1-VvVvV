@@ -66,8 +66,9 @@ public class GameManagerScript : MonoBehaviour {
         // Debug.Log("Fin de la partie dans :" + timeleft);
         timeleft -= Time.deltaTime;
         if(timeleft < 0) {
-            Debug.Log("GameOver");
-            Application.Quit();
+            //Debug.Log("GameOver");
+            //Application.Quit();
+            Application.LoadLevel("GameOver");
         }
     }
 
