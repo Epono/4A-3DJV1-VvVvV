@@ -79,8 +79,8 @@ public class GameManagerScript : MonoBehaviour {
         timeleft -= Time.deltaTime;
         currentTurnTimeRemaining -= Time.deltaTime;
 
-        _textTurnTimeRemaining.text = "Tour : " + currentTurnTimeRemaining + " s";
-        _textGameTimeRemaining.text = "Partie : " + timeleft + " s";
+        //_textTurnTimeRemaining.text = "Tour : " + currentTurnTimeRemaining + " s";
+        //_textGameTimeRemaining.text = "Partie : " + timeleft + " s";
 
         if(timeleft < 0) {
             Debug.Log("GameOver");

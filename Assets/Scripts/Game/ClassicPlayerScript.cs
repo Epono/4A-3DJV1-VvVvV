@@ -24,9 +24,6 @@ public class ClassicPlayerScript : MonoBehaviour
 
     [SerializeField]
     float _shootImpulse;
-
-    [SerializeField]
-    GameObject Coin;
     
     float _squareShootDistance;
     // Use this for initialization

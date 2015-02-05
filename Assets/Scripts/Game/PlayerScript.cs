@@ -10,8 +10,8 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     Transform _transform;
 
-    [SerializeField]
     int _actionPoints;
+    public int score = 0;
 
     [SerializeField]
     public List<CharacterAction> actionList = new List<CharacterAction>();

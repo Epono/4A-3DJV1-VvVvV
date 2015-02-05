@@ -120,8 +120,7 @@ public class LobbyManagerScript : MonoBehaviour
     }
 
     //Client-only method
-    [RPC
-]
+    [RPC]
     public void clientLaunchGameScene()
     {
         Network.SetSendingEnabled(0, false);
