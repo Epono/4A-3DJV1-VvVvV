@@ -4,8 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MainMenuManagerScript : MonoBehaviour {
-    //Singletonisation
-    public static MainMenuManagerScript currentMainMenuManagerScript;
 
     [SerializeField]
     Button _playButton;
@@ -52,24 +50,15 @@ public class MainMenuManagerScript : MonoBehaviour {
     [SerializeField]
     string _lobbyScene;
 
-    void Awake() {
-        if(currentMainMenuManagerScript == null) {
-            DontDestroyOnLoad(gameObject);
-            currentMainMenuManagerScript = this;
-        } else if(currentMainMenuManagerScript != null) {
-            Destroy(gameObject);
-        }
-    }
-
-    // Use this for initialization
     void Start() {
+        NetworkManagerScript.currentNetworkManagerScript._mainMenuManagerScript = this;
+
         Debug.Log("Starting the game (" + (NetworkManagerScript.currentNetworkManagerScript._isServer ? "Server mode" : "Client mode") + "), waiting for a player input on a button");
 
         //Specifies that the Application should be running when in background (mandatory if multiple instances)
         Application.runInBackground = true;
 
         initScene();
-
     }
 
     public void initScene() {
@@ -188,28 +177,9 @@ public class MainMenuManagerScript : MonoBehaviour {
         Application.Quit();
     }
 
-    public void onServerInitialized() {
-        SceneStateManager.currentStateManager.setNewSceneState(SceneStateManager.sceneState.Lobby);
-        Application.LoadLevel(_lobbyScene);
-    }
-
-
     public void failedToConnect(NetworkConnectionError error) {
         Debug.Log("Couldn't connect to the server : " + error);
         //Display an error message, and asks if the player wants to retry to connect
-    }
-
-    public void onConnectedToServer() {
-        Debug.Log("Joining the Lobby");
-
-        Network.SetSendingEnabled(0, false);
-        Network.isMessageQueueRunning = false;
-        SceneStateManager.currentStateManager.setNewSceneState(SceneStateManager.sceneState.Lobby);
-
-        Application.LoadLevel(_lobbyScene);
-
-        Network.isMessageQueueRunning = true;
-        Network.SetSendingEnabled(0, true);
     }
 
     public void disconnectedFromServer(NetworkDisconnection networkDisconnection) {

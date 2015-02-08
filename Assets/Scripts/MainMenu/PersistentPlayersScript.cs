@@ -34,18 +34,6 @@ public class PersistentPlayersScript : MonoBehaviour
     public void playerConnected(NetworkPlayer player)
     {
         _players.Add(player);
-
-        /*
-        if (_players.Count == 1)
-        {
-            Application.LoadLevel(_lobbyScene);
-        }
-        else if (_players.Count == _networkManagerScript._maxNumberOfConnections)
-        {
-            Debug.Log("Launching the game ...");
-            Application.LoadLevel(_gameScene);
-        }
-         */
     }
 
     public void playerDisconnected(NetworkPlayer player)

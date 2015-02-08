@@ -9,32 +9,20 @@ using System.Runtime.Serialization;
 
 public class GameManagerScript : MonoBehaviour {
 
-    //Singletonisation
     [SerializeField]
-    static GameManagerScript currentGameManagerScript;
-
     SmartActionManagerScript _smartActionManager;
 
     [SerializeField]
-    public PlayerScript[] _playersScript;
+    PlayerScript[] _playersScript;
 
     [SerializeField]
-    public GameObject[] _playersGameObject;
-
-    /*
-    [SerializeField]
-    public Object _playerPrefab;
-    */
+    GameObject[] _playersGameObject;
 
     [SerializeField]
-    public Material _otherPlayerMaterial;
-
-
-    [SerializeField]
-    public NetworkView _networkView;
+    Material _otherPlayerMaterial;
 
     [SerializeField]
-    Button _executeButton;
+    NetworkView _networkView;
 
     [SerializeField]
     Text _textTurnTimeRemaining;
@@ -60,14 +48,9 @@ public class GameManagerScript : MonoBehaviour {
 
     bool isPlaying = false;
 
-
-    void Awake() {
-        DontDestroyOnLoad(gameObject);
-        currentGameManagerScript = this;
-    }
-
-    // Use this for initialization
     void Start() {
+        NetworkManagerScript.currentNetworkManagerScript._gameManagerScript = this;
+
         PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
 
         if(NetworkManagerScript.currentNetworkManagerScript._isServer) {

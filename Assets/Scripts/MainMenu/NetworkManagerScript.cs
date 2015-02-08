@@ -3,12 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class NetworkManagerScript : MonoBehaviour
-{
-    //Singleton
+public class NetworkManagerScript : MonoBehaviour {
+
     public static NetworkManagerScript currentNetworkManagerScript;
 
-    //To ease the configuration
     [SerializeField]
     int _serverPort;
 
@@ -24,71 +22,54 @@ public class NetworkManagerScript : MonoBehaviour
     [SerializeField]
     public bool _isServer;
 
-    //[SerializeField]
-    // MainMenuManagerScript _mainMenuManagerScript;
+    // Updated when needed
+    public MainMenuManagerScript _mainMenuManagerScript;
+    public LobbyManagerScript _lobbyManagerScript;
+    public GameManagerScript _gameManagerScript;
 
-    // [SerializeField]
-    // PersistentPlayersScript _persistentPlayersScript;
+    private bool isServerRunning = false;
 
-    //[SerializeField]
-    //string _lobbyScene;
-
-    private bool _isServerRunning = false;
-
-    void Awake()
-    {
-        if (currentNetworkManagerScript == null)
-        {
+    void Awake() {
+        if(currentNetworkManagerScript == null) {
             DontDestroyOnLoad(gameObject);
             currentNetworkManagerScript = this;
-        }
-        else if (currentNetworkManagerScript != null)
-        {
+        } else if(currentNetworkManagerScript != null) {
             Destroy(gameObject);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
+        // Check players connections ?
     }
 
-    // Server (Runs the server)
-    public void runServer()
-    {
-        if (!_isServerRunning)
-        {
+    //Server (Runs the server)
+    public void runServer() {
+        if(!isServerRunning) {
             Debug.Log("Trying to initialize the server ...");
             Network.InitializeSecurity();
             Network.InitializeServer(_maxNumberOfConnections, _serverPort, !Network.HavePublicAddress());
-        }
-        else
-        {
+        } else {
             Debug.Log("Closing the server ...");
             Network.Disconnect();
         }
     }
 
     //Server (server finished initializing, launch lobbyScene)
-    void OnServerInitialized()
-    {
-        _isServerRunning = true;
-        MainMenuManagerScript.currentMainMenuManagerScript.onServerInitialized();
+    void OnServerInitialized() {
+        isServerRunning = true;
+        SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.Lobby);
     }
 
     //Server (a player connected)
-    void OnPlayerConnected(NetworkPlayer player)
-    {
-        switch (SceneStateManager.currentStateManager.getCurrentSceneState())
-        {
+    void OnPlayerConnected(NetworkPlayer player) {
+        switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
             case SceneStateManager.sceneState.MainMenu:
                 // Shouldn't happen (not connected while in MainMenu)
                 break;
             case SceneStateManager.sceneState.Lobby:
                 // Add the player to the persistentPlayersScript
                 Debug.Log("Player [" + player.ipAddress + "] connected");
-                LobbyManagerScript.currentLobbyManagerScript.serverPlayerJoined(player);
+                _lobbyManagerScript.serverPlayerJoined(player);
                 break;
             case SceneStateManager.sceneState.Game:
                 // If it's a reconnection, add him to the game, shouldn't happen otherwise
@@ -97,18 +78,15 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Server (a player disconnected)
-    void OnPlayerDisconnected(NetworkPlayer player)
-    {
+    void OnPlayerDisconnected(NetworkPlayer player) {
         Debug.Log("Player disconnected : " + player.guid);
-        //LobbyManagerScript.currentLobbyManagerScript.playerDisconnected(player);
-        switch (SceneStateManager.currentStateManager.getCurrentSceneState())
-        {
+        switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
             case SceneStateManager.sceneState.MainMenu:
                 // Shouldn't happen (not connected while in MainMenu)
                 break;
             case SceneStateManager.sceneState.Lobby:
                 // Wait (a bit) for him to reconnect ?
-                LobbyManagerScript.currentLobbyManagerScript.serverPlayerDisconnected(player);
+                _lobbyManagerScript.serverPlayerDisconnected(player);
                 break;
             case SceneStateManager.sceneState.Game:
                 // Wait (a bit longer) for him to reconnect ?
@@ -117,18 +95,14 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Client (tries to connect to the server)
-    public void TryToConnectToServer()
-    {
+    public void TryToConnectToServer() {
         Debug.Log("Trying to connect to the server ...");
         Network.Connect(_serverAdress, _serverPort);
     }
 
     //Client
-    void OnFailedToConnect(NetworkConnectionError error)
-    {
-        //LobbyManagerScript.currentLobbyManagerScript.failedToConnect(error);
-        switch (SceneStateManager.currentStateManager.getCurrentSceneState())
-        {
+    void OnFailedToConnect(NetworkConnectionError error) {
+        switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
             case SceneStateManager.sceneState.MainMenu:
                 // Couldn't connect, display error message and retry
                 break;
@@ -142,14 +116,10 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Client
-    void OnConnectedToServer()
-    {
-        switch (SceneStateManager.currentStateManager.getCurrentSceneState())
-        {
+    void OnConnectedToServer() {
+        switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
             case SceneStateManager.sceneState.MainMenu:
-                // Go to Lobby
-                Debug.Log("Connection to the server successful !");
-                MainMenuManagerScript.currentMainMenuManagerScript.onConnectedToServer();
+                // Go to Lobby (handled by server) 
                 break;
             case SceneStateManager.sceneState.Lobby:
                 // Shouldn't happen
@@ -161,20 +131,15 @@ public class NetworkManagerScript : MonoBehaviour
     }
 
     //Server (gets called when the server finishes closing => normal) + Client (gets called when disconnected from server => abnormal)
-    void OnDisconnectedFromServer(NetworkDisconnection networkDisconnection)
-    {
-        if (_isServer)
-        {
+    void OnDisconnectedFromServer(NetworkDisconnection networkDisconnection) {
+        if(_isServer) {
             Debug.Log("Server closed");
-            _isServerRunning = false;
-        }
-        else
-        {
+            isServerRunning = false;
+        } else {
             Debug.Log("Disconnected from server");
         }
 
-        switch (SceneStateManager.currentStateManager.getCurrentSceneState())
-        {
+        switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
             case SceneStateManager.sceneState.MainMenu:
                 // Shouldn't happen (not connected while in MainMenu)
                 break;
@@ -185,5 +150,11 @@ public class NetworkManagerScript : MonoBehaviour
                 // Try to reconnect/evicts from the game after a while
                 break;
         }
+    }
+
+    [RPC]
+    public void LoadLobby() {
+        Debug.Log("RPC received, joining lobby");
+        SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.Lobby);
     }
 }

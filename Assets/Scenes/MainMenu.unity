@@ -271,6 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9228dd52319208045a52bf33182a4da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainMenuSceneName: MainMenu
+  _lobbySceneName: Lobby
+  _gameSceneName: Game
 --- !u!4 &259457633
 Transform:
   m_ObjectHideFlags: 0
@@ -670,6 +673,10 @@ MonoBehaviour:
   _maxNumberOfConnections: 3
   _networkView: {fileID: 460902283}
   _isServer: 1
+  _mainMenuManagerScript: {fileID: 11400000, guid: 5f62a6d76aa327044876ee113ef7143d,
+    type: 2}
+  _lobbyManagerScript: {fileID: 0}
+  _gameManagerScript: {fileID: 0}
 --- !u!4 &460902285
 Transform:
   m_ObjectHideFlags: 0
