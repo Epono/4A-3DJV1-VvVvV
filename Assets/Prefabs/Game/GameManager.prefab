@@ -49,6 +49,7 @@ MonoBehaviour:
   _collectButton: {fileID: 0}
   _networkView: {fileID: 14800000}
   _endTurnButton: {fileID: 0}
+  _executeButton: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -60,15 +61,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playersScript:
-  - {fileID: 0}
-  _playersGameObject:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _playersScript: []
+  _playersGameObject: []
   _otherPlayerMaterial: {fileID: 2100000, guid: 7d43234139074e747ab21840779b7f97,
     type: 2}
   _networkView: {fileID: 14800000}
+  _executeButton: {fileID: 0}
+  _textTurnTimeRemaining: {fileID: 0}
+  _textGameTimeRemaining: {fileID: 0}
+  _turnDuration: 30
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

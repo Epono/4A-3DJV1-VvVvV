@@ -10,7 +10,8 @@ using System.Runtime.Serialization;
 public class GameManagerScript : MonoBehaviour {
 
     //Singletonisation
-    public static GameManagerScript currentGameManagerScript;
+    [SerializeField]
+    static GameManagerScript currentGameManagerScript;
 
     SmartActionManagerScript _smartActionManager;
 
@@ -35,6 +36,12 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     Button _executeButton;
 
+    [SerializeField]
+    Text _textTurnTimeRemaining;
+
+    [SerializeField]
+    Text _textGameTimeRemaining;
+
 
     //[SerializeField]
     //GUIText Timer;
@@ -46,55 +53,54 @@ public class GameManagerScript : MonoBehaviour {
 
     //List<CharacterAction> _maList = new List<CharacterAction>();
 
+    [SerializeField]
+    float _turnDuration = 30.0f;
+
+    float currentTurnTimeRemaining = 30.0f;
+
+    bool isPlaying = false;
+
 
     void Awake() {
-        if(currentGameManagerScript == null) {
-            DontDestroyOnLoad(gameObject);
-            currentGameManagerScript = this;
-        } else if(currentGameManagerScript != null) {
-            Destroy(gameObject);
-        }
+        DontDestroyOnLoad(gameObject);
+        currentGameManagerScript = this;
     }
 
     // Use this for initialization
     void Start() {
         PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
+
+        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
+            _networkView.RPC("TellPlayerWhoHeIs", RPCMode.Others);
+        }
     }
 
-    // Update is called once per frame
     void Update() {
-        // Debug.Log("Fin de la partie dans :" + timeleft);
         timeleft -= Time.deltaTime;
+        currentTurnTimeRemaining -= Time.deltaTime;
+
+        //_textTurnTimeRemaining.text = "Tour : " + currentTurnTimeRemaining + " s";
+        //_textGameTimeRemaining.text = "Partie : " + timeleft + " s";
+
         if(timeleft < 0) {
+<<<<<<< HEAD
             //Debug.Log("GameOver");
             //Application.Quit();
             Application.LoadLevel("GameOver");
+=======
+            Debug.Log("GameOver");
+            Application.Quit();
+        } else if(currentTurnTimeRemaining < 0) {
+            isPlaying = true;
+            //ExecuteActions();
+>>>>>>> 7ab68839bf4634c7ddbf72e27cffd003b413ccde
         }
     }
 
-    void FixedUpdate() {
-        //guiText.text = Time.timeSinceLevelLoad.ToString();
-        //  Timer.text = Time.timeSinceLevelLoad.ToString();
-        //  timer.text = Time.timeSinceLevelLoad.ToString();
+    void ALaFinDeLexecutionDesActions() {
+        currentTurnTimeRemaining = _turnDuration;
+        isPlaying = false;
     }
-
-    /*
-    public void WantToMove(int player, Vector3 pos) {
-        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
-            //Debug
-            PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
-            //_networkView.RPC("TellPlayerWhoHeIs", RPCMode.Others);
-
-
-        } else {
-            foreach(GameObject go in _playersGameObject) {
-                if(!go.name.Equals(int.Parse(Network.player.ToString()))) {
-                    go.GetComponent<Renderer>().material = _otherPlayerMaterial;
-                }
-            }
-        }
-    }
-    */
 
     [RPC]
     void TellPlayerWhoHeIs() {
@@ -104,10 +110,6 @@ public class GameManagerScript : MonoBehaviour {
             }
         }
     }
-
-    // Update is called once per frame
-
-
 
     //Execution des actions d'un joueur
     /*
