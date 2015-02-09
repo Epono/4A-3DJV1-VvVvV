@@ -66,11 +66,14 @@ public class GameManagerScript : MonoBehaviour {
         //_textGameTimeRemaining.text = "Partie : " + timeleft + " s";
 
         if(timeleft < 0) {
-            Debug.Log("GameOver");
-            Application.Quit();
+
+            Application.LoadLevel("GameOver");
+
+            
         } else if(currentTurnTimeRemaining < 0) {
             isPlaying = true;
             //ExecuteActions();
+
         }
     }
 
@@ -156,9 +159,7 @@ public class GameManagerScript : MonoBehaviour {
 
 
             Debug.Log("Taille de la liste :" + maList.Count);
-            // Debug.Log("type de ma putain de liste :" + maList[i].GetType());
-            // Debug.Log("??? de ma putain de liste :" + maList[i]);
-            // Debug.Log("??? de ma putain de liste :" + maList);
+            
 
 
 
