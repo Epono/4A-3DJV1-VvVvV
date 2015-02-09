@@ -1738,7 +1738,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 15d9ec7b7b1107a429486aaae273199d, type: 2}
+  - {fileID: 2100000, guid: 03775b2f15bb2c74bbc380dd973f97b4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2055,6 +2055,10 @@ Prefab:
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 290b457cc455cff4db9af16f72d004fa, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
   m_RootGameObject: {fileID: 1148168570}
@@ -6511,7 +6515,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 15d9ec7b7b1107a429486aaae273199d, type: 2}
+  - {fileID: 2100000, guid: 290b457cc455cff4db9af16f72d004fa, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7222,6 +7226,10 @@ Prefab:
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 03775b2f15bb2c74bbc380dd973f97b4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e7152d7fc94ace4e87f5d20af476656, type: 2}
   m_RootGameObject: {fileID: 274252830}
@@ -7842,6 +7850,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400002, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
       propertyPath: _playersScript.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _playersGameObject.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
@@ -11118,12 +11130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smartActionManager: {fileID: 0}
+  _smartActionManager: {fileID: 2051850084}
   _playersScript:
   - {fileID: 1845325183}
   - {fileID: 274252833}
   - {fileID: 1148168573}
-  _playersGameObject: []
+  _playersGameObject:
+  - {fileID: 1845325181}
+  - {fileID: 274252830}
+  - {fileID: 1148168570}
   _otherPlayerMaterial: {fileID: 2100000, guid: 7d43234139074e747ab21840779b7f97,
     type: 2}
   _networkView: {fileID: 2051850085}
