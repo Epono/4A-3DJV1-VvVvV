@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlayerScript : MonoBehaviour {
 
     [SerializeField]
-    NavMeshAgent _agent;
+    public NavMeshAgent _agent;
 
     [SerializeField]
     Transform _transform;

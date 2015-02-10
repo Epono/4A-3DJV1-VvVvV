@@ -42,9 +42,14 @@ public class GameManagerScript : MonoBehaviour {
     //List<CharacterAction> _maList = new List<CharacterAction>();
 
     [SerializeField]
-    float _turnDuration = 30.0f;
+    float _turnDuration = 10.0f;
 
-    float currentTurnTimeRemaining = 30.0f;
+    float currentTurnTimeRemaining = 10.0f;
+
+    [SerializeField]
+    float _simulationDuration = 5.0f;
+
+    float currentSimulationTimeRemaining = 5.0f;
 
     bool isPlaying = false;
 
@@ -53,33 +58,42 @@ public class GameManagerScript : MonoBehaviour {
 
         PersistentPlayersScript.currentPersistentPlayersScript.displayNetworkPlayers();
 
-        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
-            _networkView.RPC("TellPlayerWhoHeIs", RPCMode.Others);
-        }
+        //if(networkmanagerscript.currentnetworkmanagerscript._isserver) {
+        //    _networkview.rpc("tellplayerwhoheis", rpcmode.others);
+        //}
     }
 
     void Update() {
         timeleft -= Time.deltaTime;
-        currentTurnTimeRemaining -= Time.deltaTime;
+        _textGameTimeRemaining.text = "Game : " + timeleft.ToString("F0") + " s";
 
-        //_textTurnTimeRemaining.text = "Tour : " + currentTurnTimeRemaining + " s";
-        //_textGameTimeRemaining.text = "Partie : " + timeleft + " s";
+        if(isPlaying) {
+            currentSimulationTimeRemaining -= Time.deltaTime;
+            _textTurnTimeRemaining.text = "Simu : " + currentSimulationTimeRemaining.ToString("F1") + " s";
+        } else {
+            currentTurnTimeRemaining -= Time.deltaTime;
+            _textTurnTimeRemaining.text = "Tour : " + currentTurnTimeRemaining.ToString("F1") + " s";
+        }
+
 
         if(timeleft < 0) {
-
             Application.LoadLevel("GameOver");
-
-            
-        } else if(currentTurnTimeRemaining < 0) {
-            isPlaying = true;
-            //ExecuteActions();
-
+        } else {
+            if(isPlaying) {
+                if(currentSimulationTimeRemaining < 0) {
+                    isPlaying = false;
+                    currentSimulationTimeRemaining = _simulationDuration;
+                    // Reprendre
+                }
+            } else {
+                if(currentTurnTimeRemaining < 0) {
+                    isPlaying = true;
+                    currentTurnTimeRemaining = _turnDuration;
+                    // Lancer simulation
+                    // ExecuteActions();
+                }
+            }
         }
-    }
-
-    void ALaFinDeLexecutionDesActions() {
-        currentTurnTimeRemaining = _turnDuration;
-        isPlaying = false;
     }
 
     [RPC]
@@ -159,7 +173,7 @@ public class GameManagerScript : MonoBehaviour {
 
 
             Debug.Log("Taille de la liste :" + maList.Count);
-            
+
 
 
 
@@ -170,5 +184,16 @@ public class GameManagerScript : MonoBehaviour {
 
             // }
         }
+    }
+
+    [RPC]
+    public void HasToStop(NetworkPlayer player) {
+        if(Network.isServer) {
+            _networkView.RPC("HasToStop", RPCMode.Others, player);
+        }
+        var playerId = int.Parse(player.ToString());
+
+        ExecuteActionOfPlayerT(playerId - 1, _playersScript[playerId - 1].actionList);
+        _playersScript[playerId - 1]._agent.Stop();
     }
 }

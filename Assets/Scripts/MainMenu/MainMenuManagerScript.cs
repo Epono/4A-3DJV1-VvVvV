@@ -80,7 +80,9 @@ public class MainMenuManagerScript : MonoBehaviour {
     }
 
     public void Update() {
-
+        if(Input.GetKeyDown(KeyCode.Return) && !NetworkManagerScript.currentNetworkManagerScript._isServer) {
+            NetworkManagerScript.currentNetworkManagerScript.TryToConnectToServer();
+        }
     }
 
     //TODO

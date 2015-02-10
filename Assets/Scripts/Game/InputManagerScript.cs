@@ -9,8 +9,8 @@ public class InputManagerScript : MonoBehaviour {
     [SerializeField]
     private GameManagerScript _gameManager;
 
-    //[SerializeField]
-    //private PlayerScript _playerScript;
+    [SerializeField]
+    PlayerScript[] _playerScript;
 
     [SerializeField]
     Camera _gameCamera;
