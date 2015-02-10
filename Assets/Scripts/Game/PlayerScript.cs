@@ -48,6 +48,7 @@ public class PlayerScript : MonoBehaviour {
 
     public void AddActionInList(CharacterAction currentAction) {
         _actionsList.Add(currentAction);
+        Debug.Log("Ajout action");
     }
 
     public void IncrementScore() {
@@ -56,19 +57,6 @@ public class PlayerScript : MonoBehaviour {
 
     public int GetScore() {
         return score;
-    }
-
-    public void ExecuteAction(CharacterAction action) {
-        ////if(this.transform.position != action.getLocation()) {
-        //Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
-        //_agent.SetDestination(action.getLocation());
-        //actionList.Remove(action);
-        //Debug.Log("Mon_AgentPATH:" + _agent.path);
-
-        //Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
-        //}
-        //_agent.ResetPath();
-        // throw new System.NotImplementedException();
     }
 
     public void ExecuteNextAction() {
@@ -85,6 +73,8 @@ public class PlayerScript : MonoBehaviour {
 
     public void ClearActionsList() {
         _actionsList.Clear();
+        currentAction = null;
+        Debug.Log(_actionsList.Count);
     }
 
     public NavMeshAgent GetAgent() {

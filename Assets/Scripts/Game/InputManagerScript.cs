@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class InputManagerScript : MonoBehaviour {
 
-    //public static InputManagerScript currentInputManagerScript;
-
     [SerializeField]
     GameManagerScript _gameManager;
 
@@ -38,27 +36,14 @@ public class InputManagerScript : MonoBehaviour {
 
     Vector3 clickPoint = Vector3.zero;
 
-    //void Awake() {
-    //    if(currentInputManagerScript == null) {
-    //        DontDestroyOnLoad(gameObject);
-    //        currentInputManagerScript = this;
-    //    } else if(currentInputManagerScript != null) {
-    //        Destroy(gameObject);
-    //    }
-    //}
-
-    // Use this for initialization
     void Start() {
         _collectCoinsButton.onClick.AddListener(() => {
-            //WantsToCollectCoins();
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
         });
         _addWayPointButton.onClick.AddListener(() => {
-            //WantsToAddWayPoint();
             _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
         });
         _finishTurnButton.onClick.AddListener(() => {
-            //WantsToFinishTurn(); 
             _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
         });
         _cancelButton.onClick.AddListener(() => {
@@ -68,16 +53,14 @@ public class InputManagerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
         if(Network.isClient) {
-            // End Turn
-            if(Input.GetKeyDown(KeyCode.Space)) {
-                //WantsToFinishTurn();
+
+            if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) {
                 _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player);
+                CancelClick();
             }
 
             if(Input.GetKeyDown(KeyCode.Return)) {
-                //WantsToFinishTurn();
                 _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
             }
 
@@ -112,34 +95,6 @@ public class InputManagerScript : MonoBehaviour {
             }
         }
     }
-
-    //[RPC]
-    //void WantsToFinishTurn() {
-    //    //_networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
-    //    //_gameManager.WantsToFinishTurn(Network.player);
-    //    _gameManager._networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
-    //}
-
-    //[RPC]
-    //void WantsToAddWayPoint() {
-    //    if(clickPoint != Vector3.zero) {
-    //        //_networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
-    //        //_gameManager.WantsToAddWayPoint(Network.player, clickPoint);
-    //        _gameManager._networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
-    //    }
-    //}
-
-    //[RPC]
-    //void WantsToCollectCoins() {
-    //    //_networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
-    //    _gameManager.WantsToCollectCoins(Network.player);
-    //    //_gameManager._networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
-    //}
-
-    //void ExecuteActions() {
-    //    Debug.Log("Player " + gameObject.name + " wants to execute actions");
-    //    _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
-    //}
 
     void CancelClick() {
         clickPoint = Vector3.zero;

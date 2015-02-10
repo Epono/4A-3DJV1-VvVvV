@@ -123,9 +123,10 @@ public class GameManagerScript : MonoBehaviour {
 
             playerWantsToFinishTurn[playerId - 1] = true;
 
+            finishTurn = true;
             for(int i = 0; i < _playersScript.Length; i++) {
-                if(playerWantsToFinishTurn[i]) {
-                    finishTurn = true;
+                if(!playerWantsToFinishTurn[i]) {
+                    finishTurn = false;
                     break;
                 }
             }
@@ -139,6 +140,8 @@ public class GameManagerScript : MonoBehaviour {
                 _networkView.RPC("WantsToAddWayPoint", RPCMode.Others, player, point);
             }
             var playerId = int.Parse(player.ToString());
+
+            Debug.Log(playerId);
 
             _playersScript[playerId - 1].AddActionInList(new CharacterActionMove(point, _playersScript[playerId - 1].GetAgent()));
         }
@@ -155,20 +158,6 @@ public class GameManagerScript : MonoBehaviour {
             _playersScript[playerId - 1].AddActionInList(new CharacterActionCollectCoins());
         }
     }
-
-    //public void ExecuteActionOfPlayerT(int player, List<CharacterAction> maList) {
-    //    Debug.Log("On rentre dans ExecuteActionOfPlayerT()");
-    //    // maList.ConvertAll(CharacterActionMove);
-    //    // for(int i = 0; i < maList.Count; i++) {
-    //    if(maList.Count != 0) {
-    //        Debug.Log("Taille de la liste :" + maList.Count);
-    //        //_playersScript[player].ExecuteActionT(dico["MoveToLocation"]);
-    //        _playersScript[player].ExecuteAction(maList[0]);
-    //        //_playersScript[player].ExecuteAction(actionNameList[i], pos);
-
-    //        // }
-    //    }
-    //}
 
     //[RPC]
     //void TellPlayerWhoHeIs() {
