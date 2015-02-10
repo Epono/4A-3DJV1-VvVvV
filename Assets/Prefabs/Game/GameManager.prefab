@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400004}
   - 148: {fileID: 14800000}
   m_Layer: 0
   m_Name: GameManager
@@ -46,11 +45,11 @@ MonoBehaviour:
   _playerScript: []
   _gameCamera: {fileID: 0}
   _groundCollider: {fileID: 0}
-  _moveButton: {fileID: 0}
-  _collectButton: {fileID: 0}
   _networkView: {fileID: 14800000}
-  _endTurnButton: {fileID: 0}
-  _executeButton: {fileID: 0}
+  _collectCoinsButton: {fileID: 0}
+  _addWayPointButton: {fileID: 0}
+  _finishTurnButton: {fileID: 0}
+  _cancelButton: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,27 +61,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smartActionManager: {fileID: 0}
   _playersScript: []
   _playersGameObject: []
-  _otherPlayerMaterial: {fileID: 2100000, guid: 7d43234139074e747ab21840779b7f97,
-    type: 2}
   _networkView: {fileID: 14800000}
   _textTurnTimeRemaining: {fileID: 0}
   _textGameTimeRemaining: {fileID: 0}
+  _gameDuration: 180
   _turnDuration: 10
   _simulationDuration: 5
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92616462d8bc92a4385673ef98331cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!148 &14800000
 NetworkView:
   m_ObjectHideFlags: 1

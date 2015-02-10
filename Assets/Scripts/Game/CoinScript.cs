@@ -3,19 +3,15 @@ using System.Collections;
 
 public class CoinScript : MonoBehaviour {
 
-	public float speed = 10f;
-
-    [SerializeField]
-    PlayerScript player;
+    public float speed = 10f;
 
     void Update() {
         transform.Rotate(Vector3.down, speed * Time.deltaTime);
         transform.Rotate(Vector3.left, speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
+    void OnTriggerEnter(Collider other) {
         Object.Destroy(this.gameObject);
-        player.score += 1;
+        other.gameObject.GetComponent<PlayerScript>().IncrementScore();
     }
 }

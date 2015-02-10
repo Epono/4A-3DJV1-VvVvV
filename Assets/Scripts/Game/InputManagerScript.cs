@@ -3,11 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class InputManagerScript : MonoBehaviour {
-    //Singletonisation
-    public static InputManagerScript currentInputManagerScript;
+
+    //public static InputManagerScript currentInputManagerScript;
 
     [SerializeField]
-    private GameManagerScript _gameManager;
+    GameManagerScript _gameManager;
 
     [SerializeField]
     PlayerScript[] _playerScript;
@@ -19,94 +19,85 @@ public class InputManagerScript : MonoBehaviour {
     Collider _groundCollider;
 
     [SerializeField]
-    Button _moveButton;
-
-    [SerializeField]
-    Button _collectButton;
-
-    [SerializeField]
     NetworkView _networkView;
 
     // [SerializeField]
     // LineRenderer _lineMovement;
 
     [SerializeField]
-    Button _endTurnButton;
+    Button _collectCoinsButton;
 
     [SerializeField]
-    Button _executeButton;
+    Button _addWayPointButton;
 
     [SerializeField]
-    GUI _menuJoueur;
+    Button _finishTurnButton;
 
-    void Awake() {
-        if(currentInputManagerScript == null) {
-            DontDestroyOnLoad(gameObject);
-            currentInputManagerScript = this;
-        } else if(currentInputManagerScript != null) {
-            Destroy(gameObject);
-        }
-    }
+    [SerializeField]
+    Button _cancelButton;
+
+    Vector3 clickPoint = Vector3.zero;
+
+    //void Awake() {
+    //    if(currentInputManagerScript == null) {
+    //        DontDestroyOnLoad(gameObject);
+    //        currentInputManagerScript = this;
+    //    } else if(currentInputManagerScript != null) {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     // Use this for initialization
     void Start() {
-        _executeButton.onClick.AddListener(() => { ExecuteActions(); });
+        _collectCoinsButton.onClick.AddListener(() => {
+            //WantsToCollectCoins();
+            _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+        });
+        _addWayPointButton.onClick.AddListener(() => {
+            //WantsToAddWayPoint();
+            _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
+        });
+        _finishTurnButton.onClick.AddListener(() => {
+            //WantsToFinishTurn(); 
+            _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
+        });
+        _cancelButton.onClick.AddListener(() => {
+            CancelClick();
+        });
     }
 
     // Update is called once per frame
     void Update() {
 
         if(Network.isClient) {
-            //if(GUI BOUTTON MOVE)
-            //{
-            //    print("Choisir un point de déplacement :");
-
-            //    if(Input.GetMouseButtonUp(0))
-            //    {
-            //        var ray = _gameCamera.ScreenPointToRay(Input.mousePosition);
-            //        RaycastHit hitInfo;
-            //        if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue))
-            //        {
-            //            CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point));
-            //        }
-            //    }
-
-
-            //}
-
-            //if(GUI BOUTTON PICK)
-            //{
-            //    //Recupère les pièces dans une zone
-            //}
-
-            //if(GUI BOUTTON END TURN)
-            //{
-            //   // EXECUTE LES METHODE D'ACTION;
-            //}
-
+            // End Turn
             if(Input.GetKeyDown(KeyCode.Space)) {
-                // _gameManager.ExecuteTurnActionT();
-                ExecuteActions();
-
+                //WantsToFinishTurn();
+                _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player);
             }
 
+            if(Input.GetKeyDown(KeyCode.Return)) {
+                //WantsToFinishTurn();
+                _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
+            }
+
+            if(Input.GetKeyDown(KeyCode.A)) {
+                _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+            }
+
+            // Initialize clickPoint (PC)
             if(Input.GetMouseButtonUp(0)) {
                 var ray = _gameCamera.ScreenPointToRay(Input.mousePosition);
 
                 RaycastHit hitInfo;
 
                 if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue)) {
-                    //Debug.Log("MoveToLocation :");
-                    Debug.Log("Player " + gameObject.name + " wants to add a new waypoint : " + hitInfo.point);
-                    //CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point);
-                    //_gameManager.AddActionInList(moveAction);
-                    //_playerScript.AddActionInList(moveAction);
-                    _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, hitInfo.point);
+                    clickPoint = hitInfo.point;
                 }
             }
 
+            // Initialize clickPoint (Android)
             if(Input.touchCount > 0) {
-
                 Touch touch = Input.GetTouch(0);
 
                 if(touch.phase == TouchPhase.Ended) {
@@ -115,35 +106,42 @@ public class InputManagerScript : MonoBehaviour {
                     RaycastHit hitInfo;
 
                     if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue)) {
-                        //Debug.Log("MoveToLocation :");
-                        Debug.Log("Player " + gameObject.name + " wants to add a new waypoint : " + hitInfo.point);
-                        //CharacterActionMove moveAction = new CharacterActionMove(hitInfo.point);
-                        //_gameManager.AddActionInList(moveAction);
-                        //_playerScript.AddActionInList(moveAction);
-                        _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, hitInfo.point);
+                        clickPoint = hitInfo.point;
                     }
                 }
-
-
-            }
-
-            if(Input.GetKeyDown(KeyCode.A)) {
-                Debug.Log("Vous souhaitez vous déplacer, cliqué dans la direction désiré");
             }
         }
     }
 
-    void ExecuteActions() {
-        Debug.Log("Player " + gameObject.name + " wants to execute actions");
-        _networkView.RPC("WantsToExecute", RPCMode.Server, Network.player);
-    }
+    //[RPC]
+    //void WantsToFinishTurn() {
+    //    //_networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
+    //    //_gameManager.WantsToFinishTurn(Network.player);
+    //    _gameManager._networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
+    //}
 
-    void OnGUI() {
-        if(GUI.Button(new Rect(-300f, 50f, 100f, 30f), "Move")) {
-            Debug.Log("Bouton move");
-        }
+    //[RPC]
+    //void WantsToAddWayPoint() {
+    //    if(clickPoint != Vector3.zero) {
+    //        //_networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
+    //        //_gameManager.WantsToAddWayPoint(Network.player, clickPoint);
+    //        _gameManager._networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
+    //    }
+    //}
+
+    //[RPC]
+    //void WantsToCollectCoins() {
+    //    //_networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+    //    _gameManager.WantsToCollectCoins(Network.player);
+    //    //_gameManager._networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+    //}
+
+    //void ExecuteActions() {
+    //    Debug.Log("Player " + gameObject.name + " wants to execute actions");
+    //    _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
+    //}
+
+    void CancelClick() {
+        clickPoint = Vector3.zero;
     }
 }
-
-
-

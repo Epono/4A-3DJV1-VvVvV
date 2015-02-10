@@ -11,11 +11,14 @@ public class SceneStateManager : MonoBehaviour {
     string _lobbySceneName = "Lobby";
     [SerializeField]
     string _gameSceneName = "Game";
+    [SerializeField]
+    string _gameOverSceneName = "GameOver";
 
     public enum sceneState {
         MainMenu = 0,
         Lobby = 1,
         Game = 2,
+        GameOver = 3
     };
 
     private static sceneState _currentSceneState;
@@ -49,6 +52,9 @@ public class SceneStateManager : MonoBehaviour {
                 break;
             case sceneState.Game:
                 Application.LoadLevel(_gameSceneName);
+                break;
+            case sceneState.GameOver:
+                Application.LoadLevel(_gameOverSceneName);
                 break;
         }
     }

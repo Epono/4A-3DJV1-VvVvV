@@ -5,23 +5,41 @@ using System.Collections.Generic;
 public class PlayerScript : MonoBehaviour {
 
     [SerializeField]
-    public NavMeshAgent _agent;
+    GameObject _playerGameObject;
+
+    // initialisé au Start ?
+    [SerializeField]
+    NavMeshAgent _agent;
 
     [SerializeField]
     Transform _transform;
 
-    int _actionPoints;
-    public int score = 0;
+    [SerializeField]
+    NetworkPlayer _networkPlayer;
+    //
 
     [SerializeField]
-    public List<CharacterAction> actionList = new List<CharacterAction>();
+    List<CharacterAction> _actionsList = new List<CharacterAction>();
+
+    string playerName;
+    int actionPoints;
+    int score;
+
+    CharacterAction currentAction;
 
     void Start() {
-        //actionList = 
+        score = 0;
+        playerName = _playerGameObject.name;
     }
 
     void Update() {
-
+        if(currentAction != null) {
+            if(currentAction.IsFinished()) {
+                currentAction = null;
+            } else {
+                currentAction.CheckIfFinished();
+            }
+        }
     }
 
     void FixedUpdate() {
@@ -29,19 +47,56 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void AddActionInList(CharacterAction currentAction) {
-        actionList.Add(currentAction);
+        _actionsList.Add(currentAction);
     }
 
-    public void ExecuteActionT(CharacterAction action) {
-        //if(this.transform.position != action.getLocation()) {
-        Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
-        _agent.SetDestination(action.getLocation());
-        actionList.Remove(action);
-        Debug.Log("Mon_AgentPATH:" + _agent.path);
+    public void IncrementScore() {
+        score++;
+    }
 
-        Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
+    public int GetScore() {
+        return score;
+    }
+
+    public void ExecuteAction(CharacterAction action) {
+        ////if(this.transform.position != action.getLocation()) {
+        //Debug.Log(gameObject.name + "Execute action :" + action.GetActionName());
+        //_agent.SetDestination(action.getLocation());
+        //actionList.Remove(action);
+        //Debug.Log("Mon_AgentPATH:" + _agent.path);
+
+        //Debug.Log("JE VAIS A LA POSITION :" + action.getLocation());
         //}
         //_agent.ResetPath();
         // throw new System.NotImplementedException();
+    }
+
+    public void ExecuteNextAction() {
+        currentAction = _actionsList[0];
+        _actionsList.RemoveAt(0);
+        Debug.Log("Executing action : " + currentAction);
+        currentAction.Execute();
+        Debug.Log("After executing action : " + currentAction);
+    }
+
+    public bool HasMoreActions() {
+        return _actionsList.Count > 0;
+    }
+
+    public void ClearActionsList() {
+        _actionsList.Clear();
+    }
+
+    public NavMeshAgent GetAgent() {
+        return _agent;
+    }
+
+    public void StopMove() {
+        _agent.Stop();
+        Debug.Log("Agent stopped !");
+    }
+
+    public CharacterAction GetCurrentAction() {
+        return currentAction;
     }
 }

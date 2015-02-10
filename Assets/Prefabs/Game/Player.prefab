@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _agent: {fileID: 19500000}
   _transform: {fileID: 400000}
-  score: 0
+  _playerGameObject: {fileID: 100000}
+  _actionsList: []
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -1,46 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class CharacterAction  {
+public abstract class CharacterAction {
 
     protected int actionPoint;
     protected string actionName;
-    //protected int actionRange;
+    protected bool isFinished;
 
-    public virtual Vector3 getLocation()
-    {
-        return new Vector3(0,0,0); 
-    }
-    
-    public string GetActionName()
-    {
+    public string GetActionName() {
         return actionName;
     }
 
-    public int GetActionPoint()
-    {
+    public int GetActionPoint() {
         return actionPoint;
     }
 
-    public virtual void Execute()
-    {
+    public bool IsFinished() {
+        return isFinished;
+    }
+
+    public virtual void Execute() {
 
     }
 
+    public virtual void CheckIfFinished() {
 
-    //void initiateActionPoint(int actionLvlSwitch)
-    //{
-    //    switch (actionLvlSwitch)
-    //    {
-    //        case 1:
-    //            this.actionPoint = 1;
-    //            break;
-    //        case 2:
-    //            this.actionPoint = 2;
-    //            break;
-    //        default:
-    //            this.actionPoint = 3;
-    //            break;
-    //    }
-    //}
+    }
 }

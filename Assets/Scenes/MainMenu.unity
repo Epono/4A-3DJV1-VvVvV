@@ -274,6 +274,7 @@ MonoBehaviour:
   _mainMenuSceneName: MainMenu
   _lobbySceneName: Lobby
   _gameSceneName: Game
+  _gameOverSceneName: GameOver
 --- !u!4 &259457633
 Transform:
   m_ObjectHideFlags: 0
