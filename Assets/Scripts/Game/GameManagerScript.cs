@@ -168,3 +168,5 @@ public class GameManagerScript : MonoBehaviour {
     //    }
     //}
 }
+
+// isKinematic pour les players ?
