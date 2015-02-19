@@ -89,7 +89,8 @@ public class NetworkManagerScript : MonoBehaviour {
                 _lobbyManagerScript.serverPlayerDisconnected(player);
                 break;
             case SceneStateManager.sceneState.Game:
-                // Wait (a bit longer) for him to reconnect ?
+                // Wait (a bit longer) for him to reconnect / display its afkness
+                //_gameManagerScript.serverPlayerDisconnected(player);
                 break;
         }
     }

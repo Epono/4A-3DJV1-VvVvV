@@ -305,7 +305,6 @@ GameObject:
   - 224: {fileID: 160673467}
   - 222: {fileID: 160673469}
   - 114: {fileID: 160673468}
-  - 148: {fileID: 160673470}
   m_Layer: 5
   m_Name: Player3Text
   m_TagString: Untagged
@@ -328,7 +327,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -151.210007, y: 24.3129997}
+  m_AnchoredPosition: {x: -150, y: 20}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &160673468
@@ -366,19 +365,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 1824085593}
   m_GameObject: {fileID: 160673466}
   m_HideIfInvisible: 0
---- !u!148 &160673470
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1824085593}
-  m_GameObject: {fileID: 160673466}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 160673467}
-  m_ViewID:
-    m_ID: 4
-    m_Type: 1
 --- !u!1 &394039445
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +375,6 @@ GameObject:
   - 224: {fileID: 394039446}
   - 222: {fileID: 394039448}
   - 114: {fileID: 394039447}
-  - 148: {fileID: 394039449}
   m_Layer: 5
   m_Name: Player1Text
   m_TagString: Untagged
@@ -412,7 +397,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -149.679993, y: 120.690002}
+  m_AnchoredPosition: {x: -150, y: 120}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &394039447
@@ -450,19 +435,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 2086563590}
   m_GameObject: {fileID: 394039445}
   m_HideIfInvisible: 0
---- !u!148 &394039449
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 2086563590}
-  m_GameObject: {fileID: 394039445}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 394039446}
-  m_ViewID:
-    m_ID: 2
-    m_Type: 1
 --- !u!1 &498150538
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +550,6 @@ GameObject:
   - 224: {fileID: 617318096}
   - 222: {fileID: 617318098}
   - 114: {fileID: 617318097}
-  - 148: {fileID: 617318099}
   m_Layer: 5
   m_Name: Player2Text
   m_TagString: Untagged
@@ -601,7 +572,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -151.080002, y: 70.7939987}
+  m_AnchoredPosition: {x: -150, y: 70}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &617318097
@@ -639,19 +610,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 1794699701}
   m_GameObject: {fileID: 617318095}
   m_HideIfInvisible: 0
---- !u!148 &617318099
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1794699701}
-  m_GameObject: {fileID: 617318095}
-  m_Enabled: 1
-  m_StateSynchronization: 2
-  m_Observed: {fileID: 617318096}
-  m_ViewID:
-    m_ID: 3
-    m_Type: 1
 --- !u!1 &854180188
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,8 +809,6 @@ MonoBehaviour:
   _exitLobbyButton: {fileID: 21381064}
   _startGame: {fileID: 498150540}
   _networkView: {fileID: 1040967024}
-  _gameScene: Game
-  _mainMenuScene: MainMenu
 --- !u!148 &1040967024
 NetworkView:
   m_ObjectHideFlags: 0
@@ -1082,11 +1038,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -151.080002
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 70.7939987
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1124,11 +1080,11 @@ Prefab:
       propertyPath: m_Name
       value: Player2Text
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -1249,11 +1205,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -151.210007
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 24.3129997
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1291,11 +1247,11 @@ Prefab:
       propertyPath: m_Name
       value: Player3Text
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
@@ -1416,11 +1372,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -149.679993
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 120.690002
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1458,29 +1414,17 @@ Prefab:
       propertyPath: m_Name
       value: Player1Text
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_ID
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 14800000, guid: 26147325131f040439e446e76729fc5f, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ViewID.m_Type
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 26147325131f040439e446e76729fc5f, type: 2}
-      propertyPath: m_Color.b
-      value: 1
+      propertyPath: m_Text
+      value: Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26147325131f040439e446e76729fc5f, type: 2}

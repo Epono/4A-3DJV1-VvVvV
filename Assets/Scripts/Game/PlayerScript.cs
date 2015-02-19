@@ -15,15 +15,29 @@ public class PlayerScript : MonoBehaviour {
     Transform _transform;
 
     [SerializeField]
-    NetworkPlayer _networkPlayer;
+    public NetworkPlayer _networkPlayer;
     //
 
     [SerializeField]
     List<CharacterAction> _actionsList = new List<CharacterAction>();
 
     string playerName;
+    public string PlayerName {
+        get { return playerName; }
+        set { playerName = value; }
+    }
+
     int actionPoints;
+    public int ActionPoints {
+        get { return actionPoints; }
+        set { actionPoints = value; }
+    }
+
     int score;
+    public int Score {
+        get { return score; }
+        set { score = value; }
+    }
 
     CharacterAction currentAction;
 
@@ -48,7 +62,6 @@ public class PlayerScript : MonoBehaviour {
 
     public void AddActionInList(CharacterAction currentAction) {
         _actionsList.Add(currentAction);
-        Debug.Log("Ajout action");
     }
 
     public void IncrementScore() {
@@ -62,9 +75,7 @@ public class PlayerScript : MonoBehaviour {
     public void ExecuteNextAction() {
         currentAction = _actionsList[0];
         _actionsList.RemoveAt(0);
-        Debug.Log("Executing action : " + currentAction);
         currentAction.Execute();
-        Debug.Log("After executing action : " + currentAction);
     }
 
     public bool HasMoreActions() {
@@ -74,7 +85,6 @@ public class PlayerScript : MonoBehaviour {
     public void ClearActionsList() {
         _actionsList.Clear();
         currentAction = null;
-        Debug.Log(_actionsList.Count);
     }
 
     public NavMeshAgent GetAgent() {
@@ -83,7 +93,6 @@ public class PlayerScript : MonoBehaviour {
 
     public void StopMove() {
         _agent.Stop();
-        Debug.Log("Agent stopped !");
     }
 
     public CharacterAction GetCurrentAction() {

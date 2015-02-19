@@ -31,7 +31,6 @@ public class LobbyManagerScript : MonoBehaviour {
         }
     }
 
-
     public void exitLobby() {
         if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
             // Close server and quit
@@ -56,22 +55,40 @@ public class LobbyManagerScript : MonoBehaviour {
     // Server-only method
     public void serverPlayerJoined(NetworkPlayer player) {
         PersistentPlayersScript.currentPersistentPlayersScript.playerConnected(player);
-        serverRefreshPlayersText();
 
         NetworkManagerScript.currentNetworkManagerScript._networkView.RPC("LoadLobby", player);
+
+        List<NetworkPlayer> players = PersistentPlayersScript.currentPersistentPlayersScript.getPlayers();
+        for(int i = 0; i < players.Count; i++) {
+            _playersText[i].text = players[i].guid;
+
+            if(players[i] != player) {
+                serverRefreshPlayersText(players[i]);
+            }
+        }
+
+        StartCoroutine(InitPlayersText(player));
 
         if(PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == NetworkManagerScript.currentNetworkManagerScript._maxNumberOfConnections) {
             StartCoroutine(wait3s());
         }
     }
 
+    public IEnumerator InitPlayersText(NetworkPlayer player) {
+        yield return new WaitForSeconds(1);
+        serverRefreshPlayersText(player);
+    }
+
 
 
     public IEnumerator wait3s() {
         Debug.Log("Lobby full, launching the game in 3 ...");
+        //TODO: RPC pour dire le temps qu'il reste
         yield return new WaitForSeconds(1);
+        //TODO: RPC pour dire le temps qu'il reste
         Debug.Log("2 ...");
         yield return new WaitForSeconds(1);
+        //TODO: RPC pour dire le temps qu'il reste
         Debug.Log("1 ...");
         yield return new WaitForSeconds(1);
         Debug.Log("Starting !");
@@ -83,59 +100,32 @@ public class LobbyManagerScript : MonoBehaviour {
     // Server-only method
     public void serverPlayerDisconnected(NetworkPlayer player) {
         PersistentPlayersScript.currentPersistentPlayersScript.playerDisconnected(player);
-        serverRefreshPlayersText();
+        serverRefreshPlayersText(player);
     }
 
     // Server-only method
-    public void serverRefreshPlayersText() {
+    public void serverRefreshPlayersText(NetworkPlayer player) {
+        List<NetworkPlayer> players = PersistentPlayersScript.currentPersistentPlayersScript.getPlayers();
         for(int i = 0; i < PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count; i++) {
-            _playersText[i].text = PersistentPlayersScript.currentPersistentPlayersScript.getPlayers()[i].guid;
+            _networkView.RPC("UpdateLobbyPlayers", player, i, players[i].guid);
         }
+    }
+
+    //Server-only method
+    [RPC]
+    public void UpdateLobbyPlayers(int index, string playerNameAtIndex) {
+        _playersText[index].text = playerNameAtIndex;
     }
 
     //Client-only method
     [RPC]
     public void clientLaunchGameScene() {
-        Network.SetSendingEnabled(0, false);
-
-        // We need to stop receiving because first the level must be loaded first.
-        // Once the level is loaded, rpc's and other state update attached to objects in the level are allowed to fire
-        Network.isMessageQueueRunning = false;
-
-        // All network views loaded from a level will get a prefix into their NetworkViewID.
-        // This will prevent old updates from clients leaking into a newly created scene.
-
         SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.Game);
-
-        // yield;
-        // yield;
-
-        // Allow receiving data again
-        Network.isMessageQueueRunning = true;
-        // Now the level has been loaded and we can start sending out data to clients
-        Network.SetSendingEnabled(0, true);
     }
 
     //Client-only method
     [RPC]
     public void clientLaunchGameOverScene() {
-        Network.SetSendingEnabled(0, false);
-
-        // We need to stop receiving because first the level must be loaded first.
-        // Once the level is loaded, rpc's and other state update attached to objects in the level are allowed to fire
-        Network.isMessageQueueRunning = false;
-
-        // All network views loaded from a level will get a prefix into their NetworkViewID.
-        // This will prevent old updates from clients leaking into a newly created scene.
-
         SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.GameOver);
-
-        // yield;
-        // yield;
-
-        // Allow receiving data again
-        Network.isMessageQueueRunning = true;
-        // Now the level has been loaded and we can start sending out data to clients
-        Network.SetSendingEnabled(0, true);
     }
 }

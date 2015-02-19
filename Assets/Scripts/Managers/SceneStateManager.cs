@@ -42,6 +42,10 @@ public class SceneStateManager : MonoBehaviour {
     }
 
     public void loadLevel(sceneState newState) {
+
+        Network.SetSendingEnabled(0, false);
+        Network.isMessageQueueRunning = false;
+
         _currentSceneState = newState;
         switch(newState) {
             case sceneState.MainMenu:
@@ -57,5 +61,8 @@ public class SceneStateManager : MonoBehaviour {
                 Application.LoadLevel(_gameOverSceneName);
                 break;
         }
+
+        Network.isMessageQueueRunning = true;
+        Network.SetSendingEnabled(0, true);
     }
 }

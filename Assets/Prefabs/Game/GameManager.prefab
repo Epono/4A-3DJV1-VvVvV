@@ -63,9 +63,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playersScript: []
   _playersGameObject: []
+  _coins: []
+  _playerMaterial: {fileID: 2100000, guid: 15d9ec7b7b1107a429486aaae273199d, type: 2}
   _networkView: {fileID: 14800000}
   _textTurnTimeRemaining: {fileID: 0}
   _textGameTimeRemaining: {fileID: 0}
+  _textScore: {fileID: 0}
   _gameDuration: 180
   _turnDuration: 10
   _simulationDuration: 5
