@@ -18,6 +18,21 @@ public class PlayerScript : MonoBehaviour {
     public NetworkPlayer _networkPlayer;
     //
 
+    string primaryKey;
+
+    [SerializeField]
+    bool isConnected = false;
+
+    public bool IsConnected {
+        get { return isConnected; }
+        set { isConnected = value; }
+    }
+
+    public string PrimaryKey {
+        get { return primaryKey; }
+        set { primaryKey = value; }
+    }
+
     [SerializeField]
     List<CharacterAction> _actionsList = new List<CharacterAction>();
 
@@ -44,6 +59,8 @@ public class PlayerScript : MonoBehaviour {
     void Start() {
         score = 0;
         playerName = _playerGameObject.name;
+        primaryKey = _networkPlayer.ipAddress + ":" + _networkPlayer.port;
+        isConnected = true;
     }
 
     void Update() {
@@ -54,10 +71,6 @@ public class PlayerScript : MonoBehaviour {
                 currentAction.CheckIfFinished();
             }
         }
-    }
-
-    void FixedUpdate() {
-
     }
 
     public void AddActionInList(CharacterAction currentAction) {

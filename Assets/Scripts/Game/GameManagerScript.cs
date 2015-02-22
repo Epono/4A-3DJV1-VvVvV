@@ -166,8 +166,6 @@ public class GameManagerScript : MonoBehaviour {
             }
             var playerId = int.Parse(player.ToString());
 
-            Debug.Log(playerId);
-
             _playersScript[playerId - 1].AddActionInList(new CharacterActionMove(point, _playersScript[playerId - 1].GetAgent()));
         }
     }
@@ -188,14 +186,14 @@ public class GameManagerScript : MonoBehaviour {
     public void UpdatePlayersDuringPlanification(float newCurrentGameTimeRemaining, float newCurrentTurnTimeRemaining, int newScore) {
         _textGameTimeRemaining.text = "Jeu : " + newCurrentGameTimeRemaining.ToString("F0") + "s";
         _textTurnTimeRemaining.text = "Tour : " + newCurrentTurnTimeRemaining.ToString("F1") + " s";
-        _textScore.text = "Simu : " + newScore.ToString("F0") + "s";
+        _textScore.text = "Score : " + newScore;
     }
 
     [RPC]
     public void UpdatePlayersDuringSimulation(float newCurrentGameTimeRemaining, float newCurrentSimulationTimeRemaining, int newScore) {
         _textGameTimeRemaining.text = "Jeu : " + newCurrentGameTimeRemaining.ToString("F0") + "s";
         _textTurnTimeRemaining.text = "Simu : " + newCurrentSimulationTimeRemaining.ToString("F1") + "s";
-        _textScore.text = "Simu : " + newScore.ToString("F0") + "s";
+        _textScore.text = "Score : " + newScore;
     }
 
     [RPC]
@@ -207,3 +205,11 @@ public class GameManagerScript : MonoBehaviour {
         }
     }
 }
+
+        //if(PersistentPlayersScript.currentPersistentPlayersScript.getPlayers().Count == 3) {
+        //    for(int i = 0; i < players.Count; i++) {
+        //        if(player.ipAddress == players[i].ipAddress && player.port == players[i].port) {
+        //            players[i] = 
+        //        }
+        //    }
+        //}

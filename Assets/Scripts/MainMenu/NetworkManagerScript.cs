@@ -10,8 +10,8 @@ public class NetworkManagerScript : MonoBehaviour {
     [SerializeField]
     int _serverPort;
 
-    [SerializeField]
-    string _serverAdress;
+    //[SerializeField]
+    //string _serverAdress;
 
     [SerializeField]
     public int _maxNumberOfConnections;
@@ -29,6 +29,11 @@ public class NetworkManagerScript : MonoBehaviour {
 
     private bool isServerRunning = false;
 
+    float intervalBetweenRPCs = 1f;
+    float currentIntervalBetweenRPCs = 1f;
+
+    private  HostData[] hostData;
+
     void Awake() {
         if(currentNetworkManagerScript == null) {
             DontDestroyOnLoad(gameObject);
@@ -40,6 +45,24 @@ public class NetworkManagerScript : MonoBehaviour {
 
     void Update() {
         // Check players connections ?
+
+        if(!_isServer && SceneStateManager.currentStateManager.getCurrentSceneState() == SceneStateManager.sceneState.MainMenu) {
+            currentIntervalBetweenRPCs -= Time.deltaTime;
+            if(currentIntervalBetweenRPCs < 0) {
+                currentIntervalBetweenRPCs = intervalBetweenRPCs;
+                MasterServer.RequestHostList("fr.esgi.VvVvV");
+                hostData = MasterServer.PollHostList();
+                if(hostData.Length != 0) {
+                    int i = 0;
+                    while(i < hostData.Length) {
+                        Debug.Log("Game name : " + hostData[i].gameName);
+                        i++;
+                    }
+                } else {
+                    Debug.Log("No server available");
+                }
+            }
+        }
     }
 
     //Server (Runs the server)
@@ -48,6 +71,7 @@ public class NetworkManagerScript : MonoBehaviour {
             Debug.Log("Trying to initialize the server ...");
             Network.InitializeSecurity();
             Network.InitializeServer(_maxNumberOfConnections, _serverPort, !Network.HavePublicAddress());
+            MasterServer.RegisterHost("fr.esgi.VvVvV", "gameName", "This is a comment");
         } else {
             Debug.Log("Closing the server ...");
             Network.Disconnect();
@@ -98,7 +122,23 @@ public class NetworkManagerScript : MonoBehaviour {
     //Client (tries to connect to the server)
     public void TryToConnectToServer() {
         Debug.Log("Trying to connect to the server ...");
-        Network.Connect(_serverAdress, _serverPort);
+
+        //MasterServer.RequestHostList("fr.esgi.VvVvV");
+        //HostData[] hostData = MasterServer.PollHostList();
+        //if(hostData.Length != 0) {
+        //    int i = 0;
+        //    while(i < hostData.Length) {
+        //        Debug.Log("Game name : " + hostData[i].gameName);
+        //        i++;
+        //    }
+        if(hostData.Length > 0) {
+            Network.Connect(hostData[0]);
+        }
+        //} else {
+        //    Debug.Log("No server available");
+        //    // TODO: afficher un message UI
+        //}
+        //MasterServer.ClearHostList();
     }
 
     //Client

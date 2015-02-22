@@ -670,7 +670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serverPort: 7331
-  _serverAdress: 127.0.0.1
   _maxNumberOfConnections: 3
   _networkView: {fileID: 460902283}
   _isServer: 1
