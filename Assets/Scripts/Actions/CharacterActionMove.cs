@@ -3,14 +3,16 @@ using System.Collections;
 
 public class CharacterActionMove : CharacterAction {
 
-    Vector3 _location;
-    NavMeshAgent _agent;
+    private PlayerScript _playerScript;
+    private Vector3 _location;
+    private NavMeshAgent _agent;
 
-    public CharacterActionMove(Vector3 locationChoose, NavMeshAgent agent) {
+    public CharacterActionMove(PlayerScript playerScript, Vector3 locationChoose) {
         actionPoint = 1;
         actionName = "MoveToLocation";
+        _playerScript = playerScript;
         _location = locationChoose;
-        _agent = agent;
+        _agent = playerScript.GetAgent();
     }
 
     public override void Execute() {

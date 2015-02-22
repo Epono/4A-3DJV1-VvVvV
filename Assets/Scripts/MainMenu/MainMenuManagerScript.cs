@@ -51,9 +51,9 @@ public class MainMenuManagerScript : MonoBehaviour {
     string _lobbyScene;
 
     void Start() {
-        NetworkManagerScript.currentNetworkManagerScript._mainMenuManagerScript = this;
+        NetworkManagerScript.currentNetworkManagerScript.MainMenuManagerScript = this;
 
-        Debug.Log("Starting the game (" + (NetworkManagerScript.currentNetworkManagerScript._isServer ? "Server mode" : "Client mode") + "), waiting for a player input on a button");
+        Debug.Log("Starting the game (" + (NetworkManagerScript.currentNetworkManagerScript.IsServer ? "Server mode" : "Client mode") + ")");
 
         //Specifies that the Application should be running when in background (mandatory if multiple instances)
         Application.runInBackground = true;
@@ -62,7 +62,7 @@ public class MainMenuManagerScript : MonoBehaviour {
     }
 
     public void initScene() {
-        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
+        if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
             NetworkManagerScript.currentNetworkManagerScript.runServer();
         } else {
             _playButton.onClick.AddListener(() => { NetworkManagerScript.currentNetworkManagerScript.TryToConnectToServer(); });
@@ -80,7 +80,7 @@ public class MainMenuManagerScript : MonoBehaviour {
     }
 
     public void Update() {
-        if(Input.GetKeyDown(KeyCode.Return) && !NetworkManagerScript.currentNetworkManagerScript._isServer) {
+        if(Input.GetKeyDown(KeyCode.Return) && !NetworkManagerScript.currentNetworkManagerScript.IsServer) {
             NetworkManagerScript.currentNetworkManagerScript.TryToConnectToServer();
         }
     }
@@ -185,7 +185,7 @@ public class MainMenuManagerScript : MonoBehaviour {
     }
 
     public void disconnectedFromServer(NetworkDisconnection networkDisconnection) {
-        if(NetworkManagerScript.currentNetworkManagerScript._isServer) {
+        if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
             //  _playButtonText.text = "Run Server";
             Debug.Log("Server disconnection successful : " + networkDisconnection);
         } else {

@@ -11,6 +11,7 @@ public class CoinScript : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
+        GameManagerScript.currentGameManagerScript.Coins.Remove(this.gameObject);
         Object.Destroy(this.gameObject);
         other.gameObject.GetComponent<PlayerScript>().IncrementScore();
     }

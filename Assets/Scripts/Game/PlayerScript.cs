@@ -7,7 +7,6 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     GameObject _playerGameObject;
 
-    // initialisé au Start ?
     [SerializeField]
     NavMeshAgent _agent;
 
@@ -15,10 +14,18 @@ public class PlayerScript : MonoBehaviour {
     Transform _transform;
 
     [SerializeField]
-    public NetworkPlayer _networkPlayer;
-    //
+    NetworkPlayer _networkPlayer;
+
+    public NetworkPlayer NetworkPlayer {
+        get { return _networkPlayer; }
+        set { _networkPlayer = value; }
+    }
 
     string primaryKey;
+    public string PrimaryKey {
+        get { return primaryKey; }
+        set { primaryKey = value; }
+    }
 
     [SerializeField]
     bool isConnected = false;
@@ -27,14 +34,6 @@ public class PlayerScript : MonoBehaviour {
         get { return isConnected; }
         set { isConnected = value; }
     }
-
-    public string PrimaryKey {
-        get { return primaryKey; }
-        set { primaryKey = value; }
-    }
-
-    [SerializeField]
-    List<CharacterAction> _actionsList = new List<CharacterAction>();
 
     string playerName;
     public string PlayerName {
@@ -54,7 +53,17 @@ public class PlayerScript : MonoBehaviour {
         set { score = value; }
     }
 
-    CharacterAction currentAction;
+    [SerializeField]
+    int index;
+
+    public int Index {
+        get { return index; }
+        set { index = value; }
+    }
+
+    private List<CharacterAction> _actionsList = new List<CharacterAction>();
+
+    private CharacterAction currentAction;
 
     void Start() {
         score = 0;

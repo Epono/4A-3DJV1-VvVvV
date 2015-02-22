@@ -2255,6 +2255,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
+      propertyPath: _playersScript.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ad29534c8111ab438573ed192530a8e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 92.6529999
@@ -2416,7 +2420,7 @@ GameObject:
   - 114: {fileID: 1364854266}
   - 148: {fileID: 1364854269}
   m_Layer: 0
-  m_Name: PersistentPlayers
+  m_Name: PersistentNetworkPlayers
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
