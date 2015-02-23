@@ -672,11 +672,7 @@ MonoBehaviour:
   _serverPort: 7331
   _maxNumberOfConnections: 3
   _networkView: {fileID: 460902283}
-  _isServer: 1
-  _mainMenuManagerScript: {fileID: 11400000, guid: 5f62a6d76aa327044876ee113ef7143d,
-    type: 2}
-  _lobbyManagerScript: {fileID: 0}
-  _gameManagerScript: {fileID: 0}
+  _isServer: 0
 --- !u!4 &460902285
 Transform:
   m_ObjectHideFlags: 0
@@ -3210,7 +3206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 84ced47838f24ce40b471542846bfc79, type: 2}
       propertyPath: _isServer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 14800000, guid: 84ced47838f24ce40b471542846bfc79, type: 2}
       propertyPath: m_StateSynchronization

@@ -36,6 +36,9 @@ public class InputManagerScript : MonoBehaviour {
 
     Vector3 clickPoint = Vector3.zero;
 
+    float _intervalBetweenRPCs = 1f;
+    float currentIntervalBetweenRPCs;
+
     void Start() {
         _collectCoinsButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
@@ -92,6 +95,37 @@ public class InputManagerScript : MonoBehaviour {
                         clickPoint = hitInfo.point;
                     }
                 }
+            }
+
+            SpriteRenderer r = _gameManager.CurrentPlayerGameObject.GetComponentInChildren<SpriteRenderer>();
+            LineRenderer l = _gameManager.CurrentPlayerGameObject.GetComponent<LineRenderer>();
+
+            if(clickPoint != Vector3.zero) {
+                r.transform.position = clickPoint;
+                r.enabled = true;
+                l.enabled = true;
+
+
+
+                currentIntervalBetweenRPCs -= Time.deltaTime;
+                if(currentIntervalBetweenRPCs < 0) {
+                    currentIntervalBetweenRPCs = _intervalBetweenRPCs;
+                    NavMeshPath path = new NavMeshPath();
+                    PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[0].GetAgent().CalculatePath(clickPoint, path);
+                    if(path.status == NavMeshPathStatus.PathComplete) {
+                        l.SetVertexCount(path.corners.Length);
+                        for(int i = 0; i < path.corners.Length; i++) {
+                            Debug.Log(i + " - " + path.corners[i]);
+                            l.SetPosition(i, path.corners[i]);
+                        }
+                    }
+                }
+
+
+
+            } else {
+                r.enabled = false;
+                l.enabled = false;
             }
         }
     }

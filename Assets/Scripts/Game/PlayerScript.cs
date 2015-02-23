@@ -61,9 +61,19 @@ public class PlayerScript : MonoBehaviour {
         set { index = value; }
     }
 
-    private List<CharacterAction> _actionsList = new List<CharacterAction>();
+    List<CharacterAction> _actionsList = new List<CharacterAction>();
 
-    private CharacterAction currentAction;
+    public List<CharacterAction> ActionsList {
+        get { return _actionsList; }
+        set { _actionsList = value; }
+    }
+
+    CharacterAction currentAction;
+
+    public CharacterAction CurrentAction {
+        get { return currentAction; }
+        set { currentAction = value; }
+    }
 
     void Start() {
         score = 0;

@@ -30,7 +30,12 @@ public class GameManagerScript : MonoBehaviour {
     Material _playerMaterial;
 
     [SerializeField]
-    public NetworkView _networkView;
+    NetworkView _networkView;
+
+    public NetworkView NetworkView {
+        get { return _networkView; }
+        set { _networkView = value; }
+    }
 
     [SerializeField]
     Text _textTurnTimeRemaining;
@@ -61,6 +66,13 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     float _intervalBetweenRPCs = 0.1f;
     float currentIntervalBetweenRPCs;
+
+    GameObject currentPlayerGameObject;
+
+    public GameObject CurrentPlayerGameObject {
+        get { return currentPlayerGameObject; }
+        set { currentPlayerGameObject = value; }
+    }
 
     void Start() {
         currentGameManagerScript = this;
@@ -241,6 +253,7 @@ public class GameManagerScript : MonoBehaviour {
         foreach(GameObject go in _playersGameObject) {
             if(go.name.Equals("Player" + index)) {
                 go.GetComponent<Renderer>().material = _playerMaterial;
+                currentPlayerGameObject = go;
             }
         }
     }
