@@ -19,7 +19,7 @@ public class CharacterActionCollectCoins : CharacterAction {
     public override void Execute() {
         List<GameObject> coinsToDelete = new List<GameObject>();
         foreach(GameObject coin in GameManagerScript.currentGameManagerScript.Coins) {
-            if(Vector3.Distance(coin.transform.position, playerScript.gameObject.transform.position) < 3) {
+            if(Vector3.Distance(coin.transform.position, playerScript.gameObject.transform.position) < 20) {
                 //TODO: customizable distance, beware of walls ! 
                 coinsToDelete.Add(coin);
                 playerScript.IncrementScore();

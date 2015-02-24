@@ -2,9 +2,6 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
 
 public class GameManagerScript : MonoBehaviour {
 
@@ -32,6 +29,12 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     NetworkView _networkView;
 
+    [SerializeField]
+    InputManagerScript _inputManagerScript;
+
+    [SerializeField]
+    HelpersScript _helpersScript;
+
     public NetworkView NetworkView {
         get { return _networkView; }
         set { _networkView = value; }
@@ -58,7 +61,16 @@ public class GameManagerScript : MonoBehaviour {
     float _simulationDuration = 5.0f;
     float currentSimulationTimeRemaining;
 
+    // Server
     bool isPlaying = false;
+
+    // Client
+    bool isPlanificating = true;
+
+    public bool IsPlanificating {
+        get { return isPlanificating; }
+        set { isPlanificating = value; }
+    }
 
     bool[] playerWantsToFinishTurn = new bool[NetworkManagerScript.currentNetworkManagerScript.MaxNumberOfConnections];
     bool finishTurn;
@@ -126,8 +138,8 @@ public class GameManagerScript : MonoBehaviour {
                 PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[i].StopMove();
             }
             // Reprend la planif au prochain update
+            _networkView.RPC("PlanificationStarted", RPCMode.Others);
         } else {
-            // Executer actions
             for(int i = 0; i < PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript.Count; i++) {
                 if(PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[i].HasMoreActions() && PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[i].GetCurrentAction() == null) {
                     PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[i].ExecuteNextAction();
@@ -155,6 +167,7 @@ public class GameManagerScript : MonoBehaviour {
             finishTurn = false;
             currentTurnTimeRemaining = _turnDuration;
             // Lance la simu au prochain update
+            _networkView.RPC("SimulationStarted", RPCMode.Others);
         }
 
         currentIntervalBetweenRPCs -= Time.deltaTime;
@@ -190,10 +203,11 @@ public class GameManagerScript : MonoBehaviour {
     //Finish turn
     [RPC]
     public void WantsToFinishTurn(NetworkPlayer player) {
-        if(!isPlaying) {
-            if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
-                _networkView.RPC("WantsToFinishTurn", RPCMode.Others, player);
-            }
+        if(!isPlaying && NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //    _networkView.RPC("WantsToFinishTurn", RPCMode.Others, player);
+            //}
+            //TODO: changer
             var playerId = int.Parse(player.ToString());
 
             playerWantsToFinishTurn[playerId - 1] = true;
@@ -210,11 +224,10 @@ public class GameManagerScript : MonoBehaviour {
 
     [RPC]
     public void WantsToAddWayPoint(NetworkPlayer player, Vector3 point) {
-        if(!isPlaying) {
-            if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
-                _networkView.RPC("WantsToAddWayPoint", RPCMode.Others, player, point);
-            }
-            //PlayerScript currentPlayerScript = PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[int.Parse(player.ToString()) - 1];
+        if(!isPlaying && NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //    _networkView.RPC("WantsToAddWayPoint", RPCMode.Others, player, point);
+            //}
             PlayerScript currentPlayerScript = playerScriptFromNetworkPlayer[player];
 
             currentPlayerScript.AddActionInList(new CharacterActionMove(currentPlayerScript, point));
@@ -223,11 +236,10 @@ public class GameManagerScript : MonoBehaviour {
 
     [RPC]
     public void WantsToCollectCoins(NetworkPlayer player) {
-        if(!isPlaying) {
-            if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
-                _networkView.RPC("WantsToCollectCoins", RPCMode.Others, player);
-            }
-            //PlayerScript currentPlayerScript = PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[int.Parse(player.ToString()) - 1];
+        if(!isPlaying && NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            //    _networkView.RPC("WantsToCollectCoins", RPCMode.Others, player);
+            //}
             PlayerScript currentPlayerScript = playerScriptFromNetworkPlayer[player];
 
             currentPlayerScript.AddActionInList(new CharacterActionCollectCoins(currentPlayerScript));
@@ -249,11 +261,27 @@ public class GameManagerScript : MonoBehaviour {
     }
 
     [RPC]
+    public void SimulationStarted() {
+        //spriteRenderer.enabled = false;
+        //lineRenderer.enabled = false;
+        isPlanificating = false;
+        _inputManagerScript.ClickPoint = Vector3.zero;
+        _helpersScript.Clear();
+    }
+
+    [RPC]
+    public void PlanificationStarted() {
+        isPlanificating = true;
+    }
+
+    [RPC]
     void TellPlayerWhoHeIs(int index) {
         foreach(GameObject go in _playersGameObject) {
             if(go.name.Equals("Player" + index)) {
                 go.GetComponent<Renderer>().material = _playerMaterial;
                 currentPlayerGameObject = go;
+
+                _helpersScript.SetVariables();
             }
         }
     }

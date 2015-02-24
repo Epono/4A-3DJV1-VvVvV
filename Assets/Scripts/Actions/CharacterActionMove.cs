@@ -3,9 +3,9 @@ using System.Collections;
 
 public class CharacterActionMove : CharacterAction {
 
-    private PlayerScript _playerScript;
-    private Vector3 _location;
-    private NavMeshAgent _agent;
+    PlayerScript _playerScript;
+    Vector3 _location;
+    NavMeshAgent _agent;
 
     public CharacterActionMove(PlayerScript playerScript, Vector3 locationChoose) {
         actionPoint = 1;

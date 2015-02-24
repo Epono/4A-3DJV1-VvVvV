@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,7 +42,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fd21b4bc5283a47b60e98611c874de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 11400002}
+  _helpersScript: {fileID: 11400004}
   _playerScript: []
   _gameCamera: {fileID: 0}
   _groundCollider: {fileID: 0}
@@ -61,17 +62,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playersScript: []
+  _playerScript: []
   _playersGameObject: []
   _coins: []
   _playerMaterial: {fileID: 2100000, guid: 15d9ec7b7b1107a429486aaae273199d, type: 2}
   _networkView: {fileID: 14800000}
+  _inputManagerScript: {fileID: 11400000}
+  _helpersScript: {fileID: 11400004}
   _textTurnTimeRemaining: {fileID: 0}
   _textGameTimeRemaining: {fileID: 0}
   _textScore: {fileID: 0}
   _gameDuration: 180
   _turnDuration: 10
   _simulationDuration: 5
+  _intervalBetweenRPCs: .100000001
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490c8a8c030463744999732c61122d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 21300000, guid: 0222df29af551e84e8c929fc660a438c, type: 3}
 --- !u!148 &14800000
 NetworkView:
   m_ObjectHideFlags: 1

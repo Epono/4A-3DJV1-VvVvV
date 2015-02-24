@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class InputManagerScript : MonoBehaviour {
 
+    public static InputManagerScript currentInputManagerScript;
+
+    GameManagerScript gameManagerScript;
+
     [SerializeField]
-    GameManagerScript _gameManager;
+    HelpersScript _helpersScript;
 
     [SerializeField]
     PlayerScript[] _playerScript;
@@ -18,9 +23,6 @@ public class InputManagerScript : MonoBehaviour {
 
     [SerializeField]
     NetworkView _networkView;
-
-    // [SerializeField]
-    // LineRenderer _lineMovement;
 
     [SerializeField]
     Button _collectCoinsButton;
@@ -36,15 +38,23 @@ public class InputManagerScript : MonoBehaviour {
 
     Vector3 clickPoint = Vector3.zero;
 
-    float _intervalBetweenRPCs = 1f;
-    float currentIntervalBetweenRPCs;
+    public Vector3 ClickPoint {
+        get { return clickPoint; }
+        set { clickPoint = value; }
+    }
 
     void Start() {
+        currentInputManagerScript = this;
+
+        gameManagerScript = GameManagerScript.currentGameManagerScript;
+
         _collectCoinsButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
         });
         _addWayPointButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
+            _helpersScript.AddWaypoint(clickPoint);
+            CancelClick();
         });
         _finishTurnButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
@@ -56,10 +66,11 @@ public class InputManagerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(Network.isClient) {
+        if(Network.isClient/* && gameManagerScript.IsPlanificating*/) {
 
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) {
-                _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player);
+                _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
+                _helpersScript.AddWaypoint(clickPoint);
                 CancelClick();
             }
 
@@ -79,6 +90,7 @@ public class InputManagerScript : MonoBehaviour {
 
                 if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue)) {
                     clickPoint = hitInfo.point;
+                    _helpersScript.ClickPointChanged();
                 }
             }
 
@@ -93,44 +105,15 @@ public class InputManagerScript : MonoBehaviour {
 
                     if(_groundCollider.Raycast(ray, out hitInfo, float.MaxValue)) {
                         clickPoint = hitInfo.point;
+                        _helpersScript.ClickPointChanged();
                     }
                 }
-            }
-
-            SpriteRenderer r = _gameManager.CurrentPlayerGameObject.GetComponentInChildren<SpriteRenderer>();
-            LineRenderer l = _gameManager.CurrentPlayerGameObject.GetComponent<LineRenderer>();
-
-            if(clickPoint != Vector3.zero) {
-                r.transform.position = clickPoint;
-                r.enabled = true;
-                l.enabled = true;
-
-
-
-                currentIntervalBetweenRPCs -= Time.deltaTime;
-                if(currentIntervalBetweenRPCs < 0) {
-                    currentIntervalBetweenRPCs = _intervalBetweenRPCs;
-                    NavMeshPath path = new NavMeshPath();
-                    PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript[0].GetAgent().CalculatePath(clickPoint, path);
-                    if(path.status == NavMeshPathStatus.PathComplete) {
-                        l.SetVertexCount(path.corners.Length);
-                        for(int i = 0; i < path.corners.Length; i++) {
-                            Debug.Log(i + " - " + path.corners[i]);
-                            l.SetPosition(i, path.corners[i]);
-                        }
-                    }
-                }
-
-
-
-            } else {
-                r.enabled = false;
-                l.enabled = false;
             }
         }
     }
 
     void CancelClick() {
         clickPoint = Vector3.zero;
+        _helpersScript.ClickPointChanged();
     }
 }
