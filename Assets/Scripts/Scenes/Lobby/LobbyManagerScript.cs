@@ -146,10 +146,4 @@ public class LobbyManagerScript : MonoBehaviour {
     public void clientLaunchGameScene() {
         SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.Game);
     }
-
-    //Client-only method
-    [RPC]
-    public void clientLaunchGameOverScene() {
-        SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.GameOver);
-    }
 }

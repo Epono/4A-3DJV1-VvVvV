@@ -6,6 +6,7 @@ using System.Collections.Generic;
 /*
  * PlayerScript persistence for GameScene => GameOverScene 
  */
+// TODO: supprimer ? plus trop besoin
 public class PersistentPlayersScriptScript : MonoBehaviour {
     public static PersistentPlayersScriptScript currentPersistentPlayersScriptScript;
 

@@ -17,21 +17,15 @@ public class CharacterActionCollectCoins : CharacterAction {
     }
 
     public override void Execute() {
-        List<GameObject> coinsToDelete = new List<GameObject>();
-        foreach(GameObject coin in GameManagerScript.currentGameManagerScript.Coins) {
-            if(Vector3.Distance(coin.transform.position, playerScript.gameObject.transform.position) < 20) {
-                //TODO: customizable distance, beware of walls ! 
-                coinsToDelete.Add(coin);
-                playerScript.IncrementScore();
+        for(int i = 0; i < GameManagerScript.currentGameManagerScript.Coins.Count; i++) {
+            GameObject coin = GameManagerScript.currentGameManagerScript.Coins[i];
+            if(Vector3.Distance(coin.transform.position, playerScript.gameObject.transform.position) < GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionRadius) {
+                CoinScript coinScript = coin.GetComponent<CoinScript>();
+                coinScript.CollectCoin(playerScript);
+                i--;
             }
         }
 
-        foreach(GameObject coin in coinsToDelete) {
-            GameManagerScript.currentGameManagerScript.Coins.Remove(coin);
-            Object.Destroy(coin);
-        }
-
-        //TODO: preferably, coroutine, but can't make it work
         StartTimer();
     }
 

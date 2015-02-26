@@ -11,7 +11,6 @@ public class HelpersScript : MonoBehaviour {
 
     SpriteRenderer targetRenderer;
     LineRenderer currentLineRenderer;
-    NavMeshAgent agent;
 
     List<Vector3> waypoints = new List<Vector3>();
     List<LineRenderer> paths = new List<LineRenderer>();
@@ -26,10 +25,9 @@ public class HelpersScript : MonoBehaviour {
     }
 
     public void SetVariables() {
-        targetRenderer = gameManagerScript.CurrentPlayerGameObject.GetComponentInChildren<SpriteRenderer>();
-        currentLineRenderer = gameManagerScript.CurrentPlayerGameObject.GetComponent<LineRenderer>();
-        agent = gameManagerScript.CurrentPlayerGameObject.GetComponent<NavMeshAgent>();
-        currentPlayerGameObject = gameManagerScript.CurrentPlayerGameObject;
+        targetRenderer = gameManagerScript.LocalPlayerGameObject.GetComponentInChildren<SpriteRenderer>();
+        currentLineRenderer = gameManagerScript.LocalPlayerGameObject.GetComponent<LineRenderer>();
+        currentPlayerGameObject = gameManagerScript.LocalPlayerGameObject;
     }
 
     void Update() {
@@ -54,11 +52,9 @@ public class HelpersScript : MonoBehaviour {
 
         if(waypoints.Count == 0) {
             // if there are no waypoints, draw from player's position
-            //Debug.Log("1er temp");
             RenderPathFromToTemp(currentPlayerGameObject.transform.position, inputManagerScript.ClickPoint);
         } else {
             // else, draws from last saved waypoint to current
-            //Debug.Log("temp : " + (waypoints.Count - 1));
             RenderPathFromToTemp(waypoints[waypoints.Count - 1], inputManagerScript.ClickPoint);
         }
     }
@@ -130,10 +126,8 @@ public class HelpersScript : MonoBehaviour {
         targetRenderer.enabled = false;
         currentLineRenderer.enabled = false;
         if(waypoints.Count == 0) {
-            //Debug.Log("1er");
             RenderPathFromTo(currentPlayerGameObject.transform.position, newWaypoint);
         } else {
-            //Debug.Log(waypoints.Count);
             RenderPathFromTo(waypoints[waypoints.Count - 1], newWaypoint);
         }
     }

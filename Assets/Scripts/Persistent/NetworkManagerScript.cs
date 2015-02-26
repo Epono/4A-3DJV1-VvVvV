@@ -64,8 +64,11 @@ public class NetworkManagerScript : MonoBehaviour {
     float intervalLookingForServers = 1f;
     float currentIntervalLookingForServers;
 
-    private HostData[] hostDatas;
-    private HostData currentHostData;
+    //Lists of servers
+    HostData[] hostDatas;
+
+    //Current (or last if deconnected) server visited
+    //HostData currentHostData;
 
     void Awake() {
         if(currentNetworkManagerScript == null) {
@@ -175,7 +178,7 @@ public class NetworkManagerScript : MonoBehaviour {
 
     //Client
     void OnConnectedToServer() {
-        currentHostData = hostDatas[0];
+        //currentHostData = hostDatas[0];
     }
 
     //Server (gets called when the server finishes closing => normal) 

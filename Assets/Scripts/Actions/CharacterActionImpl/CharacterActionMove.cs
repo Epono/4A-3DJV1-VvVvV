@@ -3,20 +3,17 @@ using System.Collections;
 
 public class CharacterActionMove : CharacterAction {
 
-    PlayerScript _playerScript;
     Vector3 _location;
     NavMeshAgent _agent;
 
     public CharacterActionMove(PlayerScript playerScript, Vector3 locationChoose) {
         actionPoint = 1;
         actionName = "MoveToLocation";
-        _playerScript = playerScript;
         _location = locationChoose;
         _agent = playerScript.GetAgent();
     }
 
     public override void Execute() {
-        Debug.Log("L'agent " + _agent.gameObject.name + " se deplace vers " + _location);
         _agent.SetDestination(_location);
     }
 

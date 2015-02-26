@@ -9,6 +9,11 @@ public class InputManagerScript : MonoBehaviour {
 
     GameManagerScript gameManagerScript;
 
+    public GameManagerScript GameManagerScript {
+        get { return gameManagerScript; }
+        set { gameManagerScript = value; }
+    }
+
     [SerializeField]
     HelpersScript _helpersScript;
 
@@ -45,8 +50,6 @@ public class InputManagerScript : MonoBehaviour {
 
     void Start() {
         currentInputManagerScript = this;
-
-        gameManagerScript = GameManagerScript.currentGameManagerScript;
 
         _collectCoinsButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Represents an atomic action the player can execute, like moving, collecting coins or setting a trap 
+ */
+//TODO: virer les getters/setters faits a la main
 public abstract class CharacterAction {
 
     protected int actionPoint;
