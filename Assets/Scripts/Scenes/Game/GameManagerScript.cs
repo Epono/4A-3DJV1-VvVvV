@@ -213,7 +213,6 @@ public class GameManagerScript : MonoBehaviour {
         }
     }
 
-    //Finish turn
     [RPC]
     public void WantsToFinishTurn(NetworkPlayer player) {
         if(!isPlaying && NetworkManagerScript.currentNetworkManagerScript.IsServer) {
