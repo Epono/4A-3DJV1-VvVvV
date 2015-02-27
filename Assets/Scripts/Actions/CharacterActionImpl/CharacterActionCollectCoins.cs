@@ -17,6 +17,7 @@ public class CharacterActionCollectCoins : CharacterAction {
     }
 
     public override void Execute() {
+        //TODO: recolter APRES le timer bug :(
         for(int i = 0; i < GameManagerScript.currentGameManagerScript.Coins.Count; i++) {
             GameObject coin = GameManagerScript.currentGameManagerScript.Coins[i];
             if(Vector3.Distance(coin.transform.position, playerScript.gameObject.transform.position) < GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionRadius) {

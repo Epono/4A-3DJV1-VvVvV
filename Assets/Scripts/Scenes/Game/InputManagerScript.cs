@@ -53,6 +53,7 @@ public class InputManagerScript : MonoBehaviour {
 
         _collectCoinsButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+            _helpersScript.AddCollectCoins();
         });
         _addWayPointButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToAddWayPoint", RPCMode.Server, Network.player, clickPoint);
@@ -77,12 +78,13 @@ public class InputManagerScript : MonoBehaviour {
                 CancelClick();
             }
 
-            if(Input.GetKeyDown(KeyCode.Return)) {
-                _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
-            }
-
             if(Input.GetKeyDown(KeyCode.A)) {
                 _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
+                _helpersScript.AddCollectCoins();
+            }
+
+            if(Input.GetKeyDown(KeyCode.Return)) {
+                _networkView.RPC("WantsToFinishTurn", RPCMode.Server, Network.player);
             }
 
             // Initialize clickPoint (PC)

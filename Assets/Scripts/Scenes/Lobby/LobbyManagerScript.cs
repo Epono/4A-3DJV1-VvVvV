@@ -20,6 +20,9 @@ public class LobbyManagerScript : MonoBehaviour {
     [SerializeField]
     NetworkView _networkView;
 
+    [SerializeField]
+    Text _textCountdown;
+
     bool isRunningCoroutineCountdownBeforeLaunchingGame = false;
 
     void Start() {
@@ -90,7 +93,7 @@ public class LobbyManagerScript : MonoBehaviour {
     public void serverPlayerDisconnected(NetworkPlayer player) {
         if(isRunningCoroutineCountdownBeforeLaunchingGame) {
             StopCoroutine("CountdownBeforeLaunchingGame");
-            //TODO: dire aux clients que c'est annulé
+            _networkView.RPC("LaunchingPostponed", RPCMode.Others);
         }
 
         PersistentNetworkPlayersScript.currentPersistentNetworkPlayersScript.Players.Remove(player);
@@ -120,12 +123,12 @@ public class LobbyManagerScript : MonoBehaviour {
     public IEnumerator CountdownBeforeLaunchingGame() {
         isRunningCoroutineCountdownBeforeLaunchingGame = true;
         Debug.Log("Lobby full, launching the game in 3 ...");
-        UpdateTimeRemainingBeforeLaunchingGame(3);
+        _networkView.RPC("UpdateTimeRemainingBeforeLaunchingGame", RPCMode.Others, 3);
         yield return new WaitForSeconds(1);
-        UpdateTimeRemainingBeforeLaunchingGame(2);
+        _networkView.RPC("UpdateTimeRemainingBeforeLaunchingGame", RPCMode.Others, 2);
         Debug.Log("2 ...");
         yield return new WaitForSeconds(1);
-        UpdateTimeRemainingBeforeLaunchingGame(1);
+        _networkView.RPC("UpdateTimeRemainingBeforeLaunchingGame", RPCMode.Others, 1);
         Debug.Log("1 ...");
         yield return new WaitForSeconds(1);
         Debug.Log("Starting !");
@@ -137,7 +140,30 @@ public class LobbyManagerScript : MonoBehaviour {
 
     [RPC]
     public void UpdateTimeRemainingBeforeLaunchingGame(int secondsRemaining) {
-        //_timeRemaining = secondsRemaining.ToString("F0") + "s";
+        StopCoroutine("ShowMessage");
+        StartCoroutine("ShowMessage", secondsRemaining);
+    }
+
+    IEnumerator ShowMessage(int secondsRemaining) {
+        _textCountdown.enabled = true;
+        _textCountdown.text = "Début dans " + secondsRemaining.ToString("F0") + " ...";
+        yield return new WaitForSeconds(1);
+        _textCountdown.enabled = false;
+        _textCountdown.text = "";
+    }
+
+    [RPC]
+    public void LaunchingPostponed() {
+        StopCoroutine("ShowMessage");
+        StartCoroutine(ShowMessage2());
+    }
+
+    IEnumerator ShowMessage2() {
+        _textCountdown.enabled = true;
+        _textCountdown.text = "Joueur déco, attendre";
+        yield return new WaitForSeconds(3);
+        _textCountdown.enabled = false;
+        _textCountdown.text = "";
     }
 
 

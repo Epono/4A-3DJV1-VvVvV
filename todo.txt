@@ -1,0 +1,7 @@
+- Les TODO dans le code
+- Ajouter un piège (au moins un élément de gameplay quoi) (son helpers, toussa)
+- Musique de fin ?
+- Ajouter des messages sur le client (il sait jamais ce qui se passe)
+- Améliorer les helpers (cercle autour du dernier waypoint (validé ?) pour la collecte de pieces
+- Gestion du ratio (letterbox / aspectRationFixer)
+- Reconnection ? (au moins dire au client qu'il est deco, de patienter toussa)

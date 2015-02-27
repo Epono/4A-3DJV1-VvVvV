@@ -15,6 +15,7 @@ public class HelpersScript : MonoBehaviour {
     List<Vector3> waypoints = new List<Vector3>();
     List<LineRenderer> paths = new List<LineRenderer>();
     List<SpriteRenderer> targets = new List<SpriteRenderer>();
+    List<LineRenderer> collectCoinsSpots = new List<LineRenderer>();
 
     [SerializeField]
     Sprite targetSprite;
@@ -89,36 +90,34 @@ public class HelpersScript : MonoBehaviour {
         container.transform.position = from;
         container.transform.parent = currentPlayerGameObject.transform;
 
-        LineRenderer ligne = container.AddComponent<LineRenderer>();
-        ligne.SetColors(Color.black, Color.black);
-        ligne.SetWidth(0.5f, 0.5f);
-        ligne.enabled = true;
-        ligne.transform.localScale = new Vector3(3, 2, 3);
+        //TODO: rendre pas rose
+        LineRenderer tempWaypointLineRenderer = container.AddComponent<LineRenderer>();
+        tempWaypointLineRenderer.SetColors(Color.black, Color.black);
+        tempWaypointLineRenderer.SetWidth(0.5f, 0.5f);
+        tempWaypointLineRenderer.enabled = true;
+        tempWaypointLineRenderer.transform.localScale = new Vector3(3, 2, 3);
 
         NavMeshPath path = new NavMeshPath();
 
         NavMesh.CalculatePath(from, to, -1, path);
 
         if(path.status == NavMeshPathStatus.PathComplete) {
-            ligne.SetVertexCount(path.corners.Length);
+            tempWaypointLineRenderer.SetVertexCount(path.corners.Length);
             for(int i = 0; i < path.corners.Length; i++) {
-                ligne.SetPosition(i, path.corners[i]);
+                tempWaypointLineRenderer.SetPosition(i, path.corners[i]);
             }
         }
 
-        GameObject container2 = new GameObject();
-        container2.transform.position = from;
-        container2.transform.parent = currentPlayerGameObject.transform;
+        SpriteRenderer tempWaypointSpriteRenderer = container.AddComponent<SpriteRenderer>();
+        tempWaypointSpriteRenderer.sprite = targetSprite;
+        tempWaypointSpriteRenderer.transform.position = to;
+        tempWaypointSpriteRenderer.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        tempWaypointSpriteRenderer.transform.localEulerAngles = new Vector3(90, 0, 0);
+        tempWaypointSpriteRenderer.enabled = true;
 
-        SpriteRenderer s = container.AddComponent<SpriteRenderer>();
-        s.sprite = targetSprite;
-        s.transform.position = to;
-        s.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        s.transform.localEulerAngles = new Vector3(90, 0, 0);
-        s.enabled = true;
 
-        paths.Add(ligne);
-        targets.Add(s);
+        paths.Add(tempWaypointLineRenderer);
+        targets.Add(tempWaypointSpriteRenderer);
         waypoints.Add(to);
     }
 
@@ -132,18 +131,59 @@ public class HelpersScript : MonoBehaviour {
         }
     }
 
-    public void Clear() {
-        foreach(LineRenderer t in paths) {
-            Object.Destroy(t.gameObject);
+    public void AddCollectCoins() {
+        Vector3 center;
+        float radius =  GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionRadius;
+        if(waypoints.Count == 0) {
+            center = currentPlayerGameObject.transform.position;
+        } else {
+            center = waypoints[waypoints.Count - 1];
         }
 
-        foreach(SpriteRenderer t in targets) {
-            Object.Destroy(t.gameObject);
+        float PI = 3.14f;
+        float theta_scale = 0.1f;                                   //Set lower to add more points
+        int size = Mathf.RoundToInt((2.0f * PI) / theta_scale);     //Total number of points in circle.
+
+        GameObject container2 = new GameObject();
+        container2.transform.position = center;
+        container2.transform.parent = currentPlayerGameObject.transform;
+
+        LineRenderer tempCollectingCoinSpotLineRenderer = container2.AddComponent<LineRenderer>();
+        tempCollectingCoinSpotLineRenderer.SetWidth(1, 1);
+        tempCollectingCoinSpotLineRenderer.SetVertexCount(size + 1);
+        tempCollectingCoinSpotLineRenderer.useWorldSpace = false;
+        tempCollectingCoinSpotLineRenderer.SetColors(Color.yellow, Color.yellow);
+        tempCollectingCoinSpotLineRenderer.transform.position = center;
+        //TODO: marche pas en buildé
+        //tempCollectingCoinSpotLineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+
+        int i = 0;
+        for(float theta = 0; theta < 2 * PI; theta += 0.1f) {
+            float x = radius * Mathf.Cos(theta);
+            float z = radius * Mathf.Sin(theta);
+
+            Vector3 pos = new Vector3(x, 1, z);
+            tempCollectingCoinSpotLineRenderer.SetPosition(i, pos);
+            i += 1;
         }
-        //TODO: mieux gerer la suppression
+        tempCollectingCoinSpotLineRenderer.SetPosition(i, new Vector3(radius * Mathf.Cos(0), 0, radius * Mathf.Sin(0)));
+
+        collectCoinsSpots.Add(tempCollectingCoinSpotLineRenderer);
+    }
+
+    public void Clear() {
+        foreach(LineRenderer l in paths) {
+            Object.Destroy(l.gameObject);
+        }
+
+        foreach(LineRenderer l in collectCoinsSpots) {
+            Object.Destroy(l.gameObject);
+        }
+        //TODO: mieux gerer la suppression ?
 
         waypoints = new List<Vector3>();
         paths = new List<LineRenderer>();
         targets = new List<SpriteRenderer>();
+        collectCoinsSpots = new List<LineRenderer>();
     }
 }
