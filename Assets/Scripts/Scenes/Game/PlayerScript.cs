@@ -7,8 +7,18 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField]
     GameObject _playerGameObject;
 
+    public GameObject PlayerGameObject {
+        get { return _playerGameObject; }
+        set { _playerGameObject = value; }
+    }
+
     [SerializeField]
     NavMeshAgent _agent;
+
+    public NavMeshAgent Agent {
+        get { return _agent; }
+        set { _agent = value; }
+    }
 
     [SerializeField]
     Transform _transform;

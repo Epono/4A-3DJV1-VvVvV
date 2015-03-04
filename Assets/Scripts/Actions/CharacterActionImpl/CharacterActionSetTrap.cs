@@ -18,6 +18,17 @@ public class CharacterActionSetTrap : CharacterAction {
     }
 
     public override void Execute() {
+        GameObject o = (GameObject)Network.Instantiate(GameManagerScript.currentGameManagerScript.GameVariables.TrapPrefab, playerScript.PlayerGameObject.transform.position, new Quaternion(), 0);
+        TrapScript t = o.AddComponent<TrapScript>();
+
+        t.Owner = playerScript;
+        //t.TrapSetClip = ;
+        //t.TrapTriggerClip = ;
+
+        foreach(PlayerScript p in PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript) {
+            GameManagerScript.currentGameManagerScript.NetworkView.RPC("trapSet", p.NetworkPlayer, p == playerScript, o.networkView.viewID);
+        }
+
         StartTimer();
     }
 
@@ -29,9 +40,6 @@ public class CharacterActionSetTrap : CharacterAction {
 
     private void OnTimerComplete(System.Object source, ElapsedEventArgs e) {
         timerSettingTrap.Stop();
-
-        //DoStuff
-
         isFinished = true;
     }
 }
