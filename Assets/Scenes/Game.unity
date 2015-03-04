@@ -9510,10 +9510,6 @@ Prefab:
       propertyPath: _setTrapButton
       value: 
       objectReference: {fileID: 408725583}
-    - target: {fileID: 11400002, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
-      propertyPath: _gameVariables._coinSelectionRadius
-      value: 200000
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
@@ -13417,7 +13413,7 @@ MonoBehaviour:
   _networkView: {fileID: 2051850085}
   _gameVariables:
     _gameDuration: 180
-    _coinSelectionRadius: 200000
+    _coinSelectionRadius: 20
     _turnDuration: 20
     _simulationDuration: 5
     _intervalBetweenRPCs: .100000001
