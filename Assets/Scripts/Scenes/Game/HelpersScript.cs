@@ -16,6 +16,7 @@ public class HelpersScript : MonoBehaviour {
     List<LineRenderer> paths = new List<LineRenderer>();
     List<SpriteRenderer> targets = new List<SpriteRenderer>();
     List<LineRenderer> collectCoinsSpots = new List<LineRenderer>();
+    List<LineRenderer> traps = new List<LineRenderer>();
 
     [SerializeField]
     Sprite targetSprite;
@@ -90,12 +91,12 @@ public class HelpersScript : MonoBehaviour {
         container.transform.position = from;
         container.transform.parent = currentPlayerGameObject.transform;
 
-        //TODO: rendre pas rose
         LineRenderer tempWaypointLineRenderer = container.AddComponent<LineRenderer>();
         tempWaypointLineRenderer.SetColors(Color.black, Color.black);
         tempWaypointLineRenderer.SetWidth(0.5f, 0.5f);
         tempWaypointLineRenderer.enabled = true;
         tempWaypointLineRenderer.transform.localScale = new Vector3(3, 2, 3);
+        tempWaypointLineRenderer.material = GameManagerScript.currentGameManagerScript.GameVariables.PathMaterial;
 
         NavMeshPath path = new NavMeshPath();
 
@@ -133,7 +134,7 @@ public class HelpersScript : MonoBehaviour {
 
     public void AddCollectCoins() {
         Vector3 center;
-        float radius =  GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionRadius;
+        float radius = GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionRadius;
         if(waypoints.Count == 0) {
             center = currentPlayerGameObject.transform.position;
         } else {
@@ -154,8 +155,7 @@ public class HelpersScript : MonoBehaviour {
         tempCollectingCoinSpotLineRenderer.useWorldSpace = false;
         tempCollectingCoinSpotLineRenderer.SetColors(Color.yellow, Color.yellow);
         tempCollectingCoinSpotLineRenderer.transform.position = center;
-        //TODO: marche pas en buildé
-        //tempCollectingCoinSpotLineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+        tempCollectingCoinSpotLineRenderer.material = GameManagerScript.currentGameManagerScript.GameVariables.CoinSelectionMateriel;
 
         int i = 0;
         for(float theta = 0; theta < 2 * PI; theta += 0.1f) {
@@ -171,6 +171,45 @@ public class HelpersScript : MonoBehaviour {
         collectCoinsSpots.Add(tempCollectingCoinSpotLineRenderer);
     }
 
+    public void AddTrap() {
+        Vector3 center;
+        float radius = 2.0f;
+        if(waypoints.Count == 0) {
+            center = currentPlayerGameObject.transform.position;
+        } else {
+            center = waypoints[waypoints.Count - 1];
+        }
+
+        float PI = 3.14f;
+        float theta_scale = 0.1f;                                   //Set lower to add more points
+        int size = Mathf.RoundToInt((2.0f * PI) / theta_scale);     //Total number of points in circle.
+
+        GameObject container2 = new GameObject();
+        container2.transform.position = center;
+        container2.transform.parent = currentPlayerGameObject.transform;
+
+        LineRenderer tempTrapSetLineRenderer = container2.AddComponent<LineRenderer>();
+        tempTrapSetLineRenderer.SetWidth(1, 1);
+        tempTrapSetLineRenderer.SetVertexCount(size + 1);
+        tempTrapSetLineRenderer.useWorldSpace = false;
+        tempTrapSetLineRenderer.SetColors(Color.yellow, Color.yellow);
+        tempTrapSetLineRenderer.transform.position = center;
+        tempTrapSetLineRenderer.material = GameManagerScript.currentGameManagerScript.GameVariables.TrapRadiusMaterial;
+
+        int i = 0;
+        for(float theta = 0; theta < 2 * PI; theta += 0.1f) {
+            float x = radius * Mathf.Cos(theta);
+            float z = radius * Mathf.Sin(theta);
+
+            Vector3 pos = new Vector3(x, 1, z);
+            tempTrapSetLineRenderer.SetPosition(i, pos);
+            i += 1;
+        }
+        tempTrapSetLineRenderer.SetPosition(i, new Vector3(radius * Mathf.Cos(0), 0, radius * Mathf.Sin(0)));
+
+        traps.Add(tempTrapSetLineRenderer);
+    }
+
     public void Clear() {
         foreach(LineRenderer l in paths) {
             Object.Destroy(l.gameObject);
@@ -179,11 +218,16 @@ public class HelpersScript : MonoBehaviour {
         foreach(LineRenderer l in collectCoinsSpots) {
             Object.Destroy(l.gameObject);
         }
+
+        foreach(LineRenderer l in traps) {
+            Object.Destroy(l.gameObject);
+        }
         //TODO: mieux gerer la suppression ?
 
         waypoints = new List<Vector3>();
         paths = new List<LineRenderer>();
         targets = new List<SpriteRenderer>();
         collectCoinsSpots = new List<LineRenderer>();
+        traps = new List<LineRenderer>();
     }
 }

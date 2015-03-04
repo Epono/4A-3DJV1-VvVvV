@@ -20,7 +20,7 @@ public class GeneralGameVariables {
     }
 
     [SerializeField]
-    float _turnDuration = 10.0f;
+    float _turnDuration = 20.0f;
 
     public float TurnDuration {
         get { return _turnDuration; }
@@ -57,6 +57,22 @@ public class GeneralGameVariables {
     public GameObject TrapPrefab {
         get { return _trapPrefab; }
         set { _trapPrefab = value; }
+    }
+
+    [SerializeField]
+    int _trapCoinsLostCount = 5;
+
+    public int TrapCoinsLostCount {
+        get { return _trapCoinsLostCount; }
+        set { _trapCoinsLostCount = value; }
+    }
+
+    [SerializeField]
+    Material _trapRadiusMaterial;
+
+    public Material TrapRadiusMaterial {
+        get { return _trapRadiusMaterial; }
+        set { _trapRadiusMaterial = value; }
     }
 
     [SerializeField]

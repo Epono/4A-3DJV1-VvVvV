@@ -19,7 +19,8 @@ public class GameManagerScript : MonoBehaviour {
     bool finishTurn;
 
     // Dico pour association player <=> scores (gameover)
-    Dictionary<NetworkPlayer, GameOverGUIPlayerItems> PlayerScoreTextFromNetworkPlayer = new Dictionary<NetworkPlayer, GameOverGUIPlayerItems>();
+    //Dictionary<string, GameOverGUIPlayerItems> playerScoreTextFromNetworkPlayer = new Dictionary<string, GameOverGUIPlayerItems>();
+    //GameOverGUIPlayerItems[] playerScoreTextFromNetworkPlayer = new GameOverGUIPlayerItems[NetworkManagerScript.currentNetworkManagerScript.MaxNumberOfConnections];
 
     [SerializeField]
     List<GameObject> _coins;
@@ -28,6 +29,8 @@ public class GameManagerScript : MonoBehaviour {
         get { return _coins; }
         set { _coins = value; }
     }
+
+    Dictionary<int, GameObject> traps = new Dictionary<int, GameObject>();
 
     [SerializeField]
     Material _playerMaterial;
@@ -53,6 +56,11 @@ public class GameManagerScript : MonoBehaviour {
 
     // Server
     bool isPlaying = false;
+
+    public bool IsPlaying {
+        get { return isPlaying; }
+        set { isPlaying = value; }
+    }
 
     // Client
     bool isPlanificating = true;
@@ -93,6 +101,8 @@ public class GameManagerScript : MonoBehaviour {
         set { _gameOverGuiItems = value; }
     }
 
+    bool gameOver = false;
+
     void Start() {
         AudioSource.PlayClipAtPoint(GameVariables.BackgroundMusic, transform.position);
         currentGameManagerScript = this;
@@ -114,7 +124,8 @@ public class GameManagerScript : MonoBehaviour {
 
                 tempPlayerScript.NetworkPlayer = tempNetworkPlayer;
                 playerScriptFromNetworkPlayer.Add(tempNetworkPlayer, tempPlayerScript);
-                PlayerScoreTextFromNetworkPlayer.Add(tempNetworkPlayer, GameOverGuiItems.GameOverGuiPlayerItems[i]);
+                //playerScoreTextFromNetworkPlayer.Add(Utils.NetworkPlayerToFormattedAddress(tempNetworkPlayer), GameOverGuiItems.GameOverGuiPlayerItems[i]);
+                //playerScoreTextFromNetworkPlayer[i] = GameOverGuiItems.GameOverGuiPlayerItems[i];
                 _networkView.RPC("TellPlayerWhoHeIs", tempNetworkPlayer, i + 1);
                 playersWantsToFinishTurn[tempPlayerScript] = false;
             }
@@ -126,7 +137,8 @@ public class GameManagerScript : MonoBehaviour {
             currentGameTimeRemaining -= Time.deltaTime;
             GameGuiItems.TextGameTimeRemaining.text = "Jeu : " + currentGameTimeRemaining.ToString("F0") + "s";
 
-            if(currentGameTimeRemaining < 0 || _coins.Count == 0) {
+            if(currentGameTimeRemaining < 0 || _coins.Count == 0 && !gameOver) {
+                gameOver = true;
                 GameOver();
             } else {
                 if(isPlaying) {
@@ -209,6 +221,7 @@ public class GameManagerScript : MonoBehaviour {
         foreach(PlayerScript tempPlayerScript in PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript) {
             if(player.ipAddress.Equals(tempPlayerScript.NetworkPlayer.ipAddress) && player.port.Equals(tempPlayerScript.NetworkPlayer.port)) {
                 tempPlayerScript.IsConnected = false;
+                tempPlayerScript.gameObject.renderer.enabled = false;
             }
         }
     }
@@ -245,6 +258,27 @@ public class GameManagerScript : MonoBehaviour {
 
             currentPlayerScript.AddActionInList(new CharacterActionCollectCoins(currentPlayerScript));
         }
+    }
+
+    [RPC]
+    public void WantsToSetTrap(NetworkPlayer player) {
+        if(!isPlaying && NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            PlayerScript currentPlayerScript = playerScriptFromNetworkPlayer[player];
+
+            currentPlayerScript.AddActionInList(new CharacterActionSetTrap(currentPlayerScript));
+        }
+    }
+
+    [RPC]
+    public void TrapCreated(int id) {
+        GameObject go = (GameObject)GameObject.Instantiate(GameVariables.TrapPrefab, localPlayerGameObject.transform.position, new Quaternion());
+        Destroy(go.GetComponent<TrapScript>());
+        traps.Add(id, go);
+    }
+
+    [RPC]
+    public void DestroyTrap(int id) {
+        GameObject.Destroy(traps[id]);
     }
 
     [RPC]
@@ -294,24 +328,27 @@ public class GameManagerScript : MonoBehaviour {
 
         foreach(PlayerScript PlayerScriptToSendRPCTo in PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript) {
             _networkView.RPC("ClientLaunchGameOver", PlayerScriptToSendRPCTo.NetworkPlayer, PlayerScriptToSendRPCTo.Score == maxScore);
+            int i = 0;
             foreach(PlayerScript PlayerScriptConcerned in PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript) {
-                _networkView.RPC("ClientSetScoreForPlayer", PlayerScriptToSendRPCTo.NetworkPlayer, PlayerScriptConcerned.NetworkPlayer, PlayerScriptConcerned.Score);
+                _networkView.RPC("ClientSetScoreForPlayer", PlayerScriptToSendRPCTo.NetworkPlayer, PlayerScriptConcerned.NetworkPlayer, PlayerScriptConcerned.Score, i, PlayerScriptToSendRPCTo.NetworkPlayer);
+                i++;
             }
         }
     }
 
     //Client-only method
     [RPC]
-    void ClientSetScoreForPlayer(NetworkPlayer networkPlayer, int finalScore) {
-        GameOverGUIPlayerItems tempGameOverGUIPlayerItems = PlayerScoreTextFromNetworkPlayer[networkPlayer];
-        tempGameOverGUIPlayerItems.PlayerNameLabel.text = Utils.NetworkPlayerToFormattedAddress(networkPlayer);
+    void ClientSetScoreForPlayer(NetworkPlayer OtherNetworkPlayer, int finalScore, int index, NetworkPlayer CurrentNetworkPlayer) {
+        GameOverGUIPlayerItems tempGameOverGUIPlayerItems = GameOverGuiItems.GameOverGuiPlayerItems[index];
+        //tempGameOverGUIPlayerItems.PlayerNameLabel.text = Utils.NetworkPlayerToFormattedAddress(networkPlayer);
         tempGameOverGUIPlayerItems.PlayerScore.text = finalScore.ToString();
 
-        //TODO: moche
-        if(Utils.NetworkPlayerToFormattedAddress(networkPlayer).Equals(Utils.NetworkPlayerToFormattedAddress(LocalPlayerGameObject.GetComponent<PlayerScript>().NetworkPlayer))) {
+        Debug.Log(Utils.NetworkPlayerToFormattedAddress(OtherNetworkPlayer));
+        Debug.Log(Utils.NetworkPlayerToFormattedAddress(LocalPlayerGameObject.GetComponent<PlayerScript>().NetworkPlayer));
+
+        if(Utils.NetworkPlayerToFormattedAddress(OtherNetworkPlayer).Equals(Utils.NetworkPlayerToFormattedAddress(CurrentNetworkPlayer))) {
             tempGameOverGUIPlayerItems.PlayerNameLabel.color = Color.red;
-        } else {
-            tempGameOverGUIPlayerItems.PlayerNameLabel.color = Color.magenta;
+            tempGameOverGUIPlayerItems.PlayerScore.color = Color.red;
         }
     }
 

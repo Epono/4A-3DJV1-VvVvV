@@ -30,6 +30,9 @@ public class InputManagerScript : MonoBehaviour {
     NetworkView _networkView;
 
     [SerializeField]
+    Button _setTrapButton;
+
+    [SerializeField]
     Button _collectCoinsButton;
 
     [SerializeField]
@@ -51,6 +54,10 @@ public class InputManagerScript : MonoBehaviour {
     void Start() {
         currentInputManagerScript = this;
 
+        _setTrapButton.onClick.AddListener(() => {
+            _networkView.RPC("WantsToSetTrap", RPCMode.Server, Network.player);
+            _helpersScript.AddTrap();
+        });
         _collectCoinsButton.onClick.AddListener(() => {
             _networkView.RPC("WantsToCollectCoins", RPCMode.Server, Network.player);
             _helpersScript.AddCollectCoins();

@@ -47,6 +47,7 @@ MonoBehaviour:
   _gameCamera: {fileID: 0}
   _groundCollider: {fileID: 0}
   _networkView: {fileID: 14800000}
+  _setTrapButton: {fileID: 0}
   _collectCoinsButton: {fileID: 0}
   _addWayPointButton: {fileID: 0}
   _finishTurnButton: {fileID: 0}
@@ -62,26 +63,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f385fa9fd547f7546a4cdfed9637c680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerScript: []
   _playersGameObject: []
   _coins: []
   _playerMaterial: {fileID: 2100000, guid: 15d9ec7b7b1107a429486aaae273199d, type: 2}
   _inputManagerScript: {fileID: 11400000}
   _helpersScript: {fileID: 11400004}
   _networkView: {fileID: 14800000}
-  _textTurnTimeRemaining: {fileID: 0}
-  _textGameTimeRemaining: {fileID: 0}
-  _textScore: {fileID: 0}
   _gameVariables:
     _gameDuration: 180
     _coinSelectionRadius: 20
-    _turnDuration: 10
+    _turnDuration: 20
     _simulationDuration: 5
     _intervalBetweenRPCs: .100000001
     _backgroundMusic: {fileID: 8300000, guid: afc41611001196041bf5b3ae20c7cf93, type: 3}
-  _coinVariables:
-    _coinRotationSpeed: 10
-    _collectingCoinClip: {fileID: 0}
+    _trapPrefab: {fileID: 100000, guid: 812a4a5e910eaa2429e9b89c7c731c68, type: 2}
+    _trapCoinsLostCount: 2
+    _trapRadiusMaterial: {fileID: 2100000, guid: cb609b4294ba36340a873852470ebe92,
+      type: 2}
+    _pathMaterial: {fileID: 2100000, guid: ae7aa22540db5a141b03114225130e96, type: 2}
+    _coinSelectionMateriel: {fileID: 2100000, guid: 371c36d52c8cc5642b8338c4a84bdf1c,
+      type: 2}
+  _gameGUIItems:
+    _gameGUICamera: {fileID: 0}
+    _textTurnOrSimulationTimeRemaining: {fileID: 0}
+    _textGameTimeRemaining: {fileID: 0}
+    _textScore: {fileID: 0}
+  _gameOverGuiItems:
+    _gameOverGUICamera: {fileID: 0}
+    _winnerOrLooserText: {fileID: 0}
+    _backToMainMenuButton: {fileID: 0}
+    _gameOverGuiPlayerItems: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

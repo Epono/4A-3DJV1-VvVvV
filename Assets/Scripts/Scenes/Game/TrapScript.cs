@@ -29,12 +29,14 @@ public class TrapScript : MonoBehaviour {
         set { _owner = value; }
     }
 
-    IEnumerator OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         PlayerScript p = other.GetComponent<PlayerScript>();
-        if(p != _owner) {
-            p.Agent.Stop(true);
-            yield return new WaitForSeconds(1);
-            p.Agent.Resume();
+        if(!Utils.NetworkPlayerToFormattedAddress(p.NetworkPlayer).Equals(Utils.NetworkPlayerToFormattedAddress(_owner.NetworkPlayer))) {
+            AudioSource.PlayClipAtPoint(_trapTriggerClip, transform.position);
+            GameManagerScript.currentGameManagerScript.NetworkView.RPC("DestroyTrap", _owner.NetworkPlayer, this.gameObject.GetInstanceID());
+            GameObject.Destroy(this.gameObject);
+
+            p.DecreaseScoreTrap();
         }
     }
 }

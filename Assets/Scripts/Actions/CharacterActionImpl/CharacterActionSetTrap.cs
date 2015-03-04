@@ -5,9 +5,7 @@ using System.Collections.Generic;
 
 using System.Timers;
 
-//TODO
 public class CharacterActionSetTrap : CharacterAction {
-
     PlayerScript playerScript;
     Timer timerSettingTrap;
 
@@ -18,16 +16,14 @@ public class CharacterActionSetTrap : CharacterAction {
     }
 
     public override void Execute() {
-        GameObject o = (GameObject)Network.Instantiate(GameManagerScript.currentGameManagerScript.GameVariables.TrapPrefab, playerScript.PlayerGameObject.transform.position, new Quaternion(), 0);
-        TrapScript t = o.AddComponent<TrapScript>();
+        GameObject o = (GameObject)GameObject.Instantiate(GameManagerScript.currentGameManagerScript.GameVariables.TrapPrefab, playerScript.PlayerGameObject.transform.position, new Quaternion());
+        TrapScript t = o.GetComponent<TrapScript>();
 
         t.Owner = playerScript;
-        //t.TrapSetClip = ;
-        //t.TrapTriggerClip = ;
 
-        foreach(PlayerScript p in PersistentPlayersScriptScript.currentPersistentPlayersScriptScript.PlayersScript) {
-            GameManagerScript.currentGameManagerScript.NetworkView.RPC("trapSet", p.NetworkPlayer, p == playerScript, o.networkView.viewID);
-        }
+        AudioSource.PlayClipAtPoint(t.TrapSetClip, playerScript.PlayerGameObject.transform.position);
+
+        GameManagerScript.currentGameManagerScript.NetworkView.RPC("TrapCreated", t.Owner.NetworkPlayer, o.GetInstanceID());
 
         StartTimer();
     }

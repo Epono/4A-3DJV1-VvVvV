@@ -9506,6 +9506,14 @@ Prefab:
       propertyPath: _gameOverGuiItems._gameOverGuiPlayerItems.Array.data[2]._playerScore
       value: 
       objectReference: {fileID: 1850875848}
+    - target: {fileID: 11400000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _setTrapButton
+      value: 
+      objectReference: {fileID: 408725583}
+    - target: {fileID: 11400002, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
+      propertyPath: _gameVariables._coinSelectionRadius
+      value: 200000
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1f5f51642a9f5734bbfdc63c68d8d03f, type: 2}
@@ -12447,7 +12455,7 @@ Camera:
   field of view: 65
   orthographic: 0
   orthographic size: 90
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13346,6 +13354,7 @@ MonoBehaviour:
   _gameCamera: {fileID: 1293451599}
   _groundCollider: {fileID: 598566454}
   _networkView: {fileID: 2051850085}
+  _setTrapButton: {fileID: 408725583}
   _collectCoinsButton: {fileID: 407993380}
   _addWayPointButton: {fileID: 1258738036}
   _finishTurnButton: {fileID: 160824149}
@@ -13408,11 +13417,18 @@ MonoBehaviour:
   _networkView: {fileID: 2051850085}
   _gameVariables:
     _gameDuration: 180
-    _coinSelectionRadius: 20
-    _turnDuration: 10
+    _coinSelectionRadius: 200000
+    _turnDuration: 20
     _simulationDuration: 5
     _intervalBetweenRPCs: .100000001
     _backgroundMusic: {fileID: 8300000, guid: afc41611001196041bf5b3ae20c7cf93, type: 3}
+    _trapPrefab: {fileID: 100000, guid: 812a4a5e910eaa2429e9b89c7c731c68, type: 2}
+    _trapCoinsLostCount: 2
+    _trapRadiusMaterial: {fileID: 2100000, guid: cb609b4294ba36340a873852470ebe92,
+      type: 2}
+    _pathMaterial: {fileID: 2100000, guid: ae7aa22540db5a141b03114225130e96, type: 2}
+    _coinSelectionMateriel: {fileID: 2100000, guid: 371c36d52c8cc5642b8338c4a84bdf1c,
+      type: 2}
   _gameGUIItems:
     _gameGUICamera: {fileID: 1915191350}
     _textTurnOrSimulationTimeRemaining: {fileID: 1589522087}

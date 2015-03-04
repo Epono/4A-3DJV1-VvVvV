@@ -192,9 +192,11 @@ public class NetworkManagerScript : MonoBehaviour {
             switch(SceneStateManager.currentStateManager.getCurrentSceneState()) {
                 case SceneStateManager.sceneState.Lobby:
                     // TODO: Go back to Mainenu
+                    SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.MainMenu);
                     break;
                 case SceneStateManager.sceneState.Game:
                     // TODO: Try to reconnect/go back to MainMenu after a while
+                    SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.MainMenu);
                     break;
                 default:
                     Debug.Log("OnDisconnectedFromServer with wrong currentSceneState : " + SceneStateManager.currentStateManager.getCurrentSceneState());

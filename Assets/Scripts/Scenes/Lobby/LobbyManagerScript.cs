@@ -32,8 +32,6 @@ public class LobbyManagerScript : MonoBehaviour {
             playerTextIsFilled.Add(text, false);
         }
 
-        _startGame.onClick.AddListener(() => { SceneStateManager.currentStateManager.loadLevel(SceneStateManager.sceneState.Game); });
-
         _exitLobbyButton.onClick.AddListener(() => { exitLobby(); });
 
         if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {

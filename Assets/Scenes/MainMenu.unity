@@ -508,6 +508,10 @@ Prefab:
       propertyPath: _backgroundMusic
       value: 
       objectReference: {fileID: 8300000, guid: afc41611001196041bf5b3ae20c7cf93, type: 3}
+    - target: {fileID: 11400000, guid: 5f62a6d76aa327044876ee113ef7143d, type: 2}
+      propertyPath: lol
+      value: 
+      objectReference: {fileID: 8300000, guid: 22a18129c3255d2449681f6acfa1cd82, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f62a6d76aa327044876ee113ef7143d, type: 2}
   m_RootGameObject: {fileID: 319125877}
@@ -676,7 +680,7 @@ MonoBehaviour:
   _serverPort: 7331
   _maxNumberOfConnections: 3
   _networkView: {fileID: 460902283}
-  _isServer: 0
+  _isServer: 1
 --- !u!4 &460902285
 Transform:
   m_ObjectHideFlags: 0
@@ -3047,7 +3051,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 84ced47838f24ce40b471542846bfc79, type: 2}
       propertyPath: _isServer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14800000, guid: 84ced47838f24ce40b471542846bfc79, type: 2}
       propertyPath: m_StateSynchronization

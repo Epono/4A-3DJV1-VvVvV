@@ -140,4 +140,8 @@ public class PlayerScript : MonoBehaviour {
     public CharacterAction GetCurrentAction() {
         return currentAction;
     }
+
+    public void DecreaseScoreTrap() {
+        score = Mathf.Max(0, score - GameManagerScript.currentGameManagerScript.GameVariables.TrapCoinsLostCount);
+    }
 }
