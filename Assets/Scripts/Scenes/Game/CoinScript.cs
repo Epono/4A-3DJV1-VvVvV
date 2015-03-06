@@ -22,6 +22,8 @@ public class CoinScript : MonoBehaviour {
         AudioSource.PlayClipAtPoint(_collectingCoinClip, transform.position);
         GameManagerScript.currentGameManagerScript.Coins.Remove(this.gameObject);
         playerScript.IncrementScore();
-        Network.Destroy(this.gameObject);
+        if(NetworkManagerScript.currentNetworkManagerScript.IsServer) {
+            Network.Destroy(this.gameObject);
+        }
     }
 }
